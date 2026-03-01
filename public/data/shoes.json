@@ -1,0 +1,80 @@
+[
+  {
+    "shoeId": "shoe-gel-kayano-30",
+    "brand": "ASICS",
+    "model": "gel-kayano-30",
+    "category": "running",
+    "aliases": ["gel-kayano-30"],
+    "identifiers": {
+      "sku": "ASICS-GK30-M-001",
+      "gtin": "193604233001"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe-pegasus-41",
+    "brand": "Nike",
+    "model": "pegasus-41",
+    "category": "running",
+    "aliases": ["pegasus-41"],
+    "identifiers": {
+      "sku": "NIKE-PEG41-M-201"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe-fresh-foam-1080-v13",
+    "brand": "New Balance",
+    "model": "fresh-foam-1080-v13",
+    "category": "running",
+    "aliases": ["fresh-foam-1080-v13"],
+    "identifiers": {
+      "sku": "NB-1080V13-W-110"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe-speedgoat-6",
+    "brand": "HOKA",
+    "model": "speedgoat-6",
+    "category": "trail",
+    "aliases": ["speedgoat-6"],
+    "identifiers": {
+      "sku": "HOKA-SPD6-M-330"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe-peregrine-14",
+    "brand": "Saucony",
+    "model": "peregrine-14",
+    "category": "trail",
+    "aliases": ["peregrine-14"],
+    "identifiers": {
+      "sku": "SAU-PER14-U-221"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe-ghost-16",
+    "brand": "Brooks",
+    "model": "ghost-16",
+    "category": "running",
+    "aliases": ["ghost-16"],
+    "identifiers": {
+      "sku": "BRK-GH16-W-150"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe-adizero-boston-12",
+    "brand": "adidas",
+    "model": "adizero-boston-12",
+    "category": "running",
+    "aliases": ["adizero-boston-12"],
+    "identifiers": {
+      "sku": "ADI-BOS12-U-400"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  }
+]

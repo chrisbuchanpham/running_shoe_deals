@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.nike.com/ca/t/pegasus-41-mens-road-running-shoes",
+    "titleRaw": "Nike Pegasus 41 Men's Road Running Shoes",
+    "brand": "Nike",
+    "modelRaw": "Pegasus 41",
+    "gender": "men",
+    "category": "running",
+    "priceCurrent": 159.99,
+    "priceOriginal": 189.99,
+    "inStock": true,
+    "identifiers": {
+      "sku": "NIKE-PEG41-M-201"
+    }
+  }
+]

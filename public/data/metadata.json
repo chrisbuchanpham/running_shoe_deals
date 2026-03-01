@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-03-01T12:00:00.000Z",
+  "staleAfterHours": 36,
+  "stale": false,
+  "counts": {
+    "retailers": 12,
+    "offers": 12,
+    "shoes": 7,
+    "deals": 7
+  },
+  "parserHealth": [
+    { "retailerId": "running-room", "status": "ok", "offersCount": 1, "durationMs": 420, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "sport-chek", "status": "ok", "offersCount": 1, "durationMs": 421, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "mec", "status": "ok", "offersCount": 1, "durationMs": 399, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "altitude-sports", "status": "ok", "offersCount": 1, "durationMs": 388, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "the-last-hunt", "status": "ok", "offersCount": 1, "durationMs": 412, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "blacktoe", "status": "ok", "offersCount": 1, "durationMs": 390, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "soles", "status": "ok", "offersCount": 1, "durationMs": 391, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "nike-ca", "status": "ok", "offersCount": 1, "durationMs": 404, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "adidas-ca", "status": "ok", "offersCount": 1, "durationMs": 399, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "asics-ca", "status": "ok", "offersCount": 1, "durationMs": 405, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "new-balance-ca", "status": "ok", "offersCount": 1, "durationMs": 397, "warning": "Loaded fixture fallback for initial seed." },
+    { "retailerId": "brooks-ca", "status": "ok", "offersCount": 1, "durationMs": 406, "warning": "Loaded fixture fallback for initial seed." }
+  ],
+  "warnings": [
+    "All retailers are currently seeded with fixture data until scraper selectors are hardened."
+  ]
+}

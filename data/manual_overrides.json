@@ -1,0 +1,7 @@
+{
+  "forceCategoryByToken": [
+    { "token": "speedgoat", "category": "trail" },
+    { "token": "peregrine", "category": "trail" }
+  ],
+  "offerPatches": []
+}

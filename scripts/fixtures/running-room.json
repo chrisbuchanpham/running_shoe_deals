@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.runningroom.com/ca/products/asics-gel-kayano-30-mens",
+    "titleRaw": "ASICS Gel-Kayano 30 Men's Running Shoe",
+    "brand": "ASICS",
+    "modelRaw": "Gel-Kayano 30",
+    "gender": "men",
+    "category": "running",
+    "priceCurrent": 189.99,
+    "priceOriginal": 229.99,
+    "inStock": true,
+    "identifiers": {
+      "sku": "ASICS-GK30-M-001",
+      "gtin": "193604233001"
+    }
+  }
+]

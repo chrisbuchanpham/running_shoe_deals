@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.blacktoerunning.com/products/asics-gel-kayano-30",
+    "titleRaw": "ASICS GEL KAYANO 30 Men's Shoe",
+    "brand": "ASICS",
+    "modelRaw": "GEL KAYANO 30",
+    "gender": "men",
+    "category": "running",
+    "priceCurrent": 184.99,
+    "priceOriginal": 229.99,
+    "inStock": true,
+    "identifiers": {
+      "sku": "ASICS-GK30-M-001",
+      "gtin": "193604233001"
+    }
+  }
+]

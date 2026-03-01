@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Bricolage+Grotesque:wght@500;700&display=swap");
+
+:root {
+  --bg: #f4f1e8;
+  --surface: #fffdf8;
+  --surface-strong: #ffffff;
+  --text: #1d1d1d;
+  --muted: #5d5d5d;
+  --accent: #d6451b;
+  --accent-2: #1a7b68;
+  --border: #d7d0c2;
+  --shadow: 0 14px 36px rgba(38, 29, 13, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 2% 2%, #ffdca8 0%, transparent 38%),
+    radial-gradient(circle at 95% 15%, #cde9e2 0%, transparent 30%),
+    linear-gradient(180deg, #f9f5ec 0%, var(--bg) 100%);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.site-header {
+  background: linear-gradient(120deg, #fff7e3, #fff3f0 55%, #edf8f5);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  padding: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.brand-link {
+  text-decoration: none;
+  font-family: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: clamp(1.3rem, 1.7vw, 1.9rem);
+}
+
+.brand-subtitle {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  max-width: 540px;
+  font-size: 0.95rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.48rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: var(--surface);
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.stale-banner {
+  margin-top: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #d46f5a;
+  color: #602010;
+  background: #ffe7df;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+.section-header h1 {
+  margin: 0;
+  font-family: "Bricolage Grotesque", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.section-header p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.deal-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.95rem;
+}
+
+.deal-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.95rem;
+  box-shadow: 0 10px 24px rgba(21, 21, 18, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.deal-brand {
+  margin: 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-2);
+}
+
+.deal-model {
+  margin: 0.15rem 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.deal-meta,
+.deal-retailer {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.deal-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deal-price {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.deal-discount {
+  background: #e8f7f2;
+  color: #125f51;
+  border-radius: 999px;
+  padding: 0.3rem 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.deal-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.deal-actions a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+}
+
+.filter-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.7rem;
+}
+
+.filter-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.82rem;
+  gap: 0.3rem;
+  font-weight: 700;
+}
+
+.filter-grid input,
+.filter-grid select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.52rem;
+  font: inherit;
+  background: #fff;
+}
+
+.result-count {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.offer-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(21, 21, 18, 0.06);
+}
+
+.offer-table th,
+.offer-table td {
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding: 0.72rem;
+  font-size: 0.9rem;
+}
+
+.offer-table th {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.site-footer {
+  margin-top: 1.3rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.legal-links {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 0.8rem;
+  }
+  .site-header {
+    border-radius: 12px;
+  }
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

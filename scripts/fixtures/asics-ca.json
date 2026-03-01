@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://www.asics.com/ca/en-ca/gel-kayano-30/p/1011B548-001.html",
+    "titleRaw": "ASICS Gel-Kayano 30 Running Shoes",
+    "brand": "ASICS",
+    "modelRaw": "Gel-Kayano 30",
+    "gender": "unisex",
+    "category": "running",
+    "priceCurrent": 179.99,
+    "priceOriginal": 229.99,
+    "inStock": true,
+    "identifiers": {
+      "sku": "ASICS-GK30-M-001",
+      "gtin": "193604233001"
+    }
+  }
+]

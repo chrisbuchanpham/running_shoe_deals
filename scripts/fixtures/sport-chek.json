@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.sportchek.ca/en/pdp/nike-pegasus-41-mens-running-shoe",
+    "titleRaw": "Nike Pegasus 41 Men's Running Shoes",
+    "brand": "Nike",
+    "modelRaw": "Pegasus 41",
+    "gender": "men",
+    "category": "running",
+    "priceCurrent": 164.99,
+    "priceOriginal": 189.99,
+    "inStock": true,
+    "identifiers": {
+      "sku": "NIKE-PEG41-M-201"
+    }
+  }
+]

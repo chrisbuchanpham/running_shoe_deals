@@ -1,0 +1,111 @@
+[
+  {
+    "id": "running-room",
+    "name": "Running Room",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.runningroom.com",
+    "logoUrl": "https://www.runningroom.com/favicon.ico",
+    "shippingNotes": "Free shipping thresholds vary by promo.",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "sport-chek",
+    "name": "Sport Chek",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.sportchek.ca",
+    "logoUrl": "https://www.sportchek.ca/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "mec",
+    "name": "MEC",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.mec.ca",
+    "logoUrl": "https://www.mec.ca/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "altitude-sports",
+    "name": "Altitude Sports",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.altitude-sports.com",
+    "logoUrl": "https://www.altitude-sports.com/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "the-last-hunt",
+    "name": "The Last Hunt",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.thelasthunt.com",
+    "logoUrl": "https://www.thelasthunt.com/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "blacktoe",
+    "name": "BlackToe Running",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.blacktoerunning.com",
+    "logoUrl": "https://www.blacktoerunning.com/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "soles",
+    "name": "Soles",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://shop.sportinglife.ca",
+    "logoUrl": "https://shop.sportinglife.ca/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "nike-ca",
+    "name": "Nike Canada",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.nike.com/ca",
+    "logoUrl": "https://www.nike.com/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "adidas-ca",
+    "name": "adidas Canada",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.adidas.ca",
+    "logoUrl": "https://www.adidas.ca/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "asics-ca",
+    "name": "ASICS Canada",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.asics.com/ca/en-ca",
+    "logoUrl": "https://www.asics.com/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "new-balance-ca",
+    "name": "New Balance Canada",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.newbalance.ca",
+    "logoUrl": "https://www.newbalance.ca/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  },
+  {
+    "id": "brooks-ca",
+    "name": "Brooks Canada",
+    "country": "CA",
+    "currency": "CAD",
+    "homepageUrl": "https://www.brooksrunning.com/en_ca",
+    "logoUrl": "https://www.brooksrunning.com/favicon.ico",
+    "lastCrawledAt": "2026-03-01T12:00:00.000Z"
+  }
+]

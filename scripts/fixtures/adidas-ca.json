@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.adidas.ca/en/adizero-boston-12-running-shoes",
+    "titleRaw": "adidas Adizero Boston 12 Running Shoes",
+    "brand": "adidas",
+    "modelRaw": "Adizero Boston 12",
+    "gender": "unisex",
+    "category": "running",
+    "priceCurrent": 149.0,
+    "priceOriginal": 189.0,
+    "inStock": true,
+    "identifiers": {
+      "sku": "ADI-BOS12-U-400"
+    }
+  }
+]

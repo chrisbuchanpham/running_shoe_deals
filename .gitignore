@@ -1,0 +1,7 @@
+node_modules
+dist
+coverage
+.DS_Store
+*.log
+.tools/
+__codex_run_script.ps1
