@@ -1,0 +1,208 @@
+{
+  "generatedAt": "2026-03-02T14:39:54.280Z",
+  "thresholds": {
+    "perRetailerRecall": 0.9,
+    "aggregateRecall": 0.93,
+    "fixtureUsageRate": 0.1
+  },
+  "perRetailerRecall": {
+    "adidas-ca": 1,
+    "altitude-sports": 1,
+    "asics-ca": 1,
+    "blacktoe": 1,
+    "brooks-ca": 1,
+    "hoka-ca": 1,
+    "mec": 1,
+    "new-balance-ca": 1,
+    "nike-ca": 1,
+    "on-running-ca": 1,
+    "running-room": 1,
+    "salomon-ca": 1,
+    "saucony-ca": 1,
+    "soles": 1,
+    "sport-chek": 1,
+    "the-last-hunt": 1,
+    "under-armour-ca": 1
+  },
+  "aggregateRecall": 1,
+  "fixtureUsageRate": 0.3529,
+  "retailers": [
+    {
+      "retailerId": "adidas-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "altitude-sports",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "asics-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "blacktoe",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "brooks-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "hoka-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "mec",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "new-balance-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "nike-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "on-running-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "running-room",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "salomon-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "saucony-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "soles",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "sport-chek",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "the-last-hunt",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    },
+    {
+      "retailerId": "under-armour-ca",
+      "expected": 1,
+      "matched": 1,
+      "recall": 1,
+      "threshold": 0.9,
+      "pass": true,
+      "consecutiveFailures": 0,
+      "autoDisabled": false
+    }
+  ],
+  "breaches": [
+    {
+      "scope": "fixture",
+      "recall": 0.3529,
+      "threshold": 0.1
+    }
+  ]
+}

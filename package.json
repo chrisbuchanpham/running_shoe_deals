@@ -14,7 +14,8 @@
     "test:watch": "vitest",
     "ingest": "tsx scripts/ingest.ts",
     "validate:data": "tsx scripts/validate-data.ts",
-    "refresh:data": "tsx scripts/ingest.ts && tsx scripts/validate-data.ts"
+    "refresh:data": "tsx scripts/ingest.ts && tsx scripts/validate-data.ts",
+    "coverage:audit": "tsx scripts/coverage/audit.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

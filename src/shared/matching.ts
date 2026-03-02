@@ -1,4 +1,9 @@
-import { normalizeBrand, normalizeModel, splitTokens } from "./normalization";
+import {
+  normalizeBrand,
+  normalizeIdentifiers,
+  normalizeModel,
+  splitTokens
+} from "./normalization";
 
 export type MatchCandidate = {
   brand?: string;
@@ -45,16 +50,18 @@ export function resolveShoeMatch(
   candidate: MatchCandidate,
   knownShoes: CanonicalShoeIndex[]
 ): { shoeId?: string; confidence: number; reason: "exact-id" | "model-fallback" | "none" } {
-  if (candidate.identifiers?.sku || candidate.identifiers?.gtin) {
+  const normalizedCandidateIdentifiers = normalizeIdentifiers(candidate.identifiers);
+  if (normalizedCandidateIdentifiers?.sku || normalizedCandidateIdentifiers?.gtin) {
     const exact = knownShoes.find((shoe) => {
+      const normalizedShoeIdentifiers = normalizeIdentifiers(shoe.identifiers);
       const skuMatch =
-        candidate.identifiers?.sku &&
-        shoe.identifiers?.sku &&
-        candidate.identifiers.sku === shoe.identifiers.sku;
+        normalizedCandidateIdentifiers.sku &&
+        normalizedShoeIdentifiers?.sku &&
+        normalizedCandidateIdentifiers.sku === normalizedShoeIdentifiers.sku;
       const gtinMatch =
-        candidate.identifiers?.gtin &&
-        shoe.identifiers?.gtin &&
-        candidate.identifiers.gtin === shoe.identifiers.gtin;
+        normalizedCandidateIdentifiers.gtin &&
+        normalizedShoeIdentifiers?.gtin &&
+        normalizedCandidateIdentifiers.gtin === normalizedShoeIdentifiers.gtin;
       return Boolean(skuMatch || gtinMatch);
     });
     if (exact) {
@@ -62,27 +69,33 @@ export function resolveShoeMatch(
     }
   }
 
-  const normalizedBrand = normalizeBrand(candidate.brand) ?? "";
+  const normalizedBrand = normalizeBrand(candidate.brand);
   const normalizedModel = normalizeModel(candidate.modelRaw);
-
-  const pool = knownShoes.filter(
-    (shoe) =>
-      shoe.category === candidate.category &&
-      normalizeBrand(shoe.brand) === normalizedBrand
-  );
+  const sameCategoryPool = knownShoes.filter((shoe) => shoe.category === candidate.category);
+  const pool = normalizedBrand
+    ? sameCategoryPool.filter((shoe) => normalizeBrand(shoe.brand) === normalizedBrand)
+    : sameCategoryPool;
+  const threshold = normalizedBrand ? 0.6 : 0.72;
+  const ambiguityDelta = normalizedBrand ? 0.04 : 0.08;
 
   let winner: CanonicalShoeIndex | undefined;
   let winnerScore = 0;
+  let runnerUpScore = 0;
 
   for (const shoe of pool) {
     const score = calculateFallbackConfidence(normalizedModel, shoe.model);
     if (score > winnerScore) {
+      runnerUpScore = winnerScore;
       winner = shoe;
       winnerScore = score;
+      continue;
+    }
+    if (score > runnerUpScore) {
+      runnerUpScore = score;
     }
   }
 
-  if (winner && winnerScore >= 0.6) {
+  if (winner && winnerScore >= threshold && winnerScore - runnerUpScore >= ambiguityDelta) {
     return { shoeId: winner.shoeId, confidence: winnerScore, reason: "model-fallback" };
   }
 

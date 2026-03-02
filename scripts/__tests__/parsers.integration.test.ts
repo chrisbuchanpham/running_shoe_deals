@@ -10,6 +10,10 @@ describe("retailer parsers", () => {
       parser.config.allowScrape = false;
       const result = await parser.fetchOffers();
       expect(result.offers.length).toBeGreaterThan(0);
+      expect(result.sourceMode).toBe("fixture");
+      expect(result.pagesCrawled).toBe(0);
+      expect(result.discoveredCount).toBeGreaterThan(0);
+      expect(result.parsedCount).toBeGreaterThan(0);
 
       const first = result.offers[0];
       offerSchema.parse({

@@ -1,28 +1,225 @@
 {
-  "generatedAt": "2026-03-01T12:00:00.000Z",
+  "generatedAt": "2026-03-02T14:39:52.378Z",
   "staleAfterHours": 36,
   "stale": false,
   "counts": {
-    "retailers": 12,
-    "offers": 12,
-    "shoes": 7,
-    "deals": 7
+    "retailers": 17,
+    "offers": 890,
+    "shoes": 329,
+    "deals": 329
   },
   "parserHealth": [
-    { "retailerId": "running-room", "status": "ok", "offersCount": 1, "durationMs": 420, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "sport-chek", "status": "ok", "offersCount": 1, "durationMs": 421, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "mec", "status": "ok", "offersCount": 1, "durationMs": 399, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "altitude-sports", "status": "ok", "offersCount": 1, "durationMs": 388, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "the-last-hunt", "status": "ok", "offersCount": 1, "durationMs": 412, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "blacktoe", "status": "ok", "offersCount": 1, "durationMs": 390, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "soles", "status": "ok", "offersCount": 1, "durationMs": 391, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "nike-ca", "status": "ok", "offersCount": 1, "durationMs": 404, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "adidas-ca", "status": "ok", "offersCount": 1, "durationMs": 399, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "asics-ca", "status": "ok", "offersCount": 1, "durationMs": 405, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "new-balance-ca", "status": "ok", "offersCount": 1, "durationMs": 397, "warning": "Loaded fixture fallback for initial seed." },
-    { "retailerId": "brooks-ca", "status": "ok", "offersCount": 1, "durationMs": 406, "warning": "Loaded fixture fallback for initial seed." }
+    {
+      "retailerId": "running-room",
+      "status": "ok",
+      "offersCount": 59,
+      "durationMs": 4912,
+      "discoveredCount": 219,
+      "parsedCount": 59,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "sport-chek",
+      "status": "failed",
+      "offersCount": 1,
+      "warning": "Live extraction failed (page fetch failed (https://www.sportchek.ca/en/cat/shop-by-sport/running/running-shoes-DC2001110.html): This operation was aborted), loaded fixture data. Blocker hint: unknown.",
+      "durationMs": 129013,
+      "discoveredCount": 0,
+      "parsedCount": 1,
+      "pagesCrawled": 0,
+      "sourceMode": "fixture"
+    },
+    {
+      "retailerId": "mec",
+      "status": "ok",
+      "offersCount": 165,
+      "warning": "page fetch failed (https://www.mec.ca/en/products/running/running-and-training-footwear/running-shoes/mens?page=3): HTTP 404 on https://www.mec.ca/en/products/running/running-and-training-footwear/running-shoes/mens?page=3",
+      "durationMs": 3360,
+      "discoveredCount": 168,
+      "parsedCount": 165,
+      "pagesCrawled": 2,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "altitude-sports",
+      "status": "ok",
+      "offersCount": 48,
+      "durationMs": 1003,
+      "discoveredCount": 144,
+      "parsedCount": 48,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "the-last-hunt",
+      "status": "ok",
+      "offersCount": 67,
+      "durationMs": 829,
+      "discoveredCount": 201,
+      "parsedCount": 67,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "blacktoe",
+      "status": "ok",
+      "offersCount": 73,
+      "durationMs": 2521,
+      "discoveredCount": 75,
+      "parsedCount": 73,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "soles",
+      "status": "ok",
+      "offersCount": 13,
+      "durationMs": 335,
+      "discoveredCount": 13,
+      "parsedCount": 13,
+      "pagesCrawled": 1,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "nike-ca",
+      "status": "ok",
+      "offersCount": 17,
+      "warning": "page fetch failed (https://www.nike.com/ca/w/running-shoes-37v7jznik1zy7ok): This operation was aborted | Recovered via sitemap fallback (14 pages).",
+      "durationMs": 142752,
+      "discoveredCount": 132,
+      "parsedCount": 17,
+      "pagesCrawled": 16,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "adidas-ca",
+      "status": "failed",
+      "offersCount": 1,
+      "warning": "Live extraction failed (page fetch failed (https://www.adidas.ca/en/running-shoes): HTTP 403 on https://www.adidas.ca/en/running-shoes), loaded fixture data. Blocker hint: anti-bot.",
+      "durationMs": 44191,
+      "discoveredCount": 0,
+      "parsedCount": 1,
+      "pagesCrawled": 0,
+      "sourceMode": "fixture"
+    },
+    {
+      "retailerId": "asics-ca",
+      "status": "ok",
+      "offersCount": 52,
+      "durationMs": 28033,
+      "discoveredCount": 76,
+      "parsedCount": 52,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "new-balance-ca",
+      "status": "failed",
+      "offersCount": 1,
+      "warning": "Live extraction failed (page fetch failed (https://www.newbalance.ca/en_ca/shoes/running/): HTTP 403 on https://www.newbalance.ca/en_ca/shoes/running/), loaded fixture data. Blocker hint: anti-bot.",
+      "durationMs": 36842,
+      "discoveredCount": 0,
+      "parsedCount": 1,
+      "pagesCrawled": 0,
+      "sourceMode": "fixture"
+    },
+    {
+      "retailerId": "brooks-ca",
+      "status": "ok",
+      "offersCount": 30,
+      "durationMs": 4274,
+      "discoveredCount": 90,
+      "parsedCount": 30,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "hoka-ca",
+      "status": "failed",
+      "offersCount": 1,
+      "warning": "Live extraction failed (page fetch failed (https://www.hoka.com/en/ca/mens-running-shoes/): fetch failed), loaded fixture data. Blocker hint: unknown.",
+      "durationMs": 44889,
+      "discoveredCount": 0,
+      "parsedCount": 1,
+      "pagesCrawled": 0,
+      "sourceMode": "fixture"
+    },
+    {
+      "retailerId": "saucony-ca",
+      "status": "ok",
+      "offersCount": 322,
+      "durationMs": 923,
+      "discoveredCount": 978,
+      "parsedCount": 322,
+      "pagesCrawled": 3,
+      "sourceMode": "live"
+    },
+    {
+      "retailerId": "salomon-ca",
+      "status": "failed",
+      "offersCount": 1,
+      "warning": "Live extraction failed (page fetch failed (https://www.salomon.com/en-ca/c/sports/trail-running/trail-running-shoes): HTTP 403 on https://www.salomon.com/en-ca/c/sports/trail-running/trail-running-shoes), loaded fixture data. Blocker hint: anti-bot.",
+      "durationMs": 44325,
+      "discoveredCount": 0,
+      "parsedCount": 1,
+      "pagesCrawled": 0,
+      "sourceMode": "fixture"
+    },
+    {
+      "retailerId": "on-running-ca",
+      "status": "failed",
+      "offersCount": 1,
+      "warning": "No offers extracted from live pages, loaded fixture data. Blocker hint: selector-drift.",
+      "durationMs": 12638,
+      "discoveredCount": 0,
+      "parsedCount": 1,
+      "pagesCrawled": 2,
+      "sourceMode": "fixture"
+    },
+    {
+      "retailerId": "under-armour-ca",
+      "status": "ok",
+      "offersCount": 38,
+      "durationMs": 327,
+      "discoveredCount": 39,
+      "parsedCount": 38,
+      "pagesCrawled": 1,
+      "sourceMode": "live"
+    }
   ],
   "warnings": [
-    "All retailers are currently seeded with fixture data until scraper selectors are hardened."
-  ]
+    "sport-chek: Live extraction failed (page fetch failed (https://www.sportchek.ca/en/cat/shop-by-sport/running/running-shoes-DC2001110.html): This operation was aborted), loaded fixture data. Blocker hint: unknown.",
+    "mec: page fetch failed (https://www.mec.ca/en/products/running/running-and-training-footwear/running-shoes/mens?page=3): HTTP 404 on https://www.mec.ca/en/products/running/running-and-training-footwear/running-shoes/mens?page=3",
+    "nike-ca: page fetch failed (https://www.nike.com/ca/w/running-shoes-37v7jznik1zy7ok): This operation was aborted | Recovered via sitemap fallback (14 pages).",
+    "adidas-ca: Live extraction failed (page fetch failed (https://www.adidas.ca/en/running-shoes): HTTP 403 on https://www.adidas.ca/en/running-shoes), loaded fixture data. Blocker hint: anti-bot.",
+    "new-balance-ca: Live extraction failed (page fetch failed (https://www.newbalance.ca/en_ca/shoes/running/): HTTP 403 on https://www.newbalance.ca/en_ca/shoes/running/), loaded fixture data. Blocker hint: anti-bot.",
+    "hoka-ca: Live extraction failed (page fetch failed (https://www.hoka.com/en/ca/mens-running-shoes/): fetch failed), loaded fixture data. Blocker hint: unknown.",
+    "salomon-ca: Live extraction failed (page fetch failed (https://www.salomon.com/en-ca/c/sports/trail-running/trail-running-shoes): HTTP 403 on https://www.salomon.com/en-ca/c/sports/trail-running/trail-running-shoes), loaded fixture data. Blocker hint: anti-bot.",
+    "on-running-ca: No offers extracted from live pages, loaded fixture data. Blocker hint: selector-drift."
+  ],
+  "coverage": {
+    "perRetailerRecall": {
+      "adidas-ca": 1,
+      "altitude-sports": 1,
+      "asics-ca": 1,
+      "blacktoe": 1,
+      "brooks-ca": 1,
+      "hoka-ca": 1,
+      "mec": 1,
+      "new-balance-ca": 1,
+      "nike-ca": 1,
+      "on-running-ca": 1,
+      "running-room": 1,
+      "salomon-ca": 1,
+      "saucony-ca": 1,
+      "soles": 1,
+      "sport-chek": 1,
+      "the-last-hunt": 1,
+      "under-armour-ca": 1
+    },
+    "aggregateRecall": 1,
+    "fixtureUsageRate": 0.3529,
+    "fixtureUsageThreshold": 0.1
+  }
 }

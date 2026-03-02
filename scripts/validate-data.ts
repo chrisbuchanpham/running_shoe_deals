@@ -1,11 +1,13 @@
 import path from "node:path";
 import { readJsonFile } from "./lib/files";
 import {
+  coverageReportSchema,
   dealsFileSchema,
   metadataSchema,
   offersFileSchema,
   retailersFileSchema,
-  shoesFileSchema
+  shoesFileSchema,
+  type CoverageReport
 } from "../src/shared/contracts";
 
 function dataPath(file: string): string {
@@ -18,6 +20,19 @@ async function run(): Promise<void> {
   const shoes = shoesFileSchema.parse(await readJsonFile(dataPath("shoes.json")));
   const deals = dealsFileSchema.parse(await readJsonFile(dataPath("deals.json")));
   const metadata = metadataSchema.parse(await readJsonFile(dataPath("metadata.json")));
+  let coverage: CoverageReport | undefined;
+  try {
+    coverage = coverageReportSchema.parse(await readJsonFile(dataPath("coverage.json")));
+  } catch (error) {
+    if (
+      !error ||
+      typeof error !== "object" ||
+      !("code" in error) ||
+      (error as NodeJS.ErrnoException).code !== "ENOENT"
+    ) {
+      throw error;
+    }
+  }
 
   const retailerIds = new Set(retailers.map((retailer) => retailer.id));
   const offerIds = new Set(offers.map((offer) => offer.id));
@@ -47,9 +62,25 @@ async function run(): Promise<void> {
   if (metadata.counts.deals !== deals.length) {
     throw new Error("metadata.counts.deals does not match deals.json length.");
   }
+  if (metadata.coverage && coverage) {
+    if (metadata.coverage.aggregateRecall !== coverage.aggregateRecall) {
+      throw new Error("metadata.coverage.aggregateRecall does not match coverage.json.");
+    }
+    if (metadata.coverage.fixtureUsageRate !== coverage.fixtureUsageRate) {
+      throw new Error("metadata.coverage.fixtureUsageRate does not match coverage.json.");
+    }
+    if (typeof metadata.coverage.fixtureUsageThreshold !== "number") {
+      throw new Error("metadata.coverage.fixtureUsageThreshold is missing.");
+    }
+    if (metadata.coverage.fixtureUsageThreshold !== coverage.thresholds.fixtureUsageRate) {
+      throw new Error(
+        "metadata.coverage.fixtureUsageThreshold does not match coverage.json thresholds."
+      );
+    }
+  }
 
   console.log(
-    `[validate] ok: ${retailers.length} retailers, ${offers.length} offers, ${shoes.length} shoes, ${deals.length} deals`
+    `[validate] ok: ${retailers.length} retailers, ${offers.length} offers, ${shoes.length} shoes, ${deals.length} deals${coverage ? `, coverage ${coverage.aggregateRecall}` : ""}`
   );
 }
 

@@ -27,6 +27,9 @@ jobs:
       - name: Run ingestion and validation
         run: npm run refresh:data
 
+      - name: Run coverage audit gate
+        run: npm run coverage:audit
+
       - name: Detect data changes
         id: changes
         run: |

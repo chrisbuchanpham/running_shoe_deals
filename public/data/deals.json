@@ -1,58 +1,2364 @@
 [
   {
-    "shoeId": "shoe-gel-kayano-30",
-    "bestOfferId": "ofr-asics-gk30",
-    "bestPrice": 179.99,
+    "shoeId": "shoe_849e9b45bf9c",
+    "bestOfferId": "ofr_8e86bee56419",
+    "bestPrice": 65000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_8ec1694fdd31",
+    "bestOfferId": "ofr_daa60d8c0641",
+    "bestPrice": 37000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_c2e0eb5360f6",
+    "bestOfferId": "ofr_7447480d55c6",
+    "bestPrice": 36000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_2db0fd8bc956",
+    "bestOfferId": "ofr_7fdd409eee95",
+    "bestPrice": 32500,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_cb34d3811f22",
+    "bestOfferId": "ofr_b5f08f0f75c3",
+    "bestPrice": 28000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_09424f62f45c",
+    "bestOfferId": "ofr_0f01c2779862",
+    "bestPrice": 28000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_3a1df2ab7666",
+    "bestOfferId": "ofr_eb6178d946d7",
+    "bestPrice": 26500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_1dc541a44008",
+    "bestOfferId": "ofr_d5f9e2c741a9",
+    "bestPrice": 26000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_03684c7684ea",
+    "bestOfferId": "ofr_567e2704fdf0",
+    "bestPrice": 24500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_e43eefc970af",
+    "bestOfferId": "ofr_c2f140b73554",
+    "bestPrice": 24000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_3b9bcd9030ab",
+    "bestOfferId": "ofr_0475f8a64392",
+    "bestPrice": 24000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_fc6c519e92f3",
+    "bestOfferId": "ofr_8e85d7a65e9f",
+    "bestPrice": 23500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_58af3832c3a4",
+    "bestOfferId": "ofr_6dac25f6c6e7",
+    "bestPrice": 23500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_462996950378",
+    "bestOfferId": "ofr_46e845f1bbcf",
+    "bestPrice": 23000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_bf5249541dca",
+    "bestOfferId": "ofr_eb01a9188385",
+    "bestPrice": 22500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_96bc3c6fa016",
+    "bestOfferId": "ofr_50b736d772ac",
+    "bestPrice": 22500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_d16a6dcbfcd5",
+    "bestOfferId": "ofr_08d919208e4a",
+    "bestPrice": 22500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_b18f7462524f",
+    "bestOfferId": "ofr_e24b8f482705",
+    "bestPrice": 22000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_47a4ae013e97",
+    "bestOfferId": "ofr_9ac64986a37f",
+    "bestPrice": 22000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_8c195faf36d5",
+    "bestOfferId": "ofr_4cb0698f5178",
+    "bestPrice": 22000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_8db920f99487",
+    "bestOfferId": "ofr_478c50b81a25",
+    "bestPrice": 22000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_c75939945e59",
+    "bestOfferId": "ofr_d88f43c41572",
+    "bestPrice": 21000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_c188e3bcadf0",
+    "bestOfferId": "ofr_438a48b90250",
+    "bestPrice": 21000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_756c5d082aba",
+    "bestOfferId": "ofr_8f7657268669",
+    "bestPrice": 21000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_96d6bf09aee4",
+    "bestOfferId": "ofr_b5ef689c99e5",
+    "bestPrice": 21000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_b4a7bfe9e342",
+    "bestOfferId": "ofr_ec8ae3c5737f",
+    "bestPrice": 21000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_8aa4397c4dc0",
+    "bestOfferId": "ofr_93f008a773f9",
+    "bestPrice": 21000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_df323791df54",
+    "bestOfferId": "ofr_22088d4272e1",
+    "bestPrice": 20000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_15488d38f11f",
+    "bestOfferId": "ofr_676936b3435b",
+    "bestPrice": 20000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_e2f3ea4d49ab",
+    "bestOfferId": "ofr_44071f7af1c8",
+    "bestPrice": 20000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_2b0e4b22b8c6",
+    "bestOfferId": "ofr_a1b5078b0a4c",
+    "bestPrice": 20000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_1cbfd1c7f1d8",
+    "bestOfferId": "ofr_7da5e731ac4f",
+    "bestPrice": 20000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_d4dfc93f7e6d",
+    "bestOfferId": "ofr_c088305a71b0",
+    "bestPrice": 19500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_1843534b8f05",
+    "bestOfferId": "ofr_34a3d1851a6e",
+    "bestPrice": 19500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_a44f315793fc",
+    "bestOfferId": "ofr_a5c55baa39ab",
+    "bestPrice": 19000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_f1ff08cb8d6e",
+    "bestOfferId": "ofr_e7a6e0d68f46",
+    "bestPrice": 19000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_c027a3f6b028",
+    "bestOfferId": "ofr_7d0be4ea35c5",
+    "bestPrice": 19000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_84a08f5060fa",
+    "bestOfferId": "ofr_7744c48b8bc2",
+    "bestPrice": 19000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_38435d4da7b2",
+    "bestOfferId": "ofr_70a8b6091684",
+    "bestPrice": 19000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_02d6b92999f4",
+    "bestOfferId": "ofr_38bb0ee1248e",
+    "bestPrice": 19000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_04eac3d69d5a",
+    "bestOfferId": "ofr_0185832722f3",
+    "bestPrice": 18000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_e323b9ed4b8b",
+    "bestOfferId": "ofr_561611876f96",
+    "bestPrice": 18000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_f58e521b0380",
+    "bestOfferId": "ofr_73886c4e7ce6",
+    "bestPrice": 18000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_8f31c99d14ce",
+    "bestOfferId": "ofr_71d1d7b8863f",
+    "bestPrice": 18000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_91b04ee11785",
+    "bestOfferId": "ofr_203da9216c0d",
+    "bestPrice": 16700,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_e8cb3b42491d",
+    "bestOfferId": "ofr_f18eea43f346",
+    "bestPrice": 16000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_7ed970f9b471",
+    "bestOfferId": "ofr_642b06ee1206",
+    "bestPrice": 15900,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_1579c69c9fb5",
+    "bestOfferId": "ofr_1991df422236",
+    "bestPrice": 15800,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_67f69fe6044c",
+    "bestOfferId": "ofr_ffe8d6aa7985",
+    "bestPrice": 15600,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_4d4870c650b7",
+    "bestOfferId": "ofr_081dd9cf1532",
+    "bestPrice": 15200,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_2b99e7faf5fd",
+    "bestOfferId": "ofr_81e9ec694346",
+    "bestPrice": 15200,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_c4ff0f1c6684",
+    "bestOfferId": "ofr_62c588eb7bab",
+    "bestPrice": 15200,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_87ef69494d44",
+    "bestOfferId": "ofr_9763521deea6",
+    "bestPrice": 15000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_6ca84b78940c",
+    "bestOfferId": "ofr_2ba6086d6dbe",
+    "bestPrice": 14900,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_6817e6fa08ec",
+    "bestOfferId": "ofr_ff4c03372ce2",
+    "bestPrice": 14500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_5fafc9d5cfa4",
+    "bestOfferId": "ofr_32d3d08ba77a",
+    "bestPrice": 14500,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_a2e92a3acbb6",
+    "bestOfferId": "ofr_dc202a0506e8",
+    "bestPrice": 14400,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_e528cef8ff9a",
+    "bestOfferId": "ofr_438bc472bc30",
+    "bestPrice": 14400,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_ac8fd8731947",
+    "bestOfferId": "ofr_97db1281f9b2",
+    "bestPrice": 14400,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_1e25e6525b60",
+    "bestOfferId": "ofr_ef328c67924e",
+    "bestPrice": 14300,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_5c3b758ff9bc",
+    "bestOfferId": "ofr_2471ca6d91d4",
+    "bestPrice": 14000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_ff60023cd42d",
+    "bestOfferId": "ofr_1ba2b826f1ce",
+    "bestPrice": 13200,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_d27b061b1c5c",
+    "bestOfferId": "ofr_6f43b47903fb",
+    "bestPrice": 12000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_8d583d17c978",
+    "bestOfferId": "ofr_0964b0da0e4d",
+    "bestPrice": 12000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_387cf571c3e3",
+    "bestOfferId": "ofr_a06e3d4deff2",
+    "bestPrice": 12000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_b761444943a7",
+    "bestOfferId": "ofr_0231720108cc",
+    "bestPrice": 11600,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_7039b82ea84e",
+    "bestOfferId": "ofr_05815a35bf52",
+    "bestPrice": 11000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_e27c6b6d7c2d",
+    "bestOfferId": "ofr_8eaf13ef6f0f",
+    "bestPrice": 11000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_617272b8ac25",
+    "bestOfferId": "ofr_cc07c1fc2509",
+    "bestPrice": 10800,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_542cb43a805b",
+    "bestOfferId": "ofr_2401c4bd91a6",
+    "bestPrice": 10000,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_b47476e9475a",
+    "bestOfferId": "ofr_741bd6a76712",
+    "bestPrice": 370,
+    "offersCount": 11,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_d84606f371d4",
+    "bestOfferId": "ofr_7d8e99ed2b31",
+    "bestPrice": 369.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_172a6d7d9a8f",
+    "bestOfferId": "ofr_2226a35892c2",
+    "bestPrice": 349.99,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_d0915777d10a",
+    "bestOfferId": "ofr_3715c1de6aa3",
+    "bestPrice": 325,
+    "offersCount": 6,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_dc4b0eba7681",
+    "bestOfferId": "ofr_557e63139094",
+    "bestPrice": 324.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_a8417efd8961",
+    "bestOfferId": "ofr_5b77edc6bd3d",
+    "bestPrice": 294.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_2cf7c1208a6e",
+    "bestOfferId": "ofr_e6992d5cc831",
+    "bestPrice": 294.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_952749d9b4e7",
+    "bestOfferId": "ofr_d6933fad2830",
+    "bestPrice": 294.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_59f55a4b02fb",
+    "bestOfferId": "ofr_b7d745a89ed1",
+    "bestPrice": 294.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_07ae8f785a3b",
+    "bestOfferId": "ofr_e8faafae0a6f",
+    "bestPrice": 280,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a714b346a818",
+    "bestOfferId": "ofr_4a86453a2fb2",
+    "bestPrice": 260,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_b5466f5790b3",
+    "bestOfferId": "ofr_778104998ef2",
+    "bestPrice": 260,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_6e8c881114c6",
+    "bestOfferId": "ofr_bc3fefa10164",
+    "bestPrice": 249.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_3587cff76d4f",
+    "bestOfferId": "ofr_2c2fa70efd82",
+    "bestPrice": 249.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_23583add5700",
+    "bestOfferId": "ofr_deead6a2f3fd",
+    "bestPrice": 240,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f0223b127b12",
+    "bestOfferId": "ofr_bc70622af7c2",
+    "bestPrice": 240,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_1c6923cf3f5f",
+    "bestOfferId": "ofr_30dcef5a2025",
+    "bestPrice": 230,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_772d23e0c6bf",
+    "bestOfferId": "ofr_2ef4ecab2f95",
+    "bestPrice": 230,
+    "offersCount": 18,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_c55854b4f831",
+    "bestOfferId": "ofr_22645d510731",
+    "bestPrice": 230,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_76f8737a096d",
+    "bestOfferId": "ofr_e6b15819d356",
+    "bestPrice": 229.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_664dd530816a",
+    "bestOfferId": "ofr_3935fecf7bd8",
+    "bestPrice": 229.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_3d392b9d7722",
+    "bestOfferId": "ofr_cf4238ffbde0",
+    "bestPrice": 229.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_5aa9b9859454",
+    "bestOfferId": "ofr_ee856930c71d",
+    "bestPrice": 229.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_885e4dd53b37",
+    "bestOfferId": "ofr_7a26734ae770",
+    "bestPrice": 220,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_db3fcd353211",
+    "bestOfferId": "ofr_5196ec89ae08",
+    "bestPrice": 220,
+    "offersCount": 11,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_5471ae7047aa",
+    "bestOfferId": "ofr_c570b2574a9e",
+    "bestPrice": 220,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_ae283da133d9",
+    "bestOfferId": "ofr_68fbdb5cfe70",
+    "bestPrice": 219.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_16d598b606d1",
+    "bestOfferId": "ofr_70211e311a19",
+    "bestPrice": 219.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a506c38bd3e5",
+    "bestOfferId": "ofr_40621d156664",
+    "bestPrice": 219.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f74d1a699344",
+    "bestOfferId": "ofr_05975bb92aa2",
+    "bestPrice": 219.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f47bf90fb9b1",
+    "bestOfferId": "ofr_2c9d3a015450",
+    "bestPrice": 219.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_26682c5fa7fc",
+    "bestOfferId": "ofr_ecdc4bdbf435",
+    "bestPrice": 210,
     "offersCount": 3,
-    "maxDiscountPct": 21.74,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
+    "updatedAt": "2026-03-02T14:38:54.144Z"
   },
   {
-    "shoeId": "shoe-pegasus-41",
-    "bestOfferId": "ofr-nike-peg41",
-    "bestPrice": 159.99,
+    "shoeId": "shoe_149226d34585",
+    "bestOfferId": "ofr_63aad4c66aec",
+    "bestPrice": 210,
+    "offersCount": 12,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_13b1fa2eaa78",
+    "bestOfferId": "ofr_06192ddeccfd",
+    "bestPrice": 210,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_3a462c0b9cb0",
+    "bestOfferId": "ofr_a10ac9965822",
+    "bestPrice": 210,
+    "offersCount": 4,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_1f61c2375979",
+    "bestOfferId": "ofr_9e480ed85a23",
+    "bestPrice": 210,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_cd0d73c8e842",
+    "bestOfferId": "ofr_2e5f42e04a6e",
+    "bestPrice": 209.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_0e93a7036f8d",
+    "bestOfferId": "ofr_9ef00e559054",
+    "bestPrice": 209.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_1cee38f90346",
+    "bestOfferId": "ofr_1596a4d7f57d",
+    "bestPrice": 209.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f047e77ee4e0",
+    "bestOfferId": "ofr_809558a7637b",
+    "bestPrice": 209.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_3103cb14adf6",
+    "bestOfferId": "ofr_aa137eef3099",
+    "bestPrice": 209.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_5ef976add704",
+    "bestOfferId": "ofr_11a4f8c6d641",
+    "bestPrice": 204.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_2baf828c6f55",
+    "bestOfferId": "ofr_60b5b961d436",
+    "bestPrice": 200,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_11264d997f32",
+    "bestOfferId": "ofr_4cf5bbab9cb1",
+    "bestPrice": 199.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_07573719921e",
+    "bestOfferId": "ofr_904866c74491",
+    "bestPrice": 199.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_b5f44673bed5",
+    "bestOfferId": "ofr_79885da0e7fa",
+    "bestPrice": 199.99,
+    "offersCount": 1,
+    "maxDiscountPct": 9.1,
+    "updatedAt": "2026-03-02T14:39:51.624Z"
+  },
+  {
+    "shoeId": "shoe_7c4092c00565",
+    "bestOfferId": "ofr_60b61323d2b9",
+    "bestPrice": 199.95,
     "offersCount": 2,
-    "maxDiscountPct": 15.79,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
+    "updatedAt": "2026-03-02T14:33:44.744Z"
   },
   {
-    "shoeId": "shoe-fresh-foam-1080-v13",
-    "bestOfferId": "ofr-newbalance-1080v13",
+    "shoeId": "shoe_00787185320e",
+    "bestOfferId": "ofr_e7c4fe50ef76",
+    "bestPrice": 199.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_b09243c06508",
+    "bestOfferId": "ofr_782bc532aaa3",
+    "bestPrice": 199.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_62ff8831fdd1",
+    "bestOfferId": "ofr_9138d8fbe6c4",
+    "bestPrice": 199.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_21a85e2436a9",
+    "bestOfferId": "ofr_9d5583aaf2b0",
+    "bestPrice": 199.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a54679461379",
+    "bestOfferId": "ofr_d3e4542d5664",
+    "bestPrice": 199.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_6f96957b5357",
+    "bestOfferId": "ofr_5ab73f9c5469",
+    "bestPrice": 198.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_beb81d7104fc",
+    "bestOfferId": "ofr_3f5ee365743c",
+    "bestPrice": 198.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_0657c3f6b72a",
+    "bestOfferId": "ofr_d646941f56c4",
+    "bestPrice": 198.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_386d2ba1fda4",
+    "bestOfferId": "ofr_ef872827fa71",
+    "bestPrice": 194.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a9218919c8e9",
+    "bestOfferId": "ofr_8ea0c47f3ad9",
+    "bestPrice": 194.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_cd2a8468a2c0",
+    "bestOfferId": "ofr_1c1287f290b3",
+    "bestPrice": 194.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_2a56853cdd12",
+    "bestOfferId": "ofr_d732d758b0b5",
+    "bestPrice": 194.95,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_8dd96fb3cdd2",
+    "bestOfferId": "ofr_ebdabce45c30",
+    "bestPrice": 190,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_2cb5946bffff",
+    "bestOfferId": "ofr_45ad5c0f4352",
+    "bestPrice": 190,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_ab0e00f2c2bc",
+    "bestOfferId": "ofr_87e4fb5ee265",
+    "bestPrice": 190,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_a32fe005d56c",
+    "bestOfferId": "ofr_145cf5292d0c",
+    "bestPrice": 190,
+    "offersCount": 7,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_a84d74bdc987",
+    "bestOfferId": "ofr_d68efaf93b3a",
+    "bestPrice": 189.99,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_c57cc3487126",
+    "bestOfferId": "ofr_5d1c8210abdd",
+    "bestPrice": 189.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_62fa4c478fc7",
+    "bestOfferId": "ofr_9e1c23b5564b",
+    "bestPrice": 189.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_a70da8208ac7",
+    "bestOfferId": "ofr_ce1067bb7daf",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_4615e3278408",
+    "bestOfferId": "ofr_4a0adc18c5ce",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_58b39ec4224f",
+    "bestOfferId": "ofr_1f9dfd19ee6f",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_ee393f011fba",
+    "bestOfferId": "ofr_e068a6172319",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_152ab27b0b9b",
+    "bestOfferId": "ofr_10fe5fbed96b",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_7117f9e0cf68",
+    "bestOfferId": "ofr_0366f408ef5a",
+    "bestPrice": 189.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_7979ace0dca4",
+    "bestOfferId": "ofr_50997771fd2b",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f371be051a93",
+    "bestOfferId": "ofr_b2f6bfd37a58",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_d238e0994b4c",
+    "bestOfferId": "ofr_35ded822c035",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_eb81e42ff06b",
+    "bestOfferId": "ofr_32fe1a0ad5c2",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_43c42566cc87",
+    "bestOfferId": "ofr_19de5d85ffc6",
+    "bestPrice": 189.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_5bfcfde02f57",
+    "bestOfferId": "ofr_576fa239702b",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_2fe1b83c1700",
+    "bestOfferId": "ofr_c584680af8fb",
+    "bestPrice": 189.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_8be9eeb6e270",
+    "bestOfferId": "ofr_94c75cc85907",
+    "bestPrice": 189.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_33d39a102177",
+    "bestOfferId": "ofr_635a087de150",
+    "bestPrice": 189.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_23524d903b8f",
+    "bestOfferId": "ofr_af8afbcaaa1c",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_7645b742e3d4",
+    "bestOfferId": "ofr_852bdcf35a0c",
+    "bestPrice": 189.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_56d160267469",
+    "bestOfferId": "ofr_d3d5c7c20395",
+    "bestPrice": 189.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_60cf90bf09e0",
+    "bestOfferId": "ofr_04769464fea9",
+    "bestPrice": 189.94,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_cbc92f1fb0c2",
+    "bestOfferId": "ofr_6fe1b89fc532",
+    "bestPrice": 187,
+    "offersCount": 1,
+    "maxDiscountPct": 15,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_e6fc46327b93",
+    "bestOfferId": "ofr_2b4bae7f7edd",
+    "bestPrice": 184.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_4438caa77b3a",
+    "bestOfferId": "ofr_e899add305b9",
+    "bestPrice": 184.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_41246f8a5268",
+    "bestOfferId": "ofr_baa92d06ed3f",
+    "bestPrice": 180,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_194ee17f7dd9",
+    "bestOfferId": "ofr_bdb2969311f3",
+    "bestPrice": 180,
+    "offersCount": 7,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_83bbbea058ef",
+    "bestOfferId": "ofr_780e8bb86ae2",
+    "bestPrice": 180,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_f7d4c379eb8f",
+    "bestOfferId": "ofr_fd2cd3b63acf",
+    "bestPrice": 180,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_35573d849e1a",
+    "bestOfferId": "ofr_e2d32f9daa1e",
+    "bestPrice": 180,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_443fa8362826",
+    "bestOfferId": "ofr_0e606a050b72",
+    "bestPrice": 180,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_894d765c6619",
+    "bestOfferId": "ofr_bae83ae793d7",
+    "bestPrice": 180,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_89cbab23fcb7",
+    "bestOfferId": "ofr_9bb62d6f0034",
+    "bestPrice": 180,
+    "offersCount": 4,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_1adf79df2a04",
+    "bestOfferId": "ofr_3bc1c5245e3e",
+    "bestPrice": 180,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_b86511a8c064",
+    "bestOfferId": "ofr_6777799060b0",
+    "bestPrice": 180,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_db7d89ace82a",
+    "bestOfferId": "ofr_5159da4c14b0",
+    "bestPrice": 180,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_b7c68dd8a1e5",
+    "bestOfferId": "ofr_de395f763351",
+    "bestPrice": 180,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_bf98f099a15a",
+    "bestOfferId": "ofr_aa7533942ded",
+    "bestPrice": 179.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_e074deb916fc",
+    "bestOfferId": "ofr_1cc606f538bc",
+    "bestPrice": 179.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_bf70f2dced20",
+    "bestOfferId": "ofr_b5a52bdcf848",
+    "bestPrice": 179.99,
+    "offersCount": 1,
+    "maxDiscountPct": 14.29,
+    "updatedAt": "2026-03-02T14:39:38.723Z"
+  },
+  {
+    "shoeId": "shoe_bad1cbbc33dd",
+    "bestOfferId": "ofr_f4b91a94f9d0",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_613daed3fb3e",
+    "bestOfferId": "ofr_e9b74244006a",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f75b394843f5",
+    "bestOfferId": "ofr_270db6042a20",
+    "bestPrice": 179.95,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_05b9e2017549",
+    "bestOfferId": "ofr_69d6931eb675",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_8c6ad262119a",
+    "bestOfferId": "ofr_089bf9fcf540",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_391344f32dea",
+    "bestOfferId": "ofr_ff73b39267cd",
+    "bestPrice": 179.95,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_41328025474d",
+    "bestOfferId": "ofr_41f831591c39",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_dd0c84a44a85",
+    "bestOfferId": "ofr_212163b7acce",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_d2c017d20c72",
+    "bestOfferId": "ofr_60d37e5c6b1d",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_4ee552136edb",
+    "bestOfferId": "ofr_e034a7fe65de",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f7a22608de54",
+    "bestOfferId": "ofr_ae3d0e8332ce",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a86f732bcdb4",
+    "bestOfferId": "ofr_e857f4d5bc97",
+    "bestPrice": 179.95,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_27e768f25dc7",
+    "bestOfferId": "ofr_513396dedfbb",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_d7e906dd4ccb",
+    "bestOfferId": "ofr_aee37844d173",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_da92cb3983bb",
+    "bestOfferId": "ofr_029348fe791d",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_4460d25a0a64",
+    "bestOfferId": "ofr_a3a931e25a4f",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_8590d01b7a62",
+    "bestOfferId": "ofr_97fb0da322b6",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_bd0f2bda3826",
+    "bestOfferId": "ofr_dd9ca3860586",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_02f73e3f52bb",
+    "bestOfferId": "ofr_5cd98f4ab32f",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_9cb11641ff5a",
+    "bestOfferId": "ofr_e9dbc98a1737",
+    "bestPrice": 179.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_03d38049ffde",
+    "bestOfferId": "ofr_ccb42dae8816",
+    "bestPrice": 179.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_c0d39e08e03f",
+    "bestOfferId": "ofr_c9a838771614",
+    "bestPrice": 174.99,
+    "offersCount": 1,
+    "maxDiscountPct": 7.9,
+    "updatedAt": "2026-03-02T14:38:52.970Z"
+  },
+  {
+    "shoeId": "shoe_964155c9040b",
+    "bestOfferId": "ofr_64cd5da2f24c",
+    "bestPrice": 170,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_4f1230501f71",
+    "bestOfferId": "ofr_cb8861843da4",
+    "bestPrice": 170,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_eb5899c7710c",
+    "bestOfferId": "ofr_41d4fda9eb80",
+    "bestPrice": 170,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_fb9c78ff5793",
+    "bestOfferId": "ofr_73f4957d8084",
     "bestPrice": 169.99,
     "offersCount": 2,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_fc7ba41dc545",
+    "bestOfferId": "ofr_3ee5cb2aabb8",
+    "bestPrice": 169.99,
+    "offersCount": 1,
     "maxDiscountPct": 19.05,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
+    "updatedAt": "2026-03-02T14:38:03.301Z"
   },
   {
-    "shoeId": "shoe-speedgoat-6",
-    "bestOfferId": "ofr-altitude-speedgoat6",
-    "bestPrice": 169.99,
-    "offersCount": 1,
-    "maxDiscountPct": 12.82,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
+    "shoeId": "shoe_a44787d1cf66",
+    "bestOfferId": "ofr_2234fcfa05d8",
+    "bestPrice": 169.95,
+    "offersCount": 10,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
   },
   {
-    "shoeId": "shoe-peregrine-14",
-    "bestOfferId": "ofr-lasthunt-peregrine14",
-    "bestPrice": 129.99,
-    "offersCount": 1,
-    "maxDiscountPct": 27.78,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
-  },
-  {
-    "shoeId": "shoe-ghost-16",
-    "bestOfferId": "ofr-soles-ghost16",
-    "bestPrice": 149.99,
+    "shoeId": "shoe_18c7498b38e5",
+    "bestOfferId": "ofr_c56ad2ba4902",
+    "bestPrice": 168,
     "offersCount": 2,
-    "maxDiscountPct": 16.67,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
+    "maxDiscountPct": 30,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
   },
   {
-    "shoeId": "shoe-adizero-boston-12",
-    "bestOfferId": "ofr-adidas-boston12",
+    "shoeId": "shoe_4acbd165501b",
+    "bestOfferId": "ofr_6a1bb857b42b",
+    "bestPrice": 165,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_e2bf241c0f4e",
+    "bestOfferId": "ofr_3696bd022f70",
+    "bestPrice": 164.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_d0da54de44a1",
+    "bestOfferId": "ofr_746159dd7659",
+    "bestPrice": 164.99,
+    "offersCount": 1,
+    "maxDiscountPct": 13.16,
+    "updatedAt": "2026-03-02T14:33:41.126Z"
+  },
+  {
+    "shoeId": "shoe_4acff4b8cd5e",
+    "bestOfferId": "ofr_5983bea65231",
+    "bestPrice": 160,
+    "offersCount": 4,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_ed989f774840",
+    "bestOfferId": "ofr_0bc878b9b400",
+    "bestPrice": 156.8,
+    "offersCount": 1,
+    "maxDiscountPct": 44,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_d2e0ff1185be",
+    "bestOfferId": "ofr_188aafac6888",
+    "bestPrice": 154.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_1f5b5fe4a999",
+    "bestOfferId": "ofr_baa1137d69e1",
+    "bestPrice": 150,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_391101fb4837",
+    "bestOfferId": "ofr_a8726d358b22",
+    "bestPrice": 150,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_d0c4b639c2f0",
+    "bestOfferId": "ofr_01d17ee35b25",
+    "bestPrice": 150,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:37:26.202Z"
+  },
+  {
+    "shoeId": "shoe_d71d07bd4ae6",
+    "bestOfferId": "ofr_96f05f49689d",
+    "bestPrice": 150,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:37:26.202Z"
+  },
+  {
+    "shoeId": "shoe_7a52e7b3561b",
+    "bestOfferId": "ofr_9c3ebd3f0bf6",
+    "bestPrice": 150,
+    "offersCount": 1,
+    "maxDiscountPct": 25,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_b4a8b87bb2a9",
+    "bestOfferId": "ofr_e81b4f1025bc",
+    "bestPrice": 149.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_16c911b0aab0",
+    "bestOfferId": "ofr_518ddf6d363b",
+    "bestPrice": 149.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f47b26f35ca1",
+    "bestOfferId": "ofr_345955b0bcb4",
+    "bestPrice": 149.55,
+    "offersCount": 2,
+    "maxDiscountPct": 40.17,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_4c5dd776997a",
+    "bestOfferId": "ofr_7af8137d9f6a",
     "bestPrice": 149,
     "offersCount": 1,
-    "maxDiscountPct": 21.16,
-    "updatedAt": "2026-03-01T12:00:00.000Z"
+    "maxDiscountPct": 21.17,
+    "updatedAt": "2026-03-02T14:36:57.912Z"
+  },
+  {
+    "shoeId": "shoe_b178f2af1d98",
+    "bestOfferId": "ofr_a75f9c2ad541",
+    "bestPrice": 146.95,
+    "offersCount": 11,
+    "maxDiscountPct": 30.03,
+    "updatedAt": "2026-03-02T14:38:07.829Z"
+  },
+  {
+    "shoeId": "shoe_266e47d2d8c9",
+    "bestOfferId": "ofr_3b5ea1a9e7fd",
+    "bestPrice": 146.93,
+    "offersCount": 2,
+    "maxDiscountPct": 30.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_42209b3ff485",
+    "bestOfferId": "ofr_00f5a8414601",
+    "bestPrice": 146.93,
+    "offersCount": 2,
+    "maxDiscountPct": 30.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_e125a8a272d0",
+    "bestOfferId": "ofr_437eebed32d7",
+    "bestPrice": 139.95,
+    "offersCount": 1,
+    "maxDiscountPct": 44.01,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f4734f8ae22b",
+    "bestOfferId": "ofr_3fef53416805",
+    "bestPrice": 134.98,
+    "offersCount": 1,
+    "maxDiscountPct": 6.9,
+    "updatedAt": "2026-03-02T14:33:50.459Z"
+  },
+  {
+    "shoeId": "shoe_76b003319dc2",
+    "bestOfferId": "ofr_1a42c59f4984",
+    "bestPrice": 134.98,
+    "offersCount": 1,
+    "maxDiscountPct": 6.9,
+    "updatedAt": "2026-03-02T14:33:50.459Z"
+  },
+  {
+    "shoeId": "shoe_9bae1e7f6b37",
+    "bestOfferId": "ofr_30f7bae0c9cf",
+    "bestPrice": 134.98,
+    "offersCount": 1,
+    "maxDiscountPct": 6.9,
+    "updatedAt": "2026-03-02T14:33:50.459Z"
+  },
+  {
+    "shoeId": "shoe_42c4fb57b859",
+    "bestOfferId": "ofr_bc6e0dc609c5",
+    "bestPrice": 134.98,
+    "offersCount": 1,
+    "maxDiscountPct": 6.9,
+    "updatedAt": "2026-03-02T14:33:50.459Z"
+  },
+  {
+    "shoeId": "shoe_2a73268e3964",
+    "bestOfferId": "ofr_bd19cce63469",
+    "bestPrice": 134.98,
+    "offersCount": 2,
+    "maxDiscountPct": 6.9,
+    "updatedAt": "2026-03-02T14:33:50.459Z"
+  },
+  {
+    "shoeId": "shoe_ba97f4a2f812",
+    "bestOfferId": "ofr_eef11821a4f1",
+    "bestPrice": 134.95,
+    "offersCount": 6,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_d44000bd8bac",
+    "bestOfferId": "ofr_ef736cc78c24",
+    "bestPrice": 130,
+    "offersCount": 4,
+    "maxDiscountPct": 4.77,
+    "updatedAt": "2026-03-02T14:38:07.829Z"
+  },
+  {
+    "shoeId": "shoe_5e8dd2c4d6c5",
+    "bestOfferId": "ofr_f9a51abd7703",
+    "bestPrice": 129.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_5df760263e0e",
+    "bestOfferId": "ofr_ac15a5d53544",
+    "bestPrice": 129.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_4249123b0b94",
+    "bestOfferId": "ofr_cc48bf89dc2b",
+    "bestPrice": 127.96,
+    "offersCount": 1,
+    "maxDiscountPct": 36.01,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_95f50a7485ae",
+    "bestOfferId": "ofr_c7376b048a76",
+    "bestPrice": 127.95,
+    "offersCount": 15,
+    "maxDiscountPct": 30.03,
+    "updatedAt": "2026-03-02T14:38:07.829Z"
+  },
+  {
+    "shoeId": "shoe_7eded66da2d3",
+    "bestOfferId": "ofr_de779953b113",
+    "bestPrice": 125.98,
+    "offersCount": 7,
+    "maxDiscountPct": 16.01,
+    "updatedAt": "2026-03-02T14:33:50.459Z"
+  },
+  {
+    "shoeId": "shoe_ee2b105e51de",
+    "bestOfferId": "ofr_27b03591b96b",
+    "bestPrice": 125,
+    "offersCount": 13,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_91889d993541",
+    "bestOfferId": "ofr_8a543e716a27",
+    "bestPrice": 125,
+    "offersCount": 7,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_b8c2a701333f",
+    "bestOfferId": "ofr_515dc9cb0a65",
+    "bestPrice": 125,
+    "offersCount": 8,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_c0e3ea73e9da",
+    "bestOfferId": "ofr_4499f6b8720d",
+    "bestPrice": 121.56,
+    "offersCount": 2,
+    "maxDiscountPct": 36.01,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_671ea19e50ac",
+    "bestOfferId": "ofr_d25633563557",
+    "bestPrice": 119.95,
+    "offersCount": 1,
+    "maxDiscountPct": 40.03,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_5fe89b2fbf7e",
+    "bestOfferId": "ofr_4fee90b06624",
+    "bestPrice": 119.36,
+    "offersCount": 1,
+    "maxDiscountPct": 40.01,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_9f10895ea663",
+    "bestOfferId": "ofr_7b3f825f37b0",
+    "bestPrice": 119.36,
+    "offersCount": 1,
+    "maxDiscountPct": 40.01,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_50aad3d9a7bf",
+    "bestOfferId": "ofr_ac4a4005ec31",
+    "bestPrice": 115.15,
+    "offersCount": 1,
+    "maxDiscountPct": 36.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a033e3c10e5d",
+    "bestOfferId": "ofr_a1b2466b3f90",
+    "bestPrice": 115.15,
+    "offersCount": 1,
+    "maxDiscountPct": 36.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_7f7a84e0e092",
+    "bestOfferId": "ofr_f3b16d7297b0",
+    "bestPrice": 115.15,
+    "offersCount": 2,
+    "maxDiscountPct": 42.13,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_1a05d60e2c1b",
+    "bestOfferId": "ofr_ea7d1df91745",
+    "bestPrice": 115,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_3a09146fc8b9",
+    "bestOfferId": "ofr_79ce2d5e7bf4",
+    "bestPrice": 113.55,
+    "offersCount": 1,
+    "maxDiscountPct": 40.23,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_58efa1685cbf",
+    "bestOfferId": "ofr_73f1c964c554",
+    "bestPrice": 112,
+    "offersCount": 2,
+    "maxDiscountPct": 35.99,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_3d042a6b6960",
+    "bestOfferId": "ofr_c9be797f0e21",
+    "bestPrice": 110,
+    "offersCount": 8,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_a689f87b3631",
+    "bestOfferId": "ofr_fb52cc06dbe1",
+    "bestPrice": 110,
+    "offersCount": 4,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_d42f44770942",
+    "bestOfferId": "ofr_9af738ea7387",
+    "bestPrice": 107.95,
+    "offersCount": 3,
+    "maxDiscountPct": 40.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_245349c5396b",
+    "bestOfferId": "ofr_ecceb13ab291",
+    "bestPrice": 107.95,
+    "offersCount": 1,
+    "maxDiscountPct": 40.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_7f0708922c0d",
+    "bestOfferId": "ofr_ce2caabbcd4c",
+    "bestPrice": 105.6,
+    "offersCount": 2,
+    "maxDiscountPct": 35.99,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_1472aded4f36",
+    "bestOfferId": "ofr_e7802e22c51a",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_4fa3394c4496",
+    "bestOfferId": "ofr_21f787881a00",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_3169168a839a",
+    "bestOfferId": "ofr_d57707f388d4",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_360906105398",
+    "bestOfferId": "ofr_22cb0562bedd",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_1a561f5835f0",
+    "bestOfferId": "ofr_d272d06268eb",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_5365e8ee5e64",
+    "bestOfferId": "ofr_c406fd587fea",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_72d7812feaee",
+    "bestOfferId": "ofr_e5477d9aef4b",
+    "bestPrice": 105,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_749bbac32380",
+    "bestOfferId": "ofr_eeb586cd4cbd",
+    "bestPrice": 101.55,
+    "offersCount": 2,
+    "maxDiscountPct": 40.25,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f9d81382f935",
+    "bestOfferId": "ofr_484083961cc7",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "maxDiscountPct": 33.34,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_466395c960e0",
+    "bestOfferId": "ofr_9a2802c259c0",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_f2eba79060f0",
+    "bestOfferId": "ofr_228dbd5ba984",
+    "bestPrice": 100,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_4e0ca4192d72",
+    "bestOfferId": "ofr_978226d57702",
+    "bestPrice": 100,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_fee815aaded2",
+    "bestOfferId": "ofr_84fc0a7cff58",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "maxDiscountPct": 33.34,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_a54052d8e183",
+    "bestOfferId": "ofr_beac50101daa",
+    "bestPrice": 100,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_1a5e6da21b8a",
+    "bestOfferId": "ofr_c0d8142b1ecc",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_79bd1b3a13f7",
+    "bestOfferId": "ofr_1d6eaa3bcf53",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_bfb8f516a87e",
+    "bestOfferId": "ofr_388ad99ff71a",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_8c71386fe0a4",
+    "bestOfferId": "ofr_7d691ba9e362",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_e5dc729069ac",
+    "bestOfferId": "ofr_024a676d881c",
+    "bestPrice": 100,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_6cda0a9222d2",
+    "bestOfferId": "ofr_083439b06bc9",
+    "bestPrice": 95.95,
+    "offersCount": 1,
+    "maxDiscountPct": 52.02,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_3e7a2591bfd8",
+    "bestOfferId": "ofr_231d02cde84b",
+    "bestPrice": 95.95,
+    "offersCount": 7,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_e19d07a70640",
+    "bestOfferId": "ofr_3b72670f183a",
+    "bestPrice": 95.95,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_8a368b48aa9f",
+    "bestOfferId": "ofr_9311faed70e6",
+    "bestPrice": 91.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_a022c35ea9f2",
+    "bestOfferId": "ofr_71bd51a27668",
+    "bestPrice": 85.95,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_af26abf149b3",
+    "bestOfferId": "ofr_87c316e79486",
+    "bestPrice": 80,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_33344a23a7af",
+    "bestOfferId": "ofr_6dbf088b095d",
+    "bestPrice": 80,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_aa50427bb083",
+    "bestOfferId": "ofr_6434e78e5830",
+    "bestPrice": 79.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_6f517179e391",
+    "bestOfferId": "ofr_19c1e281b50f",
+    "bestPrice": 79.99,
+    "offersCount": 46,
+    "updatedAt": "2026-03-02T14:37:26.202Z"
+  },
+  {
+    "shoeId": "shoe_566fb142ac16",
+    "bestOfferId": "ofr_1adfb29caa4a",
+    "bestPrice": 79.95,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_fecd6ec5140a",
+    "bestOfferId": "ofr_ebc754703213",
+    "bestPrice": 79.94,
+    "offersCount": 2,
+    "maxDiscountPct": 50.03,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_16503a0a627f",
+    "bestOfferId": "ofr_d16d1baaaf50",
+    "bestPrice": 75.95,
+    "offersCount": 5,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_9835f482cafe",
+    "bestOfferId": "ofr_f7d27fc472a2",
+    "bestPrice": 75,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:49.872Z"
+  },
+  {
+    "shoeId": "shoe_b94e5c7b8266",
+    "bestOfferId": "ofr_e54a36ea5127",
+    "bestPrice": 75,
+    "offersCount": 1,
+    "maxDiscountPct": 25,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_0635032ca67d",
+    "bestOfferId": "ofr_7279cd2a591b",
+    "bestPrice": 75,
+    "offersCount": 1,
+    "maxDiscountPct": 25,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_47ff2a483f05",
+    "bestOfferId": "ofr_a4865f28bd7d",
+    "bestPrice": 75,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_176093d92bed",
+    "bestOfferId": "ofr_04c817681ab0",
+    "bestPrice": 74.35,
+    "offersCount": 2,
+    "maxDiscountPct": 40.5,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_a52874e2d999",
+    "bestOfferId": "ofr_bf4ee23e514d",
+    "bestPrice": 69.99,
+    "offersCount": 18,
+    "maxDiscountPct": 12.52,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_7073039164d9",
+    "bestOfferId": "ofr_39a1f5aa2623",
+    "bestPrice": 69.95,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_022dd9ab90c3",
+    "bestOfferId": "ofr_50cc4be7ac36",
+    "bestPrice": 69.95,
+    "offersCount": 48,
+    "maxDiscountPct": 51.55,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_da7146c323ec",
+    "bestOfferId": "ofr_cb597a9be3fb",
+    "bestPrice": 69.95,
+    "offersCount": 48,
+    "maxDiscountPct": 51.55,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_682f94a04348",
+    "bestOfferId": "ofr_83ac946c05a7",
+    "bestPrice": 65,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_aaa55ea21a76",
+    "bestOfferId": "ofr_e7ed17e7bb96",
+    "bestPrice": 64.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_3513f30e45e5",
+    "bestOfferId": "ofr_a47fc7e152a4",
+    "bestPrice": 63.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_e589cf1c6a33",
+    "bestOfferId": "ofr_689985ff64f4",
+    "bestPrice": 59.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_0b702b5080a4",
+    "bestOfferId": "ofr_a3dcb993cbb6",
+    "bestPrice": 55,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:36:13.470Z"
+  },
+  {
+    "shoeId": "shoe_4fed5dbb6556",
+    "bestOfferId": "ofr_17d21225f7a0",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_e0a72babc22f",
+    "bestOfferId": "ofr_2971fce6d9c0",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_9248ade14b70",
+    "bestOfferId": "ofr_fd6a7ac63a27",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_906e3591bf13",
+    "bestOfferId": "ofr_09ff2ba75227",
+    "bestPrice": 50,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_350f4609f5fd",
+    "bestOfferId": "ofr_c0f270bd8769",
+    "bestPrice": 50,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_f22d90f3ba3b",
+    "bestOfferId": "ofr_8905ae21d733",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_07ac56fd0c88",
+    "bestOfferId": "ofr_fe479f16bd01",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_335dc3ed95a0",
+    "bestOfferId": "ofr_40bf6b3805f3",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:44.744Z"
+  },
+  {
+    "shoeId": "shoe_8d780e475a36",
+    "bestOfferId": "ofr_746368b422bd",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_be19a09f2197",
+    "bestOfferId": "ofr_d0a6c9906318",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_1599087b6d12",
+    "bestOfferId": "ofr_0fb5f2e2c4d0",
+    "bestPrice": 50,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_db78b5e12f2c",
+    "bestOfferId": "ofr_3a0b0dab559b",
+    "bestPrice": 40.95,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:38:54.144Z"
+  },
+  {
+    "shoeId": "shoe_d5d45a14ff05",
+    "bestOfferId": "ofr_26653d0e01b1",
+    "bestPrice": 35,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_3a71f8e255c9",
+    "bestOfferId": "ofr_ac6f7a9024ee",
+    "bestPrice": 30,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_bd12f10d42f1",
+    "bestOfferId": "ofr_dead1cdd19a5",
+    "bestPrice": 29.99,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_7b18b58eb99e",
+    "bestOfferId": "ofr_5ff02556721a",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_b7add0bee1d4",
+    "bestOfferId": "ofr_a530ee78752e",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_b6788cace435",
+    "bestOfferId": "ofr_2102536dccce",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_18e2042bc508",
+    "bestOfferId": "ofr_3938bd299ec2",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_4f001c126df8",
+    "bestOfferId": "ofr_e00a778a71e7",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_4e2f0225b8e5",
+    "bestOfferId": "ofr_d20e48385f9b",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_21fe5e9fb9dc",
+    "bestOfferId": "ofr_08f3d59e9537",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "maxDiscountPct": 50,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_ff7db70589dc",
+    "bestOfferId": "ofr_a73c05e8184a",
+    "bestPrice": 25,
+    "offersCount": 1,
+    "maxDiscountPct": 87.5,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_2d972acf29b6",
+    "bestOfferId": "ofr_e904f149aebb",
+    "bestPrice": 20,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_95915461f438",
+    "bestOfferId": "ofr_20a0d51a3cc8",
+    "bestPrice": 20,
+    "offersCount": 2,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_2b4b9348bd4b",
+    "bestOfferId": "ofr_3782658b1637",
+    "bestPrice": 20,
+    "offersCount": 4,
+    "updatedAt": "2026-03-02T14:39:52.208Z"
+  },
+  {
+    "shoeId": "shoe_b879671b9207",
+    "bestOfferId": "ofr_b9aba41b995c",
+    "bestPrice": 20,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_85d1641e4177",
+    "bestOfferId": "ofr_156a468e6e33",
+    "bestPrice": 20,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_c69b27e022fa",
+    "bestOfferId": "ofr_37cbf484d1b0",
+    "bestPrice": 20,
+    "offersCount": 3,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_ae5cfb68dbd3",
+    "bestOfferId": "ofr_88dc3b8d6df1",
+    "bestPrice": 20,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
+  },
+  {
+    "shoeId": "shoe_f195c5ceb8a6",
+    "bestOfferId": "ofr_888b2ab4684c",
+    "bestPrice": 1.59,
+    "offersCount": 21,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_cec4f0328baf",
+    "bestOfferId": "ofr_de5fef3902cd",
+    "bestPrice": 1.59,
+    "offersCount": 1,
+    "updatedAt": "2026-03-02T14:31:31.850Z"
+  },
+  {
+    "shoeId": "shoe_16a5dda6b6cd",
+    "bestOfferId": "ofr_a083ed3e99aa",
+    "bestPrice": 1.34,
+    "offersCount": 95,
+    "maxDiscountPct": 99.73,
+    "updatedAt": "2026-03-02T14:33:47.096Z"
   }
 ]

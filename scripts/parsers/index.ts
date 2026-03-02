@@ -10,6 +10,11 @@ import { adidasCaParser } from "./adidas-ca";
 import { asicsCaParser } from "./asics-ca";
 import { newBalanceCaParser } from "./new-balance-ca";
 import { brooksCaParser } from "./brooks-ca";
+import { hokaCaParser } from "./hoka-ca";
+import { sauconyCaParser } from "./saucony-ca";
+import { salomonCaParser } from "./salomon-ca";
+import { onRunningCaParser } from "./on-running-ca";
+import { underArmourCaParser } from "./under-armour-ca";
 
 export const parsers = [
   runningRoomParser,
@@ -23,5 +28,10 @@ export const parsers = [
   adidasCaParser,
   asicsCaParser,
   newBalanceCaParser,
-  brooksCaParser
+  brooksCaParser,
+  hokaCaParser,
+  sauconyCaParser,
+  salomonCaParser,
+  onRunningCaParser,
+  underArmourCaParser
 ];

@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-03-02T14:39:54.280Z",
+  "retailerConsecutiveFailures": {
+    "running-room": 0,
+    "sport-chek": 0,
+    "mec": 0,
+    "altitude-sports": 0,
+    "the-last-hunt": 0,
+    "blacktoe": 0,
+    "soles": 0,
+    "nike-ca": 0,
+    "adidas-ca": 0,
+    "asics-ca": 0,
+    "new-balance-ca": 0,
+    "brooks-ca": 0,
+    "hoka-ca": 0,
+    "saucony-ca": 0,
+    "salomon-ca": 0,
+    "on-running-ca": 0,
+    "under-armour-ca": 0
+  },
+  "aggregateConsecutiveFailures": 0
+}

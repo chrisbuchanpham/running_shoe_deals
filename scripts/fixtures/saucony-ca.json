@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.saucony.com/CA/en_CA/ride-17/59077M.html",
+    "titleRaw": "Saucony Ride 17 Running Shoes",
+    "brand": "Saucony",
+    "modelRaw": "Ride 17",
+    "gender": "men",
+    "category": "running",
+    "priceCurrent": 169.99,
+    "priceOriginal": 189.99,
+    "inStock": true,
+    "identifiers": {
+      "sku": "SAU-ride17-M-59077M"
+    }
+  }
+]

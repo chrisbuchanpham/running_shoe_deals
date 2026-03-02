@@ -1,6 +1,8 @@
 node_modules
 dist
 coverage
+!scripts/coverage/
+!scripts/coverage/**
 .DS_Store
 *.log
 .tools/

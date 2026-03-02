@@ -1,13 +1,39 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { fetchTextWithRetry } from "../lib/fetch";
+import { fetchPageWithRetry } from "../lib/fetch";
 import { readJsonFile } from "../lib/files";
 import { inferCategory, inferGender } from "../../src/shared/normalization";
-import type { RetailerConfig } from "../config/retailers";
-import type { ParsedRetailerResult, RawRetailerOffer, RetailerParser } from "./types";
+import type {
+  RetailerConfig,
+  RetailerExtractionHints,
+  RetailerHttpProfileConfig,
+  RetailerPaginationConfig
+} from "../config/retailers";
+import type {
+  ParsedRetailerResult,
+  RawRetailerOffer,
+  RetailerBlockerClassification,
+  RetailerParser
+} from "./types";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const DEFAULT_PAGINATION_CONFIG: RetailerPaginationConfig = {
+  strategy: "query",
+  pageParam: "page",
+  startPage: 2,
+  maxPages: 3
+};
+const DEFAULT_HTTP_PROFILE_CONFIG: RetailerHttpProfileConfig = {
+  profile: "default",
+  retries: 2,
+  timeoutMs: 12_000,
+  minDelayMs: 700
+};
+const PRICE_RE = /(?:CAD|CA\$|C\$|\$)\s*([0-9][0-9\s,]*(?:\s*[.,]\s*[0-9]{2})?)/gi;
+const SCRIPT_RE = /<script[^>]*>([\s\S]*?)<\/script>/gi;
+const JSON_LD_SCRIPT_RE = /<script[^>]*application\/ld\+json[^>]*>[\s\S]*?<\/script>/gi;
+const PRODUCT_LINK_RE = /<a\b[^>]*href=(["'])(.*?)\1[^>]*>([\s\S]*?)<\/a>/gi;
 
 function collectProductsFromJsonLd(node: unknown, out: any[]): void {
   if (!node || typeof node !== "object") return;
@@ -26,6 +52,53 @@ function collectProductsFromJsonLd(node: unknown, out: any[]): void {
   for (const value of Object.values(node as Record<string, unknown>)) {
     collectProductsFromJsonLd(value, out);
   }
+}
+
+function normalizeUrl(candidate: string, fallbackUrl: string): string {
+  try {
+    return new URL(candidate, fallbackUrl).toString();
+  } catch {
+    return fallbackUrl;
+  }
+}
+
+function numberFromUnknown(value: unknown): number | undefined {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const normalized = value
+      .replace(/&nbsp;/gi, " ")
+      .replace(/[^\d.,-]+/g, "")
+      .replace(/\s+/g, "")
+      .replace(/(\d),(\d{2})$/, "$1.$2")
+      .replace(/,/g, "");
+    if (!normalized) return undefined;
+    const parsed = Number(normalized);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return undefined;
+}
+
+function parsePriceList(snippet: string): number[] {
+  const text = stripTags(snippet).replace(/(\d)\s*[.,]\s*(\d{2})/g, "$1.$2");
+  const prices: number[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = PRICE_RE.exec(text)) !== null) {
+    const parsed = numberFromUnknown(match[1]);
+    if (typeof parsed === "number" && Number.isFinite(parsed) && parsed > 0) {
+      prices.push(parsed);
+    }
+  }
+  PRICE_RE.lastIndex = 0;
+  return prices;
+}
+
+function stripTags(value: string): string {
+  return value
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function productToRawOffer(product: any, fallbackUrl: string): RawRetailerOffer | undefined {
@@ -55,7 +128,7 @@ function productToRawOffer(product: any, fallbackUrl: string): RawRetailerOffer 
         : undefined;
 
   return {
-    url: product?.url ?? fallbackUrl,
+    url: normalizeUrl(product?.url ?? fallbackUrl, fallbackUrl),
     titleRaw,
     brand: brandRaw,
     modelRaw: product?.model ?? titleRaw,
@@ -74,8 +147,8 @@ function productToRawOffer(product: any, fallbackUrl: string): RawRetailerOffer 
   };
 }
 
-function extractOffersFromHtml(html: string, fallbackUrl: string): RawRetailerOffer[] {
-  const scripts = html.match(/<script[^>]*application\/ld\+json[^>]*>[\s\S]*?<\/script>/gi) ?? [];
+function extractJsonLdOffers(html: string, fallbackUrl: string): RawRetailerOffer[] {
+  const scripts = html.match(JSON_LD_SCRIPT_RE) ?? [];
   const products: any[] = [];
 
   for (const script of scripts) {
@@ -100,9 +173,619 @@ function extractOffersFromHtml(html: string, fallbackUrl: string): RawRetailerOf
   return rawOffers;
 }
 
+function extractProductCards(html: string, fallbackUrl: string): RawRetailerOffer[] {
+  const offers: RawRetailerOffer[] = [];
+  PRODUCT_LINK_RE.lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = PRODUCT_LINK_RE.exec(html)) !== null) {
+    const href = match[2];
+    const anchorContent = match[0];
+    const absoluteUrl = normalizeUrl(href, fallbackUrl);
+    const titleFromAttr =
+      /aria-label=(["'])(.*?)\1/i.exec(anchorContent)?.[2] ??
+      /title=(["'])(.*?)\1/i.exec(anchorContent)?.[2];
+    const titleRaw = stripTags(titleFromAttr ?? match[3]);
+    if (!titleRaw || titleRaw.length < 8) continue;
+
+    const windowStart = Math.max(0, (match.index ?? 0) - 400);
+    const windowEnd = Math.min(html.length, (match.index ?? 0) + anchorContent.length + 700);
+    const surrounding = html.slice(windowStart, windowEnd);
+    const surroundingText = stripTags(`${anchorContent} ${surrounding}`);
+    const prices = parsePriceList(surroundingText);
+    if (prices.length === 0) {
+      prices.push(...parsePriceList(titleRaw));
+    }
+    if (prices.length === 0) continue;
+
+    const uniqueSortedPrices = [...new Set(prices)].sort((a, b) => a - b);
+
+    const current = uniqueSortedPrices[0];
+    const original = uniqueSortedPrices.find((value) => value > current);
+
+    offers.push({
+      url: absoluteUrl,
+      titleRaw,
+      modelRaw: titleRaw,
+      brand: undefined,
+      category: inferCategory(titleRaw),
+      gender: inferGender(titleRaw),
+      priceCurrent: current,
+      priceOriginal: original,
+      inStock: !/out[-\s]?of[-\s]?stock|sold[-\s]?out/i.test(surroundingText),
+      identifiers: {
+        sku:
+          /(?:sku|product(?:[_\s-]?id)?)["':\s-]*([a-z0-9-]{4,})/i.exec(surrounding)?.[1] ??
+          undefined,
+        gtin: /(?:gtin|ean|upc)["':\s-]*([0-9]{8,14})/i.exec(surrounding)?.[1] ?? undefined
+      }
+    });
+  }
+  PRODUCT_LINK_RE.lastIndex = 0;
+
+  return offers;
+}
+
+function extractOfferLikeNodes(node: unknown, out: Record<string, unknown>[]): void {
+  if (!node || typeof node !== "object") return;
+  if (Array.isArray(node)) {
+    for (const child of node) {
+      extractOfferLikeNodes(child, out);
+    }
+    return;
+  }
+
+  const candidate = node as Record<string, unknown>;
+  const title = candidate.name ?? candidate.title ?? candidate.productName;
+  const directPrice =
+    candidate.price ??
+    candidate.currentPrice ??
+    candidate.salePrice ??
+    candidate.offerPrice ??
+    (candidate.prices as Record<string, unknown> | undefined)?.sale ??
+    (candidate.prices as Record<string, unknown> | undefined)?.current;
+
+  if ((typeof title === "string" || typeof title === "number") && numberFromUnknown(directPrice)) {
+    out.push(candidate);
+  }
+
+  for (const value of Object.values(candidate)) {
+    extractOfferLikeNodes(value, out);
+  }
+}
+
+function parseScriptJson(rawScriptBody: string): unknown | undefined {
+  const body = rawScriptBody.trim();
+  if (!body) return undefined;
+
+  const nextData = /id=(["'])__NEXT_DATA__\1/i.test(rawScriptBody);
+  if (nextData) {
+    try {
+      return JSON.parse(body);
+    } catch {
+      return undefined;
+    }
+  }
+
+  const assignmentMatch = body.match(/^window\.[a-zA-Z0-9_$]+\s*=\s*([\s\S]+?);?$/);
+  const payload = assignmentMatch ? assignmentMatch[1].trim() : body;
+  if (!(payload.startsWith("{") || payload.startsWith("["))) {
+    return undefined;
+  }
+
+  try {
+    return JSON.parse(payload);
+  } catch {
+    return undefined;
+  }
+}
+
+function nestedNumber(node: Record<string, unknown>, keys: string[]): number | undefined {
+  let cursor: unknown = node;
+  for (const key of keys) {
+    if (!cursor || typeof cursor !== "object") {
+      return undefined;
+    }
+    cursor = (cursor as Record<string, unknown>)[key];
+  }
+  return numberFromUnknown(cursor);
+}
+
+function offerLikeNodeToRawOffer(node: Record<string, unknown>, fallbackUrl: string): RawRetailerOffer | undefined {
+  const titleRaw = String(node.name ?? node.title ?? node.productName ?? "").trim();
+  if (!titleRaw) return undefined;
+
+  const priceCurrent =
+    numberFromUnknown(node.price) ??
+    numberFromUnknown(node.currentPrice) ??
+    numberFromUnknown(node.salePrice) ??
+    numberFromUnknown(node.offerPrice) ??
+    numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.sale) ??
+    numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.current) ??
+    nestedNumber(node, ["price", "amount"]) ??
+    nestedNumber(node, ["price", "value"]) ??
+    nestedNumber(node, ["prices", "current", "amount"]);
+  if (!priceCurrent || priceCurrent <= 0) return undefined;
+
+  const priceOriginal =
+    numberFromUnknown(node.originalPrice) ??
+    numberFromUnknown(node.compareAtPrice) ??
+    numberFromUnknown(node.listPrice) ??
+    numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.list) ??
+    numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.original) ??
+    nestedNumber(node, ["compareAtPrice", "amount"]) ??
+    nestedNumber(node, ["prices", "original", "amount"]) ??
+    nestedNumber(node, ["priceRange", "max"]);
+
+  const rawBrand = node.brand;
+  const brand =
+    typeof rawBrand === "string"
+      ? rawBrand
+      : typeof rawBrand === "object" && rawBrand !== null
+        ? String((rawBrand as Record<string, unknown>).name ?? "")
+        : undefined;
+
+  return {
+    url: normalizeUrl(String(node.url ?? fallbackUrl), fallbackUrl),
+    titleRaw,
+    brand: brand || undefined,
+    modelRaw: String(node.model ?? titleRaw),
+    category: inferCategory(titleRaw),
+    gender: inferGender(titleRaw),
+    priceCurrent,
+    priceOriginal: priceOriginal && priceOriginal > priceCurrent ? priceOriginal : undefined,
+    inStock: !/out[-\s]?of[-\s]?stock|sold[-\s]?out/i.test(String(node.availability ?? "")),
+    identifiers: {
+      sku: typeof node.sku === "string" ? node.sku : undefined,
+      gtin:
+        typeof node.gtin === "string"
+          ? node.gtin
+          : typeof node.gtin13 === "string"
+            ? node.gtin13
+            : undefined
+    }
+  };
+}
+
+function matchesEmbeddedHint(
+  rawScriptTag: string,
+  rawScriptBody: string,
+  hints?: RetailerExtractionHints["embeddedState"]
+): boolean {
+  if (!hints) return false;
+  const source = `${rawScriptTag}\n${rawScriptBody}`.toLowerCase();
+
+  for (const scriptId of hints.scriptIds ?? []) {
+    if (source.includes(scriptId.toLowerCase())) return true;
+  }
+  for (const globalKey of hints.globalKeys ?? []) {
+    if (source.includes(globalKey.toLowerCase())) return true;
+  }
+  for (const rootKey of hints.rootKeys ?? []) {
+    const needle = rootKey.toLowerCase();
+    if (source.includes(`"${needle}"`) || source.includes(`${needle}:`)) return true;
+  }
+  return false;
+}
+
+function extractEmbeddedStateOffers(
+  html: string,
+  fallbackUrl: string,
+  hints?: RetailerExtractionHints["embeddedState"]
+): RawRetailerOffer[] {
+  const offers: RawRetailerOffer[] = [];
+  const prioritizedScripts: string[] = [];
+  const regularScripts: string[] = [];
+  let match: RegExpExecArray | null;
+
+  while ((match = SCRIPT_RE.exec(html)) !== null) {
+    if (matchesEmbeddedHint(match[0], match[1], hints)) {
+      prioritizedScripts.push(match[1]);
+    } else {
+      regularScripts.push(match[1]);
+    }
+  }
+  SCRIPT_RE.lastIndex = 0;
+
+  for (const scriptBody of [...prioritizedScripts, ...regularScripts]) {
+    const parsed = parseScriptJson(scriptBody);
+    if (!parsed) continue;
+    const nodes: Record<string, unknown>[] = [];
+    extractOfferLikeNodes(parsed, nodes);
+    for (const node of nodes) {
+      const offer = offerLikeNodeToRawOffer(node, fallbackUrl);
+      if (offer) offers.push(offer);
+    }
+  }
+
+  return offers;
+}
+
+function dedupeOffers(offers: RawRetailerOffer[]): RawRetailerOffer[] {
+  const seen = new Set<string>();
+  const output: RawRetailerOffer[] = [];
+  for (const offer of offers) {
+    const key = `${offer.url}|${offer.titleRaw}|${offer.priceCurrent.toFixed(2)}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      output.push(offer);
+    }
+  }
+  return output;
+}
+
+function extractOffersFromHtml(html: string, fallbackUrl: string, config: RetailerConfig): {
+  offers: RawRetailerOffer[];
+  discoveredCount: number;
+} {
+  const embeddedHints = config.extractionHints?.embeddedState;
+  const fromEmbedded = extractEmbeddedStateOffers(html, fallbackUrl, embeddedHints);
+  const fromJsonLd = extractJsonLdOffers(html, fallbackUrl);
+  const fromCards = extractProductCards(html, fallbackUrl);
+  const discoveredCount = fromJsonLd.length + fromCards.length + fromEmbedded.length;
+  const offers = embeddedHints?.prefer
+    ? dedupeOffers([...fromEmbedded, ...fromJsonLd, ...fromCards])
+    : dedupeOffers([...fromJsonLd, ...fromCards, ...fromEmbedded]);
+  return { offers, discoveredCount };
+}
+
 async function loadFixtureOffers(config: RetailerConfig): Promise<RawRetailerOffer[]> {
   const fixturePath = path.resolve(__dirname, "..", "fixtures", config.fixtureFile);
   return readJsonFile<RawRetailerOffer[]>(fixturePath);
+}
+
+function dedupePageUrls(urls: string[]): string[] {
+  const seen = new Set<string>();
+  const output: string[] = [];
+  for (const url of urls) {
+    if (seen.has(url)) continue;
+    seen.add(url);
+    output.push(url);
+  }
+  return output;
+}
+
+function buildPageUrls(baseUrl: string, pagination?: RetailerPaginationConfig): string[] {
+  const resolvedPagination = pagination ?? DEFAULT_PAGINATION_CONFIG;
+  const urls = [baseUrl];
+
+  if (resolvedPagination.strategy === "none") {
+    return urls;
+  }
+
+  if (resolvedPagination.strategy === "query") {
+    for (let page = resolvedPagination.startPage; page <= resolvedPagination.maxPages; page += 1) {
+      try {
+        const parsed = new URL(baseUrl);
+        parsed.searchParams.set(resolvedPagination.pageParam, String(page));
+        urls.push(parsed.toString());
+      } catch {
+        break;
+      }
+    }
+    return dedupePageUrls(urls);
+  }
+
+  for (let page = resolvedPagination.startPage; page <= resolvedPagination.maxPages; page += 1) {
+    try {
+      const pathUrl = resolvedPagination.pathTemplate.replace("{page}", String(page));
+      urls.push(new URL(pathUrl, baseUrl).toString());
+    } catch {
+      break;
+    }
+  }
+  return dedupePageUrls(urls);
+}
+
+function extractXmlLocLinks(xml: string): string[] {
+  const links: string[] = [];
+  const re = /<loc>\s*([^<]+?)\s*<\/loc>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(xml)) !== null) {
+    const value = match[1].replace(/&amp;/g, "&").trim();
+    if (value) links.push(value);
+  }
+  return links;
+}
+
+function extractHtmlHrefLinks(html: string): string[] {
+  const links: string[] = [];
+  const re = /<a\b[^>]*href=(["'])(.*?)\1/gi;
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(html)) !== null) {
+    const href = match[2].replace(/&amp;/g, "&").trim();
+    if (href) links.push(href);
+  }
+  return links;
+}
+
+function extractSitemapLinksFromRobots(robotsTxt: string): string[] {
+  const links: string[] = [];
+  for (const line of robotsTxt.split(/\r?\n/)) {
+    const match = line.match(/^\s*Sitemap:\s*(\S+)\s*$/i);
+    if (match) {
+      links.push(match[1]);
+    }
+  }
+  return links;
+}
+
+function looksLikeSitemapDocument(url: string): boolean {
+  return /sitemap|\.xml(\?|$)/i.test(url);
+}
+
+function looksLikeRetailerOfferUrl(url: string, retailerHostname: string): boolean {
+  try {
+    const parsed = new URL(url);
+    const retailerHost = retailerHostname.replace(/^www\./i, "");
+    const linkHost = parsed.hostname.replace(/^www\./i, "");
+    if (linkHost !== retailerHost) return false;
+    const path = parsed.pathname.toLowerCase();
+    return /running|trail|shoe|footwear|product|products|\/pd\//i.test(path);
+  } catch {
+    return false;
+  }
+}
+
+async function discoverFallbackUrls(
+  config: RetailerConfig,
+  httpProfile: RetailerHttpProfileConfig
+): Promise<string[]> {
+  const homepage = new URL(config.homepageUrl);
+  const queue: string[] = [
+    new URL("/sitemap.xml", homepage).toString(),
+    new URL("/sitemap", homepage).toString(),
+    new URL("/sitemap_index.xml", homepage).toString()
+  ];
+  if (homepage.hostname.includes("adidas.")) {
+    queue.push(new URL("/glass/sitemaps/adidas/CA/en/html-sitemap/index.html", homepage).toString());
+  }
+  if (homepage.hostname.includes("newbalance.")) {
+    queue.push(new URL("/en_ca/sitemap", homepage).toString());
+  }
+  const visited = new Set<string>();
+  const candidates: string[] = [];
+
+  try {
+    const robotsUrl = new URL("/robots.txt", homepage).toString();
+    const robotsPage = await fetchPageWithRetry(robotsUrl, {
+      retries: 1,
+      timeoutMs: Math.min(httpProfile.timeoutMs, 10_000),
+      minDelayMs: 300,
+      headerPreset: httpProfile.profile
+    });
+    for (const link of extractSitemapLinksFromRobots(robotsPage.html)) {
+      queue.push(normalizeUrl(link, robotsUrl));
+    }
+  } catch {
+    // continue with default sitemap endpoint
+  }
+
+  while (queue.length > 0 && visited.size < 10) {
+    const sitemapUrl = queue.shift()!;
+    if (visited.has(sitemapUrl)) continue;
+    visited.add(sitemapUrl);
+
+    try {
+      const page = await fetchPageWithRetry(sitemapUrl, {
+        retries: 1,
+        timeoutMs: Math.min(httpProfile.timeoutMs, 10_000),
+        minDelayMs: 300,
+        headerPreset: httpProfile.profile
+      });
+      const links = [
+        ...extractXmlLocLinks(page.html),
+        ...extractHtmlHrefLinks(page.html)
+      ];
+      for (const link of links) {
+        const absolute = normalizeUrl(link, sitemapUrl);
+        if (looksLikeSitemapDocument(absolute)) {
+          if (
+            queue.length < 20 &&
+            !visited.has(absolute) &&
+            /product|catalog|sitemap|shoe|running|trail/i.test(absolute)
+          ) {
+            queue.push(absolute);
+          }
+          continue;
+        }
+
+        if (looksLikeRetailerOfferUrl(absolute, homepage.hostname)) {
+          candidates.push(absolute);
+        }
+      }
+    } catch {
+      continue;
+    }
+  }
+
+  return dedupePageUrls(candidates).slice(0, 40);
+}
+
+async function fetchSitemapFallbackOffers(
+  config: RetailerConfig,
+  httpProfile: RetailerHttpProfileConfig
+): Promise<{
+  offers: RawRetailerOffer[];
+  discoveredCount: number;
+  pagesCrawled: number;
+}> {
+  const fallbackUrls = await discoverFallbackUrls(config, httpProfile);
+  if (fallbackUrls.length === 0) {
+    return { offers: [], discoveredCount: 0, pagesCrawled: 0 };
+  }
+
+  const scrapedOffers: RawRetailerOffer[] = [];
+  let discoveredCount = 0;
+  let pagesCrawled = 0;
+
+  for (const fallbackUrl of fallbackUrls) {
+    try {
+      const page = await fetchPageWithRetry(fallbackUrl, {
+        retries: 1,
+        timeoutMs: Math.min(httpProfile.timeoutMs, 12_000),
+        minDelayMs: 400,
+        headerPreset: httpProfile.profile
+      });
+      pagesCrawled += 1;
+
+      const extraction = extractOffersFromHtml(page.html, page.finalUrl || fallbackUrl, config);
+      discoveredCount += extraction.discoveredCount;
+      scrapedOffers.push(...extraction.offers);
+
+      if (dedupeOffers(scrapedOffers).length >= 80) {
+        break;
+      }
+    } catch {
+      continue;
+    }
+  }
+
+  return {
+    offers: dedupeOffers(scrapedOffers),
+    discoveredCount,
+    pagesCrawled
+  };
+}
+
+function shouldAttemptSitemapFallback(classification: RetailerBlockerClassification): boolean {
+  return (
+    classification === "anti-bot" ||
+    classification === "selector-drift" ||
+    classification === "url-drift" ||
+    classification === "unknown"
+  );
+}
+
+type PageFetchFailure = {
+  pageIndex: number;
+  pageUrl: string;
+  status?: number;
+  antiBotSignal: boolean;
+};
+
+function getResolvedHttpProfile(config: RetailerConfig): RetailerHttpProfileConfig {
+  return config.httpProfile ?? DEFAULT_HTTP_PROFILE_CONFIG;
+}
+
+function getHttpStatusFromError(error: unknown): number | undefined {
+  if (!(error instanceof Error)) return undefined;
+  const match = /HTTP\s+(\d{3})/i.exec(error.message);
+  if (!match) return undefined;
+  const status = Number(match[1]);
+  return Number.isFinite(status) ? status : undefined;
+}
+
+function isLikelyAntiBotSignal(error: unknown, status?: number): boolean {
+  if (status === 401 || status === 403 || status === 429) {
+    return true;
+  }
+  if (!(error instanceof Error)) return false;
+  const message = error.message.toLowerCase();
+  return (
+    message.includes("captcha") ||
+    message.includes("forbidden") ||
+    message.includes("access denied") ||
+    message.includes("blocked")
+  );
+}
+
+function classifyBlocker(args: {
+  failures: PageFetchFailure[];
+  firstPageSucceeded: boolean;
+  parsedCount: number;
+  pagesCrawled: number;
+}): {
+  classification: RetailerBlockerClassification;
+  details?: string;
+  url?: string;
+} {
+  const basePageFailure = args.failures.find((failure) => failure.pageIndex === 0);
+  if (basePageFailure?.status && [404, 410, 451, 500, 502, 503].includes(basePageFailure.status)) {
+    return {
+      classification: "url-drift",
+      details: `Base deals URL returned ${basePageFailure.status}.`,
+      url: basePageFailure.pageUrl
+    };
+  }
+
+  const antiBotFailure = args.failures.find((failure) => failure.antiBotSignal);
+  if (antiBotFailure) {
+    return {
+      classification: "anti-bot",
+      details: "Request blocked, timed out, or fetch aborted.",
+      url: antiBotFailure.pageUrl
+    };
+  }
+
+  if (
+    args.firstPageSucceeded &&
+    args.failures.length > 0 &&
+    args.failures.every((failure) => failure.pageIndex > 0)
+  ) {
+    return {
+      classification: "pagination",
+      details: "Later pages failed after base page succeeded.",
+      url: args.failures[0].pageUrl
+    };
+  }
+
+  if (args.pagesCrawled > 0 && args.parsedCount === 0) {
+    return {
+      classification: "selector-drift",
+      details: "Pages fetched successfully but no offers were extracted."
+    };
+  }
+
+  return {
+    classification: "unknown"
+  };
+}
+
+function appendBlockerHintToWarning(
+  warning: string,
+  classification: RetailerBlockerClassification
+): string {
+  return `${warning} Blocker hint: ${classification}.`;
+}
+
+function diagnosticsFromBlocker(blocker: {
+  classification: RetailerBlockerClassification;
+  details?: string;
+  url?: string;
+}): ParsedRetailerResult["diagnostics"] {
+  return {
+    blocker: {
+      classification: blocker.classification,
+      details: blocker.details,
+      url: blocker.url
+    }
+  };
+}
+
+function classifyBlockerFromUnexpectedError(
+  error: unknown
+): {
+  classification: RetailerBlockerClassification;
+  details?: string;
+} {
+  const status = getHttpStatusFromError(error);
+  if (status && [404, 410, 451, 500, 502, 503].includes(status)) {
+    return {
+      classification: "url-drift",
+      details: `Base deals URL returned ${status}.`
+    };
+  }
+  if (isLikelyAntiBotSignal(error, status)) {
+    return {
+      classification: "anti-bot",
+      details: "Request blocked, timed out, or fetch aborted."
+    };
+  }
+  return {
+    classification: "unknown",
+    details: "Unexpected parser failure."
+  };
 }
 
 export function createRetailerParser(config: RetailerConfig): RetailerParser {
@@ -110,35 +793,124 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
     config,
     async fetchOffers(): Promise<ParsedRetailerResult> {
       if (!config.allowScrape) {
+        const fixtureOffers = await loadFixtureOffers(config);
         return {
-          offers: await loadFixtureOffers(config),
+          offers: fixtureOffers,
           warning: "Scraping disabled by retailer guardrail, loaded fixture data.",
-          usedFixture: true
+          usedFixture: true,
+          discoveredCount: fixtureOffers.length,
+          parsedCount: fixtureOffers.length,
+          pagesCrawled: 0,
+          sourceMode: "fixture"
         };
       }
 
-      try {
-        const html = await fetchTextWithRetry(config.dealsUrl, {
-          retries: 2,
-          timeoutMs: 10_000,
-          minDelayMs: 700
-        });
+      const warnings: string[] = [];
+      const pageUrls = buildPageUrls(config.dealsUrl, config.pagination);
+      const httpProfile = getResolvedHttpProfile(config);
+      const scrapedOffers: RawRetailerOffer[] = [];
+      const pageFailures: PageFetchFailure[] = [];
+      let discoveredCount = 0;
+      let pagesCrawled = 0;
+      let firstPageSucceeded = false;
 
-        const extracted = extractOffersFromHtml(html, config.dealsUrl);
-        if (extracted.length > 0) {
-          return { offers: extracted, usedFixture: false };
+      try {
+        for (let pageIndex = 0; pageIndex < pageUrls.length; pageIndex += 1) {
+          const pageUrl = pageUrls[pageIndex];
+          try {
+            const page = await fetchPageWithRetry(pageUrl, {
+              retries: httpProfile.retries,
+              timeoutMs: httpProfile.timeoutMs,
+              minDelayMs: httpProfile.minDelayMs,
+              headerPreset: httpProfile.profile
+            });
+            pagesCrawled += 1;
+            if (pageIndex === 0) firstPageSucceeded = true;
+            const extraction = extractOffersFromHtml(page.html, page.finalUrl || config.dealsUrl, config);
+            discoveredCount += extraction.discoveredCount;
+            scrapedOffers.push(...extraction.offers);
+            if (extraction.offers.length === 0 && pagesCrawled > 1) break;
+          } catch (error) {
+            const status = getHttpStatusFromError(error);
+            pageFailures.push({
+              pageIndex,
+              pageUrl,
+              status,
+              antiBotSignal: isLikelyAntiBotSignal(error, status)
+            });
+            warnings.push(
+              `page fetch failed (${pageUrl}): ${error instanceof Error ? error.message : "unknown"}`
+            );
+            if (pagesCrawled > 0) break;
+          }
         }
 
+        const deduped = dedupeOffers(scrapedOffers);
+        if (deduped.length > 0) {
+          return {
+            offers: deduped,
+            warning: warnings.length > 0 ? warnings.join(" | ") : undefined,
+            usedFixture: false,
+            discoveredCount,
+            parsedCount: deduped.length,
+            pagesCrawled,
+            sourceMode: "live"
+          };
+        }
+
+        const blocker = classifyBlocker({
+          failures: pageFailures,
+          firstPageSucceeded,
+          parsedCount: deduped.length,
+          pagesCrawled
+        });
+
+        if (shouldAttemptSitemapFallback(blocker.classification)) {
+          const fallbackResult = await fetchSitemapFallbackOffers(config, httpProfile);
+          if (fallbackResult.offers.length > 0) {
+            const recoveryMessage = `Recovered via sitemap fallback (${fallbackResult.pagesCrawled} pages).`;
+            const warning = warnings.length > 0 ? `${warnings.join(" | ")} | ${recoveryMessage}` : recoveryMessage;
+
+            return {
+              offers: fallbackResult.offers,
+              warning,
+              usedFixture: false,
+              discoveredCount: discoveredCount + fallbackResult.discoveredCount,
+              parsedCount: fallbackResult.offers.length,
+              pagesCrawled: pagesCrawled + fallbackResult.pagesCrawled,
+              sourceMode: "live"
+            };
+          }
+        }
+
+        const fixtureOffers = await loadFixtureOffers(config);
+        const warningBase =
+          warnings.length > 0
+            ? `Live extraction failed (${warnings.join(" | ")}), loaded fixture data.`
+            : "No offers extracted from live pages, loaded fixture data.";
         return {
-          offers: await loadFixtureOffers(config),
-          warning: "No JSON-LD offers found, loaded fixture data.",
-          usedFixture: true
+          offers: fixtureOffers,
+          warning: appendBlockerHintToWarning(warningBase, blocker.classification),
+          usedFixture: true,
+          discoveredCount,
+          parsedCount: fixtureOffers.length,
+          pagesCrawled,
+          sourceMode: "fixture",
+          diagnostics: diagnosticsFromBlocker(blocker)
         };
-      } catch {
+      } catch (error) {
+        const fixtureOffers = await loadFixtureOffers(config);
+        const blocker = classifyBlockerFromUnexpectedError(error);
+        const warningBase = `Fetch failed, loaded fixture data (${error instanceof Error ? error.message : "unknown"}).`;
         return {
-          offers: await loadFixtureOffers(config),
-          warning: "Fetch failed, loaded fixture data.",
-          usedFixture: true
+          offers: fixtureOffers,
+          warning: appendBlockerHintToWarning(warningBase, blocker.classification),
+          usedFixture: true,
+          discoveredCount,
+          parsedCount: fixtureOffers.length,
+          pagesCrawled,
+          sourceMode: "fixture",
+          diagnostics: diagnosticsFromBlocker(blocker)
         };
       }
     }

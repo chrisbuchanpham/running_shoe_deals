@@ -18,10 +18,30 @@ export type RawRetailerOffer = {
   };
 };
 
+export type RetailerBlockerClassification =
+  | "url-drift"
+  | "anti-bot"
+  | "selector-drift"
+  | "pagination"
+  | "unknown";
+
+export type ParsedRetailerDiagnostics = {
+  blocker?: {
+    classification: RetailerBlockerClassification;
+    details?: string;
+    url?: string;
+  };
+};
+
 export type ParsedRetailerResult = {
   offers: RawRetailerOffer[];
   warning?: string;
   usedFixture: boolean;
+  discoveredCount: number;
+  parsedCount: number;
+  pagesCrawled: number;
+  sourceMode: "live" | "fixture";
+  diagnostics?: ParsedRetailerDiagnostics;
 };
 
 export type RetailerParser = {

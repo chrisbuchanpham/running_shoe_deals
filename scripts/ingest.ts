@@ -23,6 +23,7 @@ import {
   inferCategory,
   inferGender,
   normalizeBrand,
+  normalizeIdentifiers,
   normalizeModel,
   normalizeToken
 } from "../src/shared/normalization";
@@ -43,6 +44,8 @@ type WorkingOffer = Offer & {
     gtin?: string;
   };
 };
+
+const TRACKING_QUERY_PARAM = /^(utm_|fbclid$|gclid$|ref$|referrer$|mc_eid$|mc_cid$)/i;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -75,6 +78,43 @@ function scoreSourceConfidence(raw: RawRetailerOffer, usedFixture: boolean): num
   return Math.max(0, Math.min(1, Math.round(score * 100) / 100));
 }
 
+function canonicalizeOfferUrl(rawUrl: string): string {
+  try {
+    const parsed = new URL(rawUrl);
+    const normalizedPath = (parsed.pathname.replace(/\/+$/g, "") || "/").toLowerCase();
+    const entries = [...parsed.searchParams.entries()]
+      .filter(([key]) => !TRACKING_QUERY_PARAM.test(key))
+      .map(([key, value]) => [key.toLowerCase(), value.trim()] as const)
+      .sort(([leftKey, leftValue], [rightKey, rightValue]) => {
+        if (leftKey === rightKey) return leftValue.localeCompare(rightValue);
+        return leftKey.localeCompare(rightKey);
+      });
+
+    const search = new URLSearchParams();
+    for (const [key, value] of entries) {
+      search.append(key, value);
+    }
+    const queryString = search.toString();
+
+    return `${parsed.protocol.toLowerCase()}//${parsed.host.toLowerCase()}${normalizedPath}${queryString ? `?${queryString}` : ""}`;
+  } catch {
+    return rawUrl.trim().replace(/\/+$/g, "").toLowerCase();
+  }
+}
+
+function enrichCanonicalShoe(shoe: ShoeCanonical, offer: WorkingOffer): void {
+  if (!shoe.aliases.includes(offer.modelNormalized)) {
+    shoe.aliases.push(offer.modelNormalized);
+  }
+
+  if (!shoe.identifiers.sku && offer.identifiers?.sku) {
+    shoe.identifiers.sku = offer.identifiers.sku;
+  }
+  if (!shoe.identifiers.gtin && offer.identifiers?.gtin) {
+    shoe.identifiers.gtin = offer.identifiers.gtin;
+  }
+}
+
 function toWorkingOffer(
   retailerId: string,
   raw: RawRetailerOffer,
@@ -86,6 +126,7 @@ function toWorkingOffer(
   const modelRaw = raw.modelRaw ?? raw.titleRaw;
   const modelNormalized = normalizeModel(modelRaw);
   const category = normalizeCategory(raw, raw.titleRaw, overrides);
+  const identifiers = normalizeIdentifiers(raw.identifiers);
   const discountPct = computeDiscountPct(raw.priceCurrent, raw.priceOriginal);
 
   const offerId = stableId(
@@ -94,8 +135,8 @@ function toWorkingOffer(
     raw.url,
     modelNormalized,
     raw.priceCurrent.toFixed(2),
-    raw.identifiers?.sku ?? "",
-    raw.identifiers?.gtin ?? ""
+    identifiers?.sku ?? "",
+    identifiers?.gtin ?? ""
   );
 
   return {
@@ -115,7 +156,7 @@ function toWorkingOffer(
     inStock: raw.inStock,
     scrapedAt,
     sourceConfidence: scoreSourceConfidence(raw, usedFixture),
-    identifiers: raw.identifiers
+    identifiers
   };
 }
 
@@ -123,7 +164,16 @@ function dedupeOffers(offers: WorkingOffer[]): WorkingOffer[] {
   const seen = new Set<string>();
   const output: WorkingOffer[] = [];
   for (const offer of offers) {
-    const key = `${offer.retailerId}|${offer.modelNormalized}|${offer.url}|${offer.priceCurrent}`;
+    const key = [
+      offer.retailerId,
+      canonicalizeOfferUrl(offer.url),
+      offer.modelNormalized,
+      offer.category,
+      offer.gender ?? "",
+      offer.identifiers?.sku ?? "",
+      offer.identifiers?.gtin ?? "",
+      offer.priceCurrent.toFixed(2)
+    ].join("|");
     if (!seen.has(key)) {
       seen.add(key);
       output.push(offer);
@@ -146,6 +196,7 @@ function materializeShoesAndDeals(offers: WorkingOffer[]): {
   deals: DealCard[];
 } {
   const shoes: ShoeCanonical[] = [];
+  const shoesById = new Map<string, ShoeCanonical>();
   const shoeIndex: CanonicalShoeIndex[] = [];
   const offerToShoe = new Map<string, string>();
 
@@ -162,6 +213,10 @@ function materializeShoesAndDeals(offers: WorkingOffer[]): {
 
     if (match.shoeId) {
       offerToShoe.set(offer.id, match.shoeId);
+      const matchedShoe = shoesById.get(match.shoeId);
+      if (matchedShoe) {
+        enrichCanonicalShoe(matchedShoe, offer);
+      }
       offer.sourceConfidence = Math.max(
         offer.sourceConfidence,
         Math.round(((offer.sourceConfidence + match.confidence) / 2) * 100) / 100
@@ -191,6 +246,7 @@ function materializeShoesAndDeals(offers: WorkingOffer[]): {
       matchRulesVersion: "v1-hybrid-exact-fallback"
     };
     shoes.push(shoe);
+    shoesById.set(shoeId, shoe);
     shoeIndex.push({
       shoeId,
       brand: shoe.brand,
@@ -283,7 +339,10 @@ export async function runIngestion(options?: {
         status: "disabled",
         offersCount: 0,
         warning: "Parser disabled via config.",
-        durationMs: Math.round(performance.now() - start)
+        durationMs: Math.round(performance.now() - start),
+        discoveredCount: 0,
+        parsedCount: 0,
+        pagesCrawled: 0
       });
       parser.config.allowScrape = originalAllowScrape;
       continue;
@@ -303,10 +362,14 @@ export async function runIngestion(options?: {
 
       parserHealth.push({
         retailerId: parser.config.id,
-        status: "ok",
+        status: result.sourceMode === "fixture" ? "failed" : "ok",
         offersCount: normalized.length,
         warning: result.warning,
-        durationMs: Math.round(performance.now() - start)
+        durationMs: Math.round(performance.now() - start),
+        discoveredCount: result.discoveredCount,
+        parsedCount: result.parsedCount,
+        pagesCrawled: result.pagesCrawled,
+        sourceMode: result.sourceMode
       });
 
       if (result.warning) {

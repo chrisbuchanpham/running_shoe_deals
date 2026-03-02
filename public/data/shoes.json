@@ -1,79 +1,4316 @@
 [
   {
-    "shoeId": "shoe-gel-kayano-30",
-    "brand": "ASICS",
-    "model": "gel-kayano-30",
+    "shoeId": "shoe_42c4fb57b859",
+    "brand": "Unknown",
+    "model": "100-door-crashers-50-off",
     "category": "running",
-    "aliases": ["gel-kayano-30"],
-    "identifiers": {
-      "sku": "ASICS-GK30-M-001",
-      "gtin": "193604233001"
-    },
+    "aliases": [
+      "100-door-crashers-50-off"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe-pegasus-41",
-    "brand": "Nike",
-    "model": "pegasus-41",
+    "shoeId": "shoe_7eded66da2d3",
+    "brand": "Unknown",
+    "model": "25---60-off-outerwear",
     "category": "running",
-    "aliases": ["pegasus-41"],
+    "aliases": [
+      "25---60-off-outerwear",
+      "20---40-off-ski-equipment",
+      "20---40-off-snowboard-equipment",
+      "up-to-50-off-winter-boots",
+      "125-98---149-98-columbia-jackets",
+      "40-off-skis-with-bindings",
+      "30-off-winter-helmets-goggles"
+    ],
     "identifiers": {
-      "sku": "NIKE-PEG41-M-201"
+      "sku": "TYPE"
     },
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe-fresh-foam-1080-v13",
-    "brand": "New Balance",
-    "model": "fresh-foam-1080-v13",
+    "shoeId": "shoe_16a5dda6b6cd",
+    "brand": "Unknown",
+    "model": "4-75-stars-up",
     "category": "running",
-    "aliases": ["fresh-foam-1080-v13"],
+    "aliases": [
+      "4-75-stars-up",
+      "4-78049-stars-up",
+      "4-85081-stars-up",
+      "4-57895-stars-up",
+      "4-6875-stars-up",
+      "4-81111-stars-up",
+      "4-48673-stars-up",
+      "4-54545-stars-up",
+      "4-38462-stars-up",
+      "4-84496-stars-up",
+      "4-73913-stars-up",
+      "4-87043-stars-up",
+      "4-83333-stars-up",
+      "4-81308-stars-up",
+      "4-71866-stars-up",
+      "4-87912-stars-up",
+      "4-80292-stars-up",
+      "4-78814-stars-up",
+      "4-76087-stars-up",
+      "4-64316-stars-up",
+      "4-85185-stars-up",
+      "4-8-stars-up",
+      "4-62963-stars-up",
+      "4-88462-stars-up",
+      "4-81818-stars-up",
+      "4-89919-stars-up",
+      "4-72165-stars-up",
+      "4-64407-stars-up",
+      "4-5529-stars-up",
+      "4-41667-stars-up",
+      "4-75862-stars-up",
+      "5-stars-up",
+      "4-74074-stars-up",
+      "4-79775-stars-up",
+      "4-87368-stars-up",
+      "4-76164-stars-up",
+      "4-68182-stars-up",
+      "4-57143-stars-up",
+      "4-84568-stars-up",
+      "4-9471-stars-up",
+      "4-77083-stars-up",
+      "4-83861-stars-up",
+      "2-birkenstock-arizona-big-buckle-eva-sandals-narrow---women-x27-s-c-84-99",
+      "4-54348-stars-up",
+      "4-6-stars-up",
+      "4-8797-stars-up",
+      "4-78261-stars-up",
+      "css-bdkrac-position-relative-cursor-pointer-background-color-var---chakra-colors-background-surface-secondary-border-radius-var---chakra-radii-image-z-index-1-css-bdkrac-not-style-overflow-hidden-position-absolute-top-var---chakra-space-0-right-var---chakra-space-0-bottom-var---chakra-space-0-left-var---chakra-space-0-display--webkit-box-display--webkit-flex-display--ms-flexbox-display-flex--webkit-box-pack-center--ms-flex-pack-center--webkit-justify-content-center-justify-content-center--webkit-align-items-center--webkit-box-align-center--ms-flex-align-center-align-items-center-width-100-height-100-css-bdkrac-img-css-bdkrac-video-object-fit-cover-css-bdkrac-before-height-var---chakra-sizes-0-content-display-block-padding-bottom-120-css-1528uyg-display-inline-block-white-space-nowrap-vertical-align-middle--webkit-padding-start-var---chakra-space-1-5-padding-inline-start-var---chakra-space-1-5--webkit-padding-end-var---chakra-space-1-5-padding-inline-end-var---chakra-space-1-5-text-transform-none-font-size-var---chakra-fontsizes-xs-font-weight-var---chakra-fontweights-semibold-background-var---badge-bg-color-var---chakra-colors-badge-text-sales-solid-box-shadow-var---badge-shadow-max-height-var---chakra-sizes-max-padding-top-var---chakra-space-0-5-padding-bottom-var---chakra-space-0-5-font-family-var---chakra-fonts-body-line-height-var---chakra-lineheights-4-letter-spacing-var---chakra-letterspacings-normal-background-color-var---chakra-colors-badge-bg-sales-solid-position-absolute-left-var---chakra-space-2-top-var---chakra-space-2-z-index-2-border-radius-var---chakra-radii-badge-media-screen-and-min-width-62rem-css-1528uyg-left-var---chakra-space-3-top-var---chakra-space-3--59-css-16ht034-display--webkit-box-display--webkit-flex-display--ms-flexbox-display-flex-margin-top-var---chakra-space-2--webkit-flex-direction-column--ms-flex-direction-column-flex-direction-column-padding-left-var---chakra-space-2-padding-right-var---chakra-space-2-media-screen-and-min-width-62rem-css-16ht034-padding-left-var---chakra-space-1-padding-right-var---chakra-space-0-5-css-ivyix-display--webkit-box-display--webkit-flex-display--ms-flexbox-display-flex--webkit-flex-direction-row--ms-flex-direction-row-flex-direction-row--webkit-box-flex-wrap-wrap--webkit-flex-wrap-wrap--ms-flex-wrap-wrap-flex-wrap-wrap-gap-0-375rem-css-17ujje4-display--webkit-box-display--webkit-flex-display--ms-flexbox-display-flex-background-color-var---chakra-colors-background-surface-secondary-width-var---chakra-sizes-7-height-var---chakra-sizes-7-position-relative-border-var---chakra-borders-1px-border-radius-var---chakra-radii-thumbnail-border-color-var---chakra-colors-transparent-cursor-pointer-media-screen-and-min-width-62rem-css-17ujje4-width-var---chakra-sizes-10-height-var---chakra-sizes-10-css-17ujje4-hover-css-17ujje4-data-hover-border-var---chakra-borders-1px-border-color-var---chakra-colors-border-hover-css-aaoig2-padding-top-var---chakra-space-3-font-family-var---chakra-fonts-heading-secondary-line-height-var---chakra-lineheights-5-letter-spacing-var---chakra-letterspacings-normal-text-transform-uppercase-font-weight-var---chakra-fontweights-bold-font-size-var---chakra-fontsizes-sm-quartz-co-css-eiojhb-font-family-var---chakra-fonts-body-font-weight-var---chakra-fontweights-normal-line-height-var---chakra-lineheights-5-letter-spacing-var---chakra-letterspacings-normal-color-var---chakra-colors-text-secondary-padding-bottom-var---chakra-space-2-font-size-var---chakra-fontsizes-sm-gisele-long-down-puffer-jacket---women-x27-s-css-4oly8v-display--webkit-box-display--webkit-flex-display--ms-flexbox-display-flex-gap-var---chakra-space-px--webkit-align-items-flex-end--webkit-box-align-flex-end--ms-flex-align-flex-end-align-items-flex-end--webkit-box-flex-wrap-wrap--webkit-flex-wrap-wrap--ms-flex-wrap-wrap-flex-wrap-wrap-line-height-1-color-var---chakra-colors-text-font-weight-var---chakra-fontweights-bold-letter-spacing-var---chakra-letterspacings-tight-font-size-var---chakra-fontsizes-lg-media-screen-and-min-width-62rem-css-4oly8v-font-size-var---chakra-fontsizes-3xl-css-1a706rn-display--webkit-inline-box-display--webkit-inline-flex-display--ms-inline-flexbox-display-inline-flex-color-var---chakra-colors-text-accent-white-space-nowrap-css-6jyban-padding-right-var---chakra-space-0-5-c-368-css-2dnfmm-display--webkit-inline-box-display--webkit-inline-flex-display--ms-inline-flexbox-display-inline-flex-font-size-var---chakra-fontsizes-xs-line-height-1-2-99-css-15h4coq-display--webkit-inline-box-display--webkit-inline-flex-display--ms-inline-flexbox-display-inline-flex-padding-left-var---chakra-space-1-font-weight-var---chakra-fontweights-normal-color-var---chakra-colors-text-muted--webkit-text-decoration-line-through-text-decoration-line-through-white-space-nowrap-font-size-var---chakra-fontsizes-xs-c-899-css-vxcmzt-display--webkit-inline-box-display--webkit-inline-flex-display--ms-inline-flexbox-display-inline-flex-99",
+      "4-77778-stars-up",
+      "4-stars-up",
+      "-40-css-1nnviuq-display--webkit-box-display--webkit-flex-display--ms-flexbox-display-flex-width-var---chakra-sizes-7-height-var---chakra-sizes-7--webkit-align-items-center--webkit-box-align-center--ms-flex-align-center-align-items-center--webkit-box-pack-center--ms-flex-pack-center--webkit-justify-content-center-justify-content-center-media-screen-and-min-width-62rem-css-1nnviuq-width-var---chakra-sizes-10-height-var---chakra-sizes-10-css-dw5ttn-font-size-var---chakra-fontsizes-xs-1-css-hp6swz-display-inline-block-white-space-nowrap-vertical-align-middle--webkit-padding-start-var---chakra-space-1-5-padding-inline-start-var---chakra-space-1-5--webkit-padding-end-var---chakra-space-1-5-padding-inline-end-var---chakra-space-1-5-text-transform-none-font-size-var---chakra-fontsizes-sm-font-weight-var---chakra-fontweights-semibold-background-var---badge-bg-color-var---chakra-colors-badge-text-primary-box-shadow-var---badge-shadow-max-height-var---chakra-sizes-max-padding-top-var---chakra-space-0-5-padding-bottom-var---chakra-space-0-5-font-family-var---chakra-fonts-body-line-height-var---chakra-lineheights-6-letter-spacing-var---chakra-letterspacings-normal-background-color-var---chakra-colors-transparent-padding-var---chakra-space-0-margin-top-var---chakra-space-3-border-radius-var---chakra-radii-badge-new-css-1s6t40o-padding-top-var---chakra-space-0-font-family-var---chakra-fonts-heading-secondary-line-height-var---chakra-lineheights-5-letter-spacing-var---chakra-letterspacings-normal-text-transform-uppercase-font-weight-var---chakra-fontweights-bold-font-size-var---chakra-fontsizes-sm-mountain-hardwear-traxion-trail-pant---men-x27-s-c-77-99-c-129-99",
+      "4-84524-stars-up",
+      "1-stars-up",
+      "-45-hoka-kawana-2-training-shoes---women-x27-s-c-90-74-c-164-99",
+      "4-69231-stars-up",
+      "4-2-stars-up",
+      "4-73832-stars-up",
+      "4-60406-stars-up",
+      "-65-ternua-half-moon-2-0-3-layer-parka---women-x27-s-c-178-49-c-509-99",
+      "-52-dalbello-cabrio-lv-95-ski-boots---women-x27-s-c-335-99-c-699-99",
+      "4-65-stars-up",
+      "-41-v-lkl-blaze-114-skis-c-530-99-c-899-99",
+      "4-88889-stars-up",
+      "4-96447-stars-up",
+      "4-91705-stars-up",
+      "4-94828-stars-up",
+      "4-90062-stars-up",
+      "-50-new-vivobarefoot-primus-trail-ii-fg-barefoot-trail-shoes---men-x27-s-c-143-99-c-287-99",
+      "4-83784-stars-up",
+      "4-90909-stars-up",
+      "-75-kuwalla-tee-baggy-low-rise-carpenter-pant---women-x27-s-c-24-74-c-98-99",
+      "-41-1-adidas-pacer-training-3-stripes-woven-high-rise-shorts---women-x27-s-c-23-59-c-39-99",
+      "4-72222-stars-up",
+      "4-875-stars-up",
+      "4-5-stars-up",
+      "4-45455-stars-up",
+      "4-85417-stars-up",
+      "4-93333-stars-up",
+      "4-66783-stars-up",
+      "-35-new-hoka-solimar-running-shoes---men-x27-s-c-94-24-c-144-99",
+      "-30-new-hagl-fs-front-proof-jacket---women-x27-s-c-113-39-c-161-99",
+      "4-85625-stars-up",
+      "4-66667-stars-up",
+      "4-25-stars-up"
+    ],
     "identifiers": {
-      "sku": "NB-1080V13-W-110"
+      "sku": "CARD"
     },
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe-speedgoat-6",
-    "brand": "HOKA",
-    "model": "speedgoat-6",
-    "category": "trail",
-    "aliases": ["speedgoat-6"],
-    "identifiers": {
-      "sku": "HOKA-SPD6-M-330"
-    },
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
-    "shoeId": "shoe-peregrine-14",
-    "brand": "Saucony",
-    "model": "peregrine-14",
-    "category": "trail",
-    "aliases": ["peregrine-14"],
-    "identifiers": {
-      "sku": "SAU-PER14-U-221"
-    },
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
-    "shoeId": "shoe-ghost-16",
-    "brand": "Brooks",
-    "model": "ghost-16",
+    "shoeId": "shoe_bfb8f516a87e",
+    "brand": "Unknown",
+    "model": "accessories",
     "category": "running",
-    "aliases": ["ghost-16"],
+    "aliases": [
+      "accessories"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f195c5ceb8a6",
+    "brand": "Unknown",
+    "model": "add-to-wish-list",
+    "category": "running",
+    "aliases": [
+      "add-to-wish-list"
+    ],
     "identifiers": {
-      "sku": "BRK-GH16-W-150"
+      "sku": "CAROUSEL"
     },
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe-adizero-boston-12",
+    "shoeId": "shoe_849e9b45bf9c",
+    "brand": "adidas",
+    "model": "adidas-adizero-adios-pro-evo-1---white-black-crystal-white-m7-w8",
+    "category": "running",
+    "aliases": [
+      "adidas-adizero-adios-pro-evo-1---white-black-crystal-white-m7-w8"
+    ],
+    "identifiers": {
+      "sku": "IH5564"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3b9bcd9030ab",
+    "brand": "adidas",
+    "model": "adidas-adizero-avanti-spikes---black-m6-w7",
+    "category": "running",
+    "aliases": [
+      "adidas-adizero-avanti-spikes---black-m6-w7"
+    ],
+    "identifiers": {
+      "sku": "IG9910"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_09424f62f45c",
+    "brand": "adidas",
+    "model": "adidas-adizero-prime-x2-strung---cloud-white-core-black-lucid-red-m8-w9",
+    "category": "running",
+    "aliases": [
+      "adidas-adizero-prime-x2-strung---cloud-white-core-black-lucid-red-m8-w9"
+    ],
+    "identifiers": {
+      "sku": "IH5685"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_756c5d082aba",
+    "brand": "adidas",
+    "model": "adidas-mens-adizero-adios-pro-4---cloud-white-core-black-silver-metallic-8",
+    "category": "running",
+    "aliases": [
+      "adidas-mens-adizero-adios-pro-4---cloud-white-core-black-silver-metallic-8"
+    ],
+    "identifiers": {
+      "sku": "JR1094"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2b99e7faf5fd",
+    "brand": "adidas",
+    "model": "adidas-mens-adizero-boston-13---flash-aqua-cloud-white-lucid-lemon-8",
+    "category": "running",
+    "aliases": [
+      "adidas-mens-adizero-boston-13---flash-aqua-cloud-white-lucid-lemon-8"
+    ],
+    "identifiers": {
+      "sku": "JS4945"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8f31c99d14ce",
+    "brand": "adidas",
+    "model": "adidas-mens-adizero-evo-sl---cloud-white-core-black-8",
+    "category": "running",
+    "aliases": [
+      "adidas-mens-adizero-evo-sl---cloud-white-core-black-8"
+    ],
+    "identifiers": {
+      "sku": "JH6206"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_542cb43a805b",
+    "brand": "adidas",
+    "model": "adidas-mens-adizero-sl---lucid-cyan-blue-cloud-white-8",
+    "category": "running",
+    "aliases": [
+      "adidas-mens-adizero-sl---lucid-cyan-blue-cloud-white-8"
+    ],
+    "identifiers": {
+      "sku": "ID6923"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4c5dd776997a",
     "brand": "adidas",
     "model": "adizero-boston-12",
     "category": "running",
-    "aliases": ["adizero-boston-12"],
+    "aliases": [
+      "adizero-boston-12"
+    ],
     "identifiers": {
-      "sku": "ADI-BOS12-U-400"
+      "sku": "ADIBOS12U400"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1c6923cf3f5f",
+    "brand": "Unknown",
+    "model": "air-jordan-3-x-levis-black-and-white",
+    "category": "running",
+    "aliases": [
+      "air-jordan-3-x-levis-black-and-white"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ae5cfb68dbd3",
+    "brand": "Unknown",
+    "model": "all-kids",
+    "category": "running",
+    "aliases": [
+      "all-kids"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_95915461f438",
+    "brand": "Unknown",
+    "model": "all-women-x27-s",
+    "category": "running",
+    "aliases": [
+      "all-women-x27-s",
+      "all-men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_bad1cbbc33dd",
+    "brand": "Unknown",
+    "model": "altra-escalante-4-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "altra-escalante-4-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d2c017d20c72",
+    "brand": "Altra",
+    "model": "altra-escalante-4-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "altra-escalante-4-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11129025"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a033e3c10e5d",
+    "brand": "Unknown",
+    "model": "altra-experience-flow-2-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "altra-experience-flow-2-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_27e768f25dc7",
+    "brand": "Altra",
+    "model": "altra-experience-flow-2-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "altra-experience-flow-2-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11108105"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_cd2a8468a2c0",
+    "brand": "Unknown",
+    "model": "altra-experience-wild-3-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "altra-experience-wild-3-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_dd0c84a44a85",
+    "brand": "Altra",
+    "model": "altra-experience-wild-3-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "altra-experience-wild-3-trail-running-shoes---mens",
+      "altra-experience-wild-trail-2-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11129183"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_50aad3d9a7bf",
+    "brand": "Unknown",
+    "model": "altra-experience-wild-trail-2-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "altra-experience-wild-trail-2-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6cda0a9222d2",
+    "brand": "Unknown",
+    "model": "altra-fwd-via-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "altra-fwd-via-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_62ff8831fdd1",
+    "brand": "Altra",
+    "model": "altra-fwd-via-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "altra-fwd-via-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11156934"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f75b394843f5",
+    "brand": "Unknown",
+    "model": "altra-lone-peak-9-gtx-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "altra-lone-peak-9-gtx-trail-running-shoes---men-x27-s",
+      "altra-lone-peak-9-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a86f732bcdb4",
+    "brand": "Altra",
+    "model": "altra-lone-peak-9-gtx-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "altra-lone-peak-9-gtx-trail-running-shoes---mens",
+      "altra-lone-peak-9-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11129193"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e074deb916fc",
+    "brand": "Unknown",
+    "model": "altra-mens-experience-flow-3-d-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "altra-mens-experience-flow-3-d-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER447469"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_0e93a7036f8d",
+    "brand": "Unknown",
+    "model": "altra-olympus-6-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "altra-olympus-6-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f047e77ee4e0",
+    "brand": "Altra",
+    "model": "altra-olympus-6-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "altra-olympus-6-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11114591"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_33d39a102177",
+    "brand": "Unknown",
+    "model": "altra-timp-5-gtx-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "altra-timp-5-gtx-trail-running-shoes---men-x27-s",
+      "altra-timp-5-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7645b742e3d4",
+    "brand": "Altra",
+    "model": "altra-timp-5-gtx-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "altra-timp-5-gtx-trail-running-shoes---mens",
+      "altra-timp-5-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11082041"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ee393f011fba",
+    "brand": "Unknown",
+    "model": "altra-timp-6-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "altra-timp-6-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_eb81e42ff06b",
+    "brand": "Altra",
+    "model": "altra-timp-6-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "altra-timp-6-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11129213"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7117f9e0cf68",
+    "brand": "Unknown",
+    "model": "altra-torin-8-gtx-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "altra-torin-8-gtx-road-running-shoes---men-x27-s",
+      "altra-torin-8-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2fe1b83c1700",
+    "brand": "Altra",
+    "model": "altra-torin-8-gtx-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "altra-torin-8-gtx-road-running-shoes---mens",
+      "altra-torin-8-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11082075"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_bf98f099a15a",
+    "brand": "Unknown",
+    "model": "altra-womens-experience-flow-3-b-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "altra-womens-experience-flow-3-b-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER447694"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_11264d997f32",
+    "brand": "Unknown",
+    "model": "altra-womens-fwd-via-2-b-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "altra-womens-fwd-via-2-b-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER447295"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_23524d903b8f",
+    "brand": "Unknown",
+    "model": "altra-x-smartwool-escalante-4-runners---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "altra-x-smartwool-escalante-4-runners---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_56d160267469",
+    "brand": "Altra",
+    "model": "altra-x-smartwool-escalante-4-runners---mens",
+    "category": "running",
+    "aliases": [
+      "altra-x-smartwool-escalante-4-runners---mens"
+    ],
+    "identifiers": {
+      "sku": "11117945"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a714b346a818",
+    "brand": "Unknown",
+    "model": "arc-x27-teryx-norvan-ld-4-gore-tex-trail-run---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "arc-x27-teryx-norvan-ld-4-gore-tex-trail-run---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_cbc92f1fb0c2",
+    "brand": "Unknown",
+    "model": "arc-x27-teryx-norvan-ld-4-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "arc-x27-teryx-norvan-ld-4-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ed989f774840",
+    "brand": "Unknown",
+    "model": "arc-x27-teryx-sylan-gore-tex-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "arc-x27-teryx-sylan-gore-tex-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_18c7498b38e5",
+    "brand": "Unknown",
+    "model": "arc-x27-teryx-sylan-pro-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "arc-x27-teryx-sylan-pro-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b5466f5790b3",
+    "brand": "Arc'teryx",
+    "model": "arcteryx-norvan-ld-4-gore-tex-trail-run---mens",
+    "category": "trail",
+    "aliases": [
+      "arcteryx-norvan-ld-4-gore-tex-trail-run---mens"
+    ],
+    "identifiers": {
+      "sku": "11103734"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_885e4dd53b37",
+    "brand": "Arc'teryx",
+    "model": "arcteryx-norvan-ld-4-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "arcteryx-norvan-ld-4-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11153265"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_07ae8f785a3b",
+    "brand": "Arc'teryx",
+    "model": "arcteryx-sylan-gore-tex-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "arcteryx-sylan-gore-tex-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11087345"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_23583add5700",
+    "brand": "Arc'teryx",
+    "model": "arcteryx-sylan-pro-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "arcteryx-sylan-pro-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11108748"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_387cf571c3e3",
+    "brand": "ASICS",
+    "model": "asics-mens-gel-cumulus-26---black-electric-lime-11-5-regular",
+    "category": "running",
+    "aliases": [
+      "asics-mens-gel-cumulus-26---black-electric-lime-11-5-regular"
+    ],
+    "identifiers": {
+      "sku": "1011B792001"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_87ef69494d44",
+    "brand": "ASICS",
+    "model": "asics-mens-gel-cumulus-27---black-concrete-12",
+    "category": "running",
+    "aliases": [
+      "asics-mens-gel-cumulus-27---black-concrete-12"
+    ],
+    "identifiers": {
+      "sku": "1011B960002"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e8cb3b42491d",
+    "brand": "ASICS",
+    "model": "asics-mens-gel-kayano-31---black-white-7-5",
+    "category": "running",
+    "aliases": [
+      "asics-mens-gel-kayano-31---black-white-7-5"
+    ],
+    "identifiers": {
+      "sku": "1011B867002"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5c3b758ff9bc",
+    "brand": "ASICS",
+    "model": "asics-mens-gel-nimbus-27---black-lake-grey-7-regular",
+    "category": "running",
+    "aliases": [
+      "asics-mens-gel-nimbus-27---black-lake-grey-7-regular"
+    ],
+    "identifiers": {
+      "sku": "1011B958002"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6817e6fa08ec",
+    "brand": "ASICS",
+    "model": "asics-mens-glideride-max---monument-blue-vanilla-12-5",
+    "category": "running",
+    "aliases": [
+      "asics-mens-glideride-max---monument-blue-vanilla-12-5"
+    ],
+    "identifiers": {
+      "sku": "1011B891402"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5fafc9d5cfa4",
+    "brand": "ASICS",
+    "model": "asics-mens-magic-speed-4---flash-red-white-8",
+    "category": "running",
+    "aliases": [
+      "asics-mens-magic-speed-4---flash-red-white-8"
+    ],
+    "identifiers": {
+      "sku": "1011B875600"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f1ff08cb8d6e",
+    "brand": "ASICS",
+    "model": "asics-mens-novablast-5---black-carrier-grey-8-regular",
+    "category": "running",
+    "aliases": [
+      "asics-mens-novablast-5---black-carrier-grey-8-regular"
+    ],
+    "identifiers": {
+      "sku": "1011B974002"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2db0fd8bc956",
+    "brand": "ASICS",
+    "model": "asics-metaspeed-edge-paris---illuminate-mint-black-m4-w5-5",
+    "category": "running",
+    "aliases": [
+      "asics-metaspeed-edge-paris---illuminate-mint-black-m4-w5-5",
+      "asics-metaspeed-sky-paris---illuminate-mint-black-m4-w5-5"
+    ],
+    "identifiers": {
+      "sku": "1013A124400"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1dc541a44008",
+    "brand": "ASICS",
+    "model": "asics-superblast-2---blue-fade-edo-purple-m12-w13-5",
+    "category": "running",
+    "aliases": [
+      "asics-superblast-2---blue-fade-edo-purple-m12-w13-5"
+    ],
+    "identifiers": {
+      "sku": "1013A142401"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_85d1641e4177",
+    "brand": "Unknown",
+    "model": "best-discounts",
+    "category": "running",
+    "aliases": [
+      "best-discounts"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b879671b9207",
+    "brand": "Unknown",
+    "model": "best-sellers",
+    "category": "running",
+    "aliases": [
+      "best-sellers"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8dd96fb3cdd2",
+    "brand": "Unknown",
+    "model": "book",
+    "category": "running",
+    "aliases": [
+      "book"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8be9eeb6e270",
+    "brand": "Brooks",
+    "model": "brooks-caldera-8-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "brooks-caldera-8-trail-running-shoes---men-x27-s",
+      "brooks-caldera-8-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11081038"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7c4092c00565",
+    "brand": "Brooks",
+    "model": "brooks-cascadia-19-gore-tex-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "brooks-cascadia-19-gore-tex-trail-running-shoes---men-x27-s",
+      "brooks-cascadia-19-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11114195"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_391344f32dea",
+    "brand": "Brooks",
+    "model": "brooks-ghost-17-gore-tex-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "brooks-ghost-17-gore-tex-road-running-shoes---men-x27-s",
+      "brooks-ghost-17-gore-tex-road-running-shoes---mens",
+      "brooks-ghost-17-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {
+      "sku": "11114227"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_03d38049ffde",
+    "brand": "Brooks",
+    "model": "brooks-ghost-17-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "brooks-ghost-17-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11114826"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_266e47d2d8c9",
+    "brand": "Brooks",
+    "model": "brooks-glycerin-22-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "brooks-glycerin-22-road-running-shoes---men-x27-s",
+      "brooks-glycerin-22-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11114346"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_fecd6ec5140a",
+    "brand": "Brooks",
+    "model": "brooks-launch-11-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "brooks-launch-11-road-running-shoes---men-x27-s",
+      "brooks-launch-11-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11081153"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_aaa55ea21a76",
+    "brand": "Brooks",
+    "model": "brooks-womens-chaser-3",
+    "category": "running",
+    "aliases": [
+      "brooks-womens-chaser-3"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450760"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d44000bd8bac",
+    "brand": "Unknown",
+    "model": "cascadia-19-170-00-mens---trail-running-widths---medium-wide",
+    "category": "trail",
+    "aliases": [
+      "cascadia-19-170-00-mens---trail-running-widths---medium-wide",
+      "revel-8-130-00-mens---road-running-walking-widths---medium-wide",
+      "trace-4-140-00-mens---road-running-walking-widths---medium-wide",
+      "ghost-max-se-200-00---210-00-mens---walking-width---medium"
+    ],
+    "identifiers": {
+      "sku": "TILETHUMBNAILWRAPPER"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_bd12f10d42f1",
+    "brand": "Unknown",
+    "model": "chaussures-de-course-true-motion-u-tech-nevos-elements-largeur-b-pour-femmes",
+    "category": "running",
+    "aliases": [
+      "chaussures-de-course-true-motion-u-tech-nevos-elements-largeur-b-pour-femmes"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER200594"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c0d39e08e03f",
+    "brand": "HOKA",
+    "model": "clifton-9",
+    "category": "running",
+    "aliases": [
+      "clifton-9"
+    ],
+    "identifiers": {
+      "sku": "HOKACL9M1127895"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b5f44673bed5",
+    "brand": "On",
+    "model": "cloudrunner-2",
+    "category": "running",
+    "aliases": [
+      "cloudrunner-2"
+    ],
+    "identifiers": {
+      "sku": "ONCR2W3WE1013"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_db78b5e12f2c",
+    "brand": "Unknown",
+    "model": "cohesion-16-wide",
+    "category": "running",
+    "aliases": [
+      "cohesion-16-wide"
+    ],
+    "identifiers": {
+      "sku": "195019460720"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3d042a6b6960",
+    "brand": "Unknown",
+    "model": "cohesion-18",
+    "category": "running",
+    "aliases": [
+      "cohesion-18"
+    ],
+    "identifiers": {
+      "sku": "195021634010"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a689f87b3631",
+    "brand": "Unknown",
+    "model": "cohesion-18-wide",
+    "category": "running",
+    "aliases": [
+      "cohesion-18-wide"
+    ],
+    "identifiers": {
+      "sku": "195021173496"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4fa3394c4496",
+    "brand": "Unknown",
+    "model": "curry-13",
+    "category": "running",
+    "aliases": [
+      "curry-13"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_9bae1e7f6b37",
+    "brand": "Unknown",
+    "model": "deal-of-the-day---134-98---144-98-salomon-hikers",
+    "category": "running",
+    "aliases": [
+      "deal-of-the-day---134-98---144-98-salomon-hikers"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f4734f8ae22b",
+    "brand": "Unknown",
+    "model": "deals-by-category",
+    "category": "running",
+    "aliases": [
+      "deals-by-category"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4f001c126df8",
+    "brand": "Unknown",
+    "model": "deals-under-100",
+    "category": "running",
+    "aliases": [
+      "deals-under-100"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_21fe5e9fb9dc",
+    "brand": "Unknown",
+    "model": "deals-under-25",
+    "category": "running",
+    "aliases": [
+      "deals-under-25"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4e2f0225b8e5",
+    "brand": "Unknown",
+    "model": "deals-under-50",
+    "category": "running",
+    "aliases": [
+      "deals-under-50"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1472aded4f36",
+    "brand": "Unknown",
+    "model": "dugout-staples",
+    "category": "running",
+    "aliases": [
+      "dugout-staples"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6f517179e391",
+    "brand": "Unknown",
+    "model": "dynablast-5",
+    "category": "running",
+    "aliases": [
+      "dynablast-5",
+      "jolt-5-wide",
+      "gel-pulse-16",
+      "noosa-tri-16",
+      "gt-4000-4-wide",
+      "gt-2000-13-wide",
+      "gt-2000-13",
+      "jolt-5-extra-wide",
+      "gel-contend-9",
+      "novablast-5",
+      "superblast-2",
+      "metaspeed-edge-paris",
+      "metaspeed-sky-paris",
+      "gel-contend-9-wide",
+      "gel-contend-9-extra-wide",
+      "gel-excite-10-wide"
+    ],
+    "identifiers": {
+      "sku": "DETAILS"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f7d4c379eb8f",
+    "brand": "Unknown",
+    "model": "echelon-10",
+    "category": "running",
+    "aliases": [
+      "echelon-10"
+    ],
+    "identifiers": {
+      "sku": "195020823897"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_443fa8362826",
+    "brand": "Unknown",
+    "model": "echelon-10-extra-wide",
+    "category": "running",
+    "aliases": [
+      "echelon-10-extra-wide"
+    ],
+    "identifiers": {
+      "sku": "195020955567"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_894d765c6619",
+    "brand": "Unknown",
+    "model": "echelon-10-wide",
+    "category": "running",
+    "aliases": [
+      "echelon-10-wide"
+    ],
+    "identifiers": {
+      "sku": "195020955109"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a32fe005d56c",
+    "brand": "Unknown",
+    "model": "endorphin-azura",
+    "category": "running",
+    "aliases": [
+      "endorphin-azura"
+    ],
+    "identifiers": {
+      "sku": "195021645450"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ab0e00f2c2bc",
+    "brand": "Unknown",
+    "model": "endorphin-azura-hi-octane",
+    "category": "running",
+    "aliases": [
+      "endorphin-azura-hi-octane"
+    ],
+    "identifiers": {
+      "sku": "195021645900"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b47476e9475a",
+    "brand": "Unknown",
+    "model": "endorphin-elite-2",
+    "category": "running",
+    "aliases": [
+      "endorphin-elite-2"
+    ],
+    "identifiers": {
+      "sku": "195021228349"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a44787d1cf66",
+    "brand": "Unknown",
+    "model": "endorphin-pro-4",
+    "category": "running",
+    "aliases": [
+      "endorphin-pro-4"
+    ],
+    "identifiers": {
+      "sku": "195021159995"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d0915777d10a",
+    "brand": "Unknown",
+    "model": "endorphin-pro-5",
+    "category": "running",
+    "aliases": [
+      "endorphin-pro-5"
+    ],
+    "identifiers": {
+      "sku": "195021642152"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_772d23e0c6bf",
+    "brand": "Unknown",
+    "model": "endorphin-speed-5",
+    "category": "running",
+    "aliases": [
+      "endorphin-speed-5",
+      "endorphin-speed-5-wide",
+      "tokyo-endorphin-speed-5",
+      "boston-endorphin-speed-5",
+      "london-endorphin-speed-5"
+    ],
+    "identifiers": {
+      "sku": "195021164968"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ee2b105e51de",
+    "brand": "Unknown",
+    "model": "excursion-tr17",
+    "category": "running",
+    "aliases": [
+      "excursion-tr17"
+    ],
+    "identifiers": {
+      "sku": "195020787274"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_91889d993541",
+    "brand": "Unknown",
+    "model": "excursion-tr17-wide",
+    "category": "running",
+    "aliases": [
+      "excursion-tr17-wide"
+    ],
+    "identifiers": {
+      "sku": "195020802274"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_07ac56fd0c88",
+    "brand": "Unknown",
+    "model": "explore-60-canadian-based-brands-we-love-gt",
+    "category": "running",
+    "aliases": [
+      "explore-60-canadian-based-brands-we-love-gt"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3169168a839a",
+    "brand": "Unknown",
+    "model": "footwear-under-105",
+    "category": "running",
+    "aliases": [
+      "footwear-under-105"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_335dc3ed95a0",
+    "brand": "Unknown",
+    "model": "fran-ais",
+    "category": "running",
+    "aliases": [
+      "fran-ais"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f22d90f3ba3b",
+    "brand": "Unknown",
+    "model": "free-shipping-on-orders-over-50-gt",
+    "category": "running",
+    "aliases": [
+      "free-shipping-on-orders-over-50-gt"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_9835f482cafe",
+    "brand": "Unknown",
+    "model": "free-shipping-on-orders-over-75",
+    "category": "running",
+    "aliases": [
+      "free-shipping-on-orders-over-75"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_47ff2a483f05",
+    "brand": "Unknown",
+    "model": "free-standard-shipping-orders-75-free-returns",
+    "category": "running",
+    "aliases": [
+      "free-standard-shipping-orders-75-free-returns"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_fc7ba41dc545",
+    "brand": "New Balance",
+    "model": "fresh-foam-x-1080-v13",
+    "category": "running",
+    "aliases": [
+      "fresh-foam-x-1080-v13"
+    ],
+    "identifiers": {
+      "sku": "NB1080V13W110"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8d780e475a36",
+    "brand": "Unknown",
+    "model": "from-0c-to-50c",
+    "category": "running",
+    "aliases": [
+      "from-0c-to-50c"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1599087b6d12",
+    "brand": "Unknown",
+    "model": "from-100c-to-150c",
+    "category": "running",
+    "aliases": [
+      "from-100c-to-150c"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_fee815aaded2",
+    "brand": "Unknown",
+    "model": "from-150c-to-200c",
+    "category": "running",
+    "aliases": [
+      "from-150c-to-200c"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7a52e7b3561b",
+    "brand": "Unknown",
+    "model": "from-200c",
+    "category": "running",
+    "aliases": [
+      "from-200c"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_be19a09f2197",
+    "brand": "Unknown",
+    "model": "from-50c-to-100c",
+    "category": "running",
+    "aliases": [
+      "from-50c-to-100c"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_cec4f0328baf",
+    "brand": "Unknown",
+    "model": "garmin-fenix-8-43mm-amoled-sapphire-gps-smartwatch",
+    "category": "running",
+    "aliases": [
+      "garmin-fenix-8-43mm-amoled-sapphire-gps-smartwatch"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER199972"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d84606f371d4",
+    "brand": "Unknown",
+    "model": "garmin-forerunner-165-gps-smartwatch",
+    "category": "running",
+    "aliases": [
+      "garmin-forerunner-165-gps-smartwatch"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER185746"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ff7db70589dc",
+    "brand": "Unknown",
+    "model": "get-a-monthly-chance-to-win-200",
+    "category": "running",
+    "aliases": [
+      "get-a-monthly-chance-to-win-200"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f9d81382f935",
+    "brand": "Unknown",
+    "model": "gift-guide",
+    "category": "running",
+    "aliases": [
+      "gift-guide"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e0a72babc22f",
+    "brand": "Unknown",
+    "model": "gifts-for-under-100",
+    "category": "running",
+    "aliases": [
+      "gifts-for-under-100"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_9248ade14b70",
+    "brand": "Unknown",
+    "model": "gifts-for-under-150",
+    "category": "running",
+    "aliases": [
+      "gifts-for-under-150"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4fed5dbb6556",
+    "brand": "Unknown",
+    "model": "gifts-for-under-50",
+    "category": "running",
+    "aliases": [
+      "gifts-for-under-50"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b178f2af1d98",
+    "brand": "Unknown",
+    "model": "glycerin-max-2-250-00-mens---road-running-walking-width---medium",
+    "category": "running",
+    "aliases": [
+      "glycerin-max-2-250-00-mens---road-running-walking-width---medium",
+      "adrenaline-gts-25-180-00-mens---road-running-walking-widths---narrow-medium-wide-extra-wide",
+      "hyperion-3-200-00-mens---road-running-width---medium",
+      "ghost-trail-180-00-mens---trail-running-widths---medium-wide",
+      "ghost-max-3-190-00-mens---road-running-walking-widths---medium-wide-extra-wide",
+      "ghost-17-180-00-mens---road-running-walking-widths---narrow-medium-wide-extra-wide",
+      "glycerin-23-210-00-mens---road-running-walking-widths---medium-wide-extra-wide",
+      "glycerin-gts-23-210-00-mens---road-running-walking-widths---medium-wide-extra-wide",
+      "glycerin-22-original-price-210-00-current-price-146-95-30-off-mens---road-running-walking-widths---medium-wide-extra-wide",
+      "glycerin-flex-210-00-mens---road-running-walking-width---medium",
+      "launch-12-160-00-mens---road-running-walking-width---medium"
+    ],
+    "identifiers": {
+      "sku": "TILETHUMBNAIL"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ba97f4a2f812",
+    "brand": "Unknown",
+    "model": "guide-18",
+    "category": "running",
+    "aliases": [
+      "guide-18"
+    ],
+    "identifiers": {
+      "sku": "195020793930"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_41246f8a5268",
+    "brand": "Unknown",
+    "model": "guide-19",
+    "category": "running",
+    "aliases": [
+      "guide-19"
+    ],
+    "identifiers": {
+      "sku": "195021640097"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1adf79df2a04",
+    "brand": "Unknown",
+    "model": "guide-19-extra-wide",
+    "category": "running",
+    "aliases": [
+      "guide-19-extra-wide"
+    ],
+    "identifiers": {
+      "sku": "195021641704"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b86511a8c064",
+    "brand": "Unknown",
+    "model": "guide-19-wide",
+    "category": "running",
+    "aliases": [
+      "guide-19-wide"
+    ],
+    "identifiers": {
+      "sku": "195021641216"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_89cbab23fcb7",
+    "brand": "Unknown",
+    "model": "guide-metro",
+    "category": "running",
+    "aliases": [
+      "guide-metro"
+    ],
+    "identifiers": {
+      "sku": "195020797532"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_35573d849e1a",
+    "brand": "Unknown",
+    "model": "guide-metro-le",
+    "category": "running",
+    "aliases": [
+      "guide-metro-le",
+      "guide-metro-le-wide"
+    ],
+    "identifiers": {
+      "sku": "195020798249"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b09243c06508",
+    "brand": "HOKA",
+    "model": "hoka-bondi-9-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "hoka-bondi-9-road-running-shoes---men-x27-s",
+      "hoka-bondi-9-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104607"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_9cb11641ff5a",
+    "brand": "HOKA",
+    "model": "hoka-challenger-8-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "hoka-challenger-8-trail-running-shoes---men-x27-s",
+      "hoka-challenger-8-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104635"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_05b9e2017549",
+    "brand": "HOKA",
+    "model": "hoka-clifton-10-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "hoka-clifton-10-road-running-shoes---men-x27-s",
+      "hoka-clifton-10-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104688"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1f5b5fe4a999",
+    "brand": "HOKA",
+    "model": "hoka-deals",
+    "category": "running",
+    "aliases": [
+      "hoka-deals"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7f0708922c0d",
+    "brand": "HOKA",
+    "model": "hoka-mach-6-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "hoka-mach-6-road-running-shoes---men-x27-s",
+      "hoka-mach-6-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104846"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8a368b48aa9f",
+    "brand": "HOKA",
+    "model": "hoka-mens-airolite-run-long-sleeve",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-airolite-run-long-sleeve"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450031"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3513f30e45e5",
+    "brand": "HOKA",
+    "model": "hoka-mens-airolite-run-tank",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-airolite-run-tank"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER449977"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_fb9c78ff5793",
+    "brand": "HOKA",
+    "model": "hoka-mens-basezip-long-sleeve",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-basezip-long-sleeve",
+      "hoka-womens-basezip-long-sleeve"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450130"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_df323791df54",
+    "brand": "HOKA",
+    "model": "hoka-mens-bondi-9---cosmic-grey-ultramarine-7-5-regular",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-bondi-9---cosmic-grey-ultramarine-7-5-regular"
+    ],
+    "identifiers": {
+      "sku": "1162011CYLT"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e2f3ea4d49ab",
+    "brand": "HOKA",
+    "model": "hoka-mens-bondi-9---wide---cosmic-grey-ultramarine-8-wide",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-bondi-9---wide---cosmic-grey-ultramarine-8-wide"
+    ],
+    "identifiers": {
+      "sku": "1162013CYLT"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e528cef8ff9a",
+    "brand": "HOKA",
+    "model": "hoka-mens-challenger-atr-7---bellwether-blue-stone-blue-13",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-challenger-atr-7---bellwether-blue-stone-blue-13"
+    ],
+    "identifiers": {
+      "sku": "1134497BBSBL"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_67f69fe6044c",
+    "brand": "HOKA",
+    "model": "hoka-mens-challenger-atr-7-gtx---black-12-5",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-challenger-atr-7-gtx---black-12-5"
+    ],
+    "identifiers": {
+      "sku": "1134501FBBLC"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_04eac3d69d5a",
+    "brand": "HOKA",
+    "model": "hoka-mens-clifton-10---alpine-blue-foggy-night-7-regular",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-clifton-10---alpine-blue-foggy-night-7-regular"
+    ],
+    "identifiers": {
+      "sku": "1162030ALF"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ac8fd8731947",
+    "brand": "HOKA",
+    "model": "hoka-mens-clifton-9---solar-flare-lettuce-13-regular",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-clifton-9---solar-flare-lettuce-13-regular"
+    ],
+    "identifiers": {
+      "sku": "1127895SLRL"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1cbfd1c7f1d8",
+    "brand": "HOKA",
+    "model": "hoka-mens-clifton-9-gtx---stormy-skies-orange-zest-13-regular",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-clifton-9-gtx---stormy-skies-orange-zest-13-regular"
+    ],
+    "identifiers": {
+      "sku": "1141470FSGZ"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_aa50427bb083",
+    "brand": "HOKA",
+    "model": "hoka-mens-essential-long-sleeve-tee",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-essential-long-sleeve-tee"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER449851"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b761444943a7",
+    "brand": "HOKA",
+    "model": "hoka-mens-mach-6---black-night-sky-8",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-mach-6---black-night-sky-8"
+    ],
+    "identifiers": {
+      "sku": "1147790BNGH"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1e25e6525b60",
+    "brand": "HOKA",
+    "model": "hoka-mens-mach-x-2---grapefruit-electric-coral-12",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-mach-x-2---grapefruit-electric-coral-12"
+    ],
+    "identifiers": {
+      "sku": "1155119GFRT"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5df760263e0e",
+    "brand": "HOKA",
+    "model": "hoka-mens-novafly-run-pant",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-novafly-run-pant"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER449815"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_172a6d7d9a8f",
+    "brand": "HOKA",
+    "model": "hoka-mens-skyfill-run-vest",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-skyfill-run-vest",
+      "hoka-womens-skyfill-run-vest"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450112"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c4ff0f1c6684",
+    "brand": "HOKA",
+    "model": "hoka-mens-skyflow---luna-moth-white-8",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-skyflow---luna-moth-white-8"
+    ],
+    "identifiers": {
+      "sku": "1155111LHW"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_cb34d3811f22",
+    "brand": "HOKA",
+    "model": "hoka-mens-skyward-x---clear-sea-alpine-blue-8-5",
+    "category": "running",
+    "aliases": [
+      "hoka-mens-skyward-x---clear-sea-alpine-blue-8-5"
+    ],
+    "identifiers": {
+      "sku": "1147911CSLP"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4d4870c650b7",
+    "brand": "HOKA",
+    "model": "hoka-mens-speedgoat-6---droplet-nautical-dusk-12",
+    "category": "trail",
+    "aliases": [
+      "hoka-mens-speedgoat-6---droplet-nautical-dusk-12"
+    ],
+    "identifiers": {
+      "sku": "1147791DRPL"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8db920f99487",
+    "brand": "HOKA",
+    "model": "hoka-mens-speedgoat-6-gtx---black-outer-orbit-9",
+    "category": "trail",
+    "aliases": [
+      "hoka-mens-speedgoat-6-gtx---black-outer-orbit-9"
+    ],
+    "identifiers": {
+      "sku": "1155150BCKT"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_91b04ee11785",
+    "brand": "HOKA",
+    "model": "hoka-rocket-x-2---yuzu-cielo-blue-m6-w7",
+    "category": "running",
+    "aliases": [
+      "hoka-rocket-x-2---yuzu-cielo-blue-m6-w7"
+    ],
+    "identifiers": {
+      "sku": "1127927YZC"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a506c38bd3e5",
+    "brand": "HOKA",
+    "model": "hoka-speedgoat-6-gore-tex-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "hoka-speedgoat-6-gore-tex-trail-running-shoes---men-x27-s",
+      "hoka-speedgoat-6-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11063948"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_386d2ba1fda4",
+    "brand": "HOKA",
+    "model": "hoka-speedgoat-7-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "hoka-speedgoat-7-trail-running-shoes---men-x27-s",
+      "hoka-speedgoat-7-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11130153"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d2e0ff1185be",
+    "brand": "HOKA",
+    "model": "hoka-torrent-4-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "hoka-torrent-4-trail-running-shoes---men-x27-s",
+      "hoka-torrent-4-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104713"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_58efa1685cbf",
+    "brand": "HOKA",
+    "model": "hoka-transport-road-walking-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "hoka-transport-road-walking-shoes---men-x27-s",
+      "hoka-transport-road-walking-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11105080"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5e8dd2c4d6c5",
+    "brand": "HOKA",
+    "model": "hoka-unisex-basecamp-thermal-midlayer",
+    "category": "running",
+    "aliases": [
+      "hoka-unisex-basecamp-thermal-midlayer"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450076"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_dc4b0eba7681",
+    "brand": "HOKA",
+    "model": "hoka-unisex-cielo-x1-3-d-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "hoka-unisex-cielo-x1-3-d-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER438335"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6e8c881114c6",
+    "brand": "HOKA",
+    "model": "hoka-unisex-outrail-shirt-jacket",
+    "category": "trail",
+    "aliases": [
+      "hoka-unisex-outrail-shirt-jacket"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450331"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e589cf1c6a33",
+    "brand": "HOKA",
+    "model": "hoka-womens-hupana-sports-bra-with-removable-cup",
+    "category": "running",
+    "aliases": [
+      "hoka-womens-hupana-sports-bra-with-removable-cup"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER449944"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e2bf241c0f4e",
+    "brand": "HOKA",
+    "model": "hoka-womens-skyglow-half-zip",
+    "category": "running",
+    "aliases": [
+      "hoka-womens-skyglow-half-zip"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450268"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ae283da133d9",
+    "brand": "HOKA",
+    "model": "hoka-womens-woodland-hike-pant",
+    "category": "running",
+    "aliases": [
+      "hoka-womens-woodland-hike-pant"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER450418"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_db3fcd353211",
+    "brand": "Unknown",
+    "model": "hurricane-25",
+    "category": "running",
+    "aliases": [
+      "hurricane-25"
+    ],
+    "identifiers": {
+      "sku": "195021168546"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5471ae7047aa",
+    "brand": "Unknown",
+    "model": "hurricane-25-wide",
+    "category": "running",
+    "aliases": [
+      "hurricane-25-wide"
+    ],
+    "identifiers": {
+      "sku": "195021194309"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_95f50a7485ae",
+    "brand": "Unknown",
+    "model": "hyperion-max-3-250-00-mens---road-running-width---medium",
+    "category": "running",
+    "aliases": [
+      "hyperion-max-3-250-00-mens---road-running-width---medium",
+      "launch-11-original-price-160-00-current-price-127-95-20-off-mens---road-running-widths---medium-wide",
+      "staple-x-ghost-trail-210-00-unisex-width---medium",
+      "ghost-17-gtx-200-00-mens---road-running-walking-width---medium",
+      "addiction-gts-15-170-00-mens---road-running-walking-widths---narrow-medium-wide-extra-wide",
+      "cascadia-19-gtx-200-00-mens---trail-running-width---medium",
+      "revel-max-150-00-mens---road-running-walking-width---medium",
+      "glycerin-gts-22-original-price-210-00-current-price-146-95-30-off-mens---road-running-walking-widths---medium-wide-extra-wide",
+      "adrenaline-gts-24-gtx-200-00-mens---road-running-walking-width---medium",
+      "beast-gts-24-original-price-200-00-current-price-159-95-20-off-mens---road-running-walking-widths---medium-wide-extra-wide",
+      "addiction-walker-2-170-00-mens---walking-widths---narrow-medium-wide-extra-wide",
+      "glycerin-stealthfit-22-original-price-210-00-current-price-146-95-30-off-mens---road-running-walking-width---medium",
+      "hyperion-elite-5-300-00-unisex---competition-width---medium",
+      "addiction-walker-v-strap-2-170-00-mens---walking-widths---medium-wide-extra-wide",
+      "ghost-max-l-200-00-mens---walking-widths---medium-wide"
+    ],
+    "identifiers": {
+      "sku": "TILE"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e125a8a272d0",
+    "brand": "Unknown",
+    "model": "icebug-newrun-bugrip-traction-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "icebug-newrun-bugrip-traction-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3587cff76d4f",
+    "brand": "Icebug",
+    "model": "icebug-newrun-bugrip-traction-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "icebug-newrun-bugrip-traction-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "738211"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8c71386fe0a4",
+    "brand": "Unknown",
+    "model": "jackets-vests",
+    "category": "running",
+    "aliases": [
+      "jackets-vests"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_0b702b5080a4",
+    "brand": "Unknown",
+    "model": "jordan-brooklyn-cat-scratch",
+    "category": "running",
+    "aliases": [
+      "jordan-brooklyn-cat-scratch"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_682f94a04348",
+    "brand": "Unknown",
+    "model": "jordan-flight",
+    "category": "running",
+    "aliases": [
+      "jordan-flight"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a70da8208ac7",
+    "brand": "Unknown",
+    "model": "keen-roam-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "keen-roam-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7979ace0dca4",
+    "brand": "Keen",
+    "model": "keen-roam-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "keen-roam-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11148964"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_664dd530816a",
+    "brand": "Unknown",
+    "model": "keen-seek-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "keen-seek-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5aa9b9859454",
+    "brand": "Keen",
+    "model": "keen-seek-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "keen-seek-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11148974"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c55854b4f831",
+    "brand": "Saucony",
+    "model": "keith-haring-x-saucony-nyc-endorphin-speed-5",
+    "category": "running",
+    "aliases": [
+      "keith-haring-x-saucony-nyc-endorphin-speed-5"
+    ],
+    "identifiers": {
+      "sku": "195021315742"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4acff4b8cd5e",
+    "brand": "Unknown",
+    "model": "kinvara-16",
+    "category": "running",
+    "aliases": [
+      "kinvara-16"
+    ],
+    "identifiers": {
+      "sku": "195021165095"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e6fc46327b93",
+    "brand": "Unknown",
+    "model": "la-sportiva-bushido-iii-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-bushido-iii-trail-running-shoes---men-x27-s",
+      "la-sportiva-bushido-iii-gore-tex-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4438caa77b3a",
+    "brand": "La Sportiva",
+    "model": "la-sportiva-bushido-iii-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-bushido-iii-trail-running-shoes---mens",
+      "la-sportiva-bushido-iii-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11134572"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5ef976add704",
+    "brand": "Unknown",
+    "model": "la-sportiva-prodigio-max-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-prodigio-max-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a9218919c8e9",
+    "brand": "Unknown",
+    "model": "la-sportiva-prodigio-pro-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-prodigio-pro-trail-running-shoes---men-x27-s",
+      "la-sportiva-prodigio-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2a56853cdd12",
+    "brand": "La Sportiva",
+    "model": "la-sportiva-prodigio-pro-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-prodigio-pro-trail-running-shoes---mens",
+      "la-sportiva-prodigio-trail-running-shoes---mens",
+      "la-sportiva-prodigio-max-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11107829"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4615e3278408",
+    "brand": "Unknown",
+    "model": "la-sportiva-ultra-raptor-3-trail-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-ultra-raptor-3-trail-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f371be051a93",
+    "brand": "La Sportiva",
+    "model": "la-sportiva-ultra-raptor-3-trail-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-ultra-raptor-3-trail-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11134736"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7073039164d9",
+    "brand": "Unknown",
+    "model": "lancer-3",
+    "category": "running",
+    "aliases": [
+      "lancer-3"
+    ],
+    "identifiers": {
+      "sku": "195020826409"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b8c2a701333f",
+    "brand": "Unknown",
+    "model": "lancer-run",
+    "category": "running",
+    "aliases": [
+      "lancer-run"
+    ],
+    "identifiers": {
+      "sku": "195021171843"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1a561f5835f0",
+    "brand": "Unknown",
+    "model": "lifestyle-shoes",
+    "category": "running",
+    "aliases": [
+      "lifestyle-shoes"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_022dd9ab90c3",
+    "brand": "Unknown",
+    "model": "men-39-s-guide-19",
+    "category": "running",
+    "aliases": [
+      "men-39-s-guide-19",
+      "men-39-s-endorphin-pro-5",
+      "men-39-s-endorphin-azura-hi-octane",
+      "men-39-s-endorphin-azura",
+      "men-39-s-ride-19",
+      "men-39-s-peregrine-16",
+      "men-39-s-omni-23-st",
+      "men-39-s-endorphin-speed-5",
+      "men-39-s-hurricane-25",
+      "men-39-s-ride-19-wide",
+      "men-39-s-endorphin-speed-5-wide",
+      "men-39-s-triumph-23",
+      "men-39-s-tokyo-endorphin-speed-5",
+      "men-39-s-boston-endorphin-speed-5",
+      "men-39-s-london-endorphin-speed-5",
+      "men-39-s-ride-18",
+      "men-39-s-kinvara-16",
+      "men-39-s-triumph-23-wide",
+      "men-39-s-peregrine-15",
+      "endorphin-elite-2",
+      "men-39-s-guide-18",
+      "men-39-s-cohesion-18",
+      "men-39-s-lancer-3",
+      "men-39-s-xodus-ultra-4",
+      "men-39-s-excursion-tr17",
+      "men-39-s-omni-23-st-wide",
+      "men-39-s-excursion-tr17-wide",
+      "men-39-s-echelon-10",
+      "men-39-s-guide-metro-le",
+      "men-39-s-lancer-run",
+      "men-39-s-peregrine-16-gtx",
+      "men-39-s-peregrine-16-wide",
+      "men-39-s-echelon-10-extra-wide",
+      "men-39-s-cohesion-18-wide",
+      "men-39-s-echelon-10-wide",
+      "men-39-s-keith-haring-x-saucony-nyc-endorphin-speed-5",
+      "men-39-s-guide-metro",
+      "men-39-s-guide-19-extra-wide",
+      "men-39-s-guide-metro-le-wide",
+      "men-39-s-guide-19-wide",
+      "men-39-s-ride-tr2",
+      "men-39-s-hurricane-25-wide",
+      "men-39-s-triumph-23-gtx",
+      "men-39-s-ride-tr2-gtx",
+      "men-39-s-surge-3",
+      "men-39-s-mirage-flow",
+      "men-39-s-endorphin-pro-4",
+      "men-39-s-tide-2"
+    ],
+    "identifiers": {
+      "sku": "TILECONTENT"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_79bd1b3a13f7",
+    "brand": "Unknown",
+    "model": "men-x27-s-golf-essentials",
+    "category": "running",
+    "aliases": [
+      "men-x27-s-golf-essentials"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_76f8737a096d",
+    "brand": "Unknown",
+    "model": "merrell-agility-peak-6-gore-tex-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "merrell-agility-peak-6-gore-tex-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3d392b9d7722",
+    "brand": "Merrell",
+    "model": "merrell-agility-peak-6-gore-tex-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "merrell-agility-peak-6-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11138461"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b4a8b87bb2a9",
+    "brand": "Unknown",
+    "model": "merrell-agility-trail-waterproof-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "merrell-agility-trail-waterproof-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_16c911b0aab0",
+    "brand": "Merrell",
+    "model": "merrell-agility-trail-waterproof-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "merrell-agility-trail-waterproof-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11138481"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f47b26f35ca1",
+    "brand": "Unknown",
+    "model": "merrell-speedarc-matis-gore-tex-hiking-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "merrell-speedarc-matis-gore-tex-hiking-shoes---men-x27-s",
+      "merrell-speedarc-matis-hiking-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f47bf90fb9b1",
+    "brand": "Merrell",
+    "model": "merrell-speedarc-matis-gore-tex-hiking-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "merrell-speedarc-matis-gore-tex-hiking-shoes---mens",
+      "merrell-speedarc-matis-hiking-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11150372"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_566fb142ac16",
+    "brand": "Unknown",
+    "model": "mirage-flow",
+    "category": "running",
+    "aliases": [
+      "mirage-flow"
+    ],
+    "identifiers": {
+      "sku": "195020729403"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2b4b9348bd4b",
+    "brand": "Unknown",
+    "model": "new-arrivals",
+    "category": "running",
+    "aliases": [
+      "new-arrivals"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_ff60023cd42d",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fresh-foam-x-1080v14---inkwell-silver-metallic-ginger-lemon-7-regular",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fresh-foam-x-1080v14---inkwell-silver-metallic-ginger-lemon-7-regular"
+    ],
+    "identifiers": {
+      "sku": "M1080N14"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a2e92a3acbb6",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fresh-foam-x-880v15---black-8-regular",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fresh-foam-x-880v15---black-8-regular",
+      "new-balance-mens-fresh-foam-x-860v14---black-phantom-sea-salt-8-regular"
+    ],
+    "identifiers": {
+      "sku": "M880K15"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1843534b8f05",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fresh-foam-x-balos---grey-matter-mineral-white-13-regular",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fresh-foam-x-balos---grey-matter-mineral-white-13-regular"
+    ],
+    "identifiers": {
+      "sku": "MBALCB1"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c027a3f6b028",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fresh-foam-x-hierro-v9---dark-juniper-dried-apricot-11",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fresh-foam-x-hierro-v9---dark-juniper-dried-apricot-11"
+    ],
+    "identifiers": {
+      "sku": "MTHIERO9"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6ca84b78940c",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fresh-foam-x-more-v5---brighton-grey-calcium-cyber-jade-12-5",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fresh-foam-x-more-v5---brighton-grey-calcium-cyber-jade-12-5"
+    ],
+    "identifiers": {
+      "sku": "MMORLJ5"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1579c69c9fb5",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fresh-foam-x-vongo-v6---black-white-7-regular",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fresh-foam-x-vongo-v6---black-white-7-regular"
+    ],
+    "identifiers": {
+      "sku": "MVNGOLK6"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2b0e4b22b8c6",
+    "brand": "New Balance",
+    "model": "new-balance-mens-fuelcell-supercomp-trainer-v3---urgent-red-sea-salt-black-8",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-fuelcell-supercomp-trainer-v3---urgent-red-sea-salt-black-8"
+    ],
+    "identifiers": {
+      "sku": "MRCXY4"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3a71f8e255c9",
+    "brand": "New Balance",
+    "model": "new-balance-mens-xc7-v3-track-spike",
+    "category": "running",
+    "aliases": [
+      "new-balance-mens-xc7-v3-track-spike",
+      "new-balance-womens-xc7-v3-track-spike"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER6782"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d5d45a14ff05",
+    "brand": "New Balance",
+    "model": "new-balance-unisex-mid-distance-500-v8-spike",
+    "category": "running",
+    "aliases": [
+      "new-balance-unisex-mid-distance-500-v8-spike"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER161330"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2d972acf29b6",
+    "brand": "New Balance",
+    "model": "new-balance-womens-xc-seven-spike",
+    "category": "running",
+    "aliases": [
+      "new-balance-womens-xc-seven-spike"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER6134"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d71d07bd4ae6",
+    "brand": "Unknown",
+    "model": "next-slide",
+    "category": "running",
+    "aliases": [
+      "next-slide"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2cb5946bffff",
+    "brand": "Nike",
+    "model": "nike-24-7-perfectstretch",
+    "category": "running",
+    "aliases": [
+      "nike-24-7-perfectstretch"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1a05d60e2c1b",
+    "brand": "Nike",
+    "model": "nike-air-force-1-07-rose-gold",
+    "category": "running",
+    "aliases": [
+      "nike-air-force-1-07-rose-gold"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_391101fb4837",
+    "brand": "Nike",
+    "model": "nike-air-force-1-low-protro-1",
+    "category": "running",
+    "aliases": [
+      "nike-air-force-1-low-protro-1"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2baf828c6f55",
+    "brand": "Nike",
+    "model": "nike-g-t-cut-4",
+    "category": "running",
+    "aliases": [
+      "nike-g-t-cut-4"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3a1df2ab7666",
+    "brand": "Nike",
+    "model": "nike-mens-alphafly-3---football-grey-blue-void-ghost-6",
+    "category": "running",
+    "aliases": [
+      "nike-mens-alphafly-3---football-grey-blue-void-ghost-6"
+    ],
+    "identifiers": {
+      "sku": "FD8311001"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e323b9ed4b8b",
+    "brand": "Nike",
+    "model": "nike-mens-pegasus-41---white-metallic-silver-barely-green-8",
+    "category": "running",
+    "aliases": [
+      "nike-mens-pegasus-41---white-metallic-silver-barely-green-8"
+    ],
+    "identifiers": {
+      "sku": "FD2722115"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_fc6c519e92f3",
+    "brand": "Nike",
+    "model": "nike-mens-pegasus-plus---black-white-8",
+    "category": "running",
+    "aliases": [
+      "nike-mens-pegasus-plus---black-white-8"
+    ],
+    "identifiers": {
+      "sku": "FQ7262002"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_bf5249541dca",
+    "brand": "Nike",
+    "model": "nike-mens-pegasus-trail-5-gore-tex---black-wolf-grey-anthracite-8",
+    "category": "trail",
+    "aliases": [
+      "nike-mens-pegasus-trail-5-gore-tex---black-wolf-grey-anthracite-8"
+    ],
+    "identifiers": {
+      "sku": "FQ0908001"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e43eefc970af",
+    "brand": "Nike",
+    "model": "nike-mens-vaporfly-4---hyper-pink-mint-foam-8",
+    "category": "running",
+    "aliases": [
+      "nike-mens-vaporfly-4---hyper-pink-mint-foam-8"
+    ],
+    "identifiers": {
+      "sku": "HF6414101"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a44f315793fc",
+    "brand": "Nike",
+    "model": "nike-mens-vomero-18---black-summit-white-8",
+    "category": "running",
+    "aliases": [
+      "nike-mens-vomero-18---black-summit-white-8"
+    ],
+    "identifiers": {
+      "sku": "HM6803007"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_58af3832c3a4",
+    "brand": "Nike",
+    "model": "nike-mens-zegama-2---black-light-lemon-twist-8",
+    "category": "running",
+    "aliases": [
+      "nike-mens-zegama-2---black-light-lemon-twist-8"
+    ],
+    "identifiers": {
+      "sku": "FD5190012"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_96bc3c6fa016",
+    "brand": "Nike",
+    "model": "nike-mens-zoom-fly-6---obsidian-white-persian-violet-8",
+    "category": "running",
+    "aliases": [
+      "nike-mens-zoom-fly-6---obsidian-white-persian-violet-8"
+    ],
+    "identifiers": {
+      "sku": "FN8454403"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_03684c7684ea",
+    "brand": "Nike",
+    "model": "nike-unisex-air-zoom-victory---sail-light-lemon-twist-guava-ice-fierce-pink-m11-5-w13",
+    "category": "running",
+    "aliases": [
+      "nike-unisex-air-zoom-victory---sail-light-lemon-twist-guava-ice-fierce-pink-m11-5-w13"
+    ],
+    "identifiers": {
+      "sku": "CD4385101"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d16a6dcbfcd5",
+    "brand": "Nike",
+    "model": "nike-unisex-dragonfly-2-spikes---fierce-purple-electric-green-m5-5-w7",
+    "category": "running",
+    "aliases": [
+      "nike-unisex-dragonfly-2-spikes---fierce-purple-electric-green-m5-5-w7"
+    ],
+    "identifiers": {
+      "sku": "IM9131500"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8aa4397c4dc0",
+    "brand": "Nike",
+    "model": "nike-zoom-superfly-elite-2---sail-light-lemon-pink-m12-5-w14",
+    "category": "running",
+    "aliases": [
+      "nike-zoom-superfly-elite-2---sail-light-lemon-pink-m12-5-w14"
+    ],
+    "identifiers": {
+      "sku": "CD4382101"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_964155c9040b",
+    "brand": "Nike",
+    "model": "nike-zoom-vomero-5-rose-gold",
+    "category": "running",
+    "aliases": [
+      "nike-zoom-vomero-5-rose-gold"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c188e3bcadf0",
+    "brand": "Nike",
+    "model": "nike-zoomx-dragonfly-xc---metallic-silver-dark-smoke-grey-m5-5-w7",
+    "category": "running",
+    "aliases": [
+      "nike-zoomx-dragonfly-xc---metallic-silver-dark-smoke-grey-m5-5-w7"
+    ],
+    "identifiers": {
+      "sku": "DX7992001"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a8417efd8961",
+    "brand": "Unknown",
+    "model": "norda-001a-seamless-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "norda-001a-seamless-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_952749d9b4e7",
+    "brand": "Norda",
+    "model": "norda-001a-seamless-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "norda-001a-seamless-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11148596"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2cf7c1208a6e",
+    "brand": "Unknown",
+    "model": "norda-002-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "norda-002-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_59f55a4b02fb",
+    "brand": "Norda",
+    "model": "norda-002-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "norda-002-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11148640"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_26682c5fa7fc",
+    "brand": "Unknown",
+    "model": "omni-23-st",
+    "category": "running",
+    "aliases": [
+      "omni-23-st",
+      "omni-23-st-wide"
+    ],
+    "identifiers": {
+      "sku": "195021646655"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_41328025474d",
+    "brand": "Unknown",
+    "model": "on-cloud-6-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "on-cloud-6-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8590d01b7a62",
+    "brand": "On",
+    "model": "on-cloud-6-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "on-cloud-6-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11127826"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c0e3ea73e9da",
+    "brand": "Unknown",
+    "model": "on-cloudrunner-2-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "on-cloudrunner-2-road-running-shoes---men-x27-s",
+      "on-cloudrunner-2-waterproof-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_60cf90bf09e0",
+    "brand": "On",
+    "model": "on-cloudrunner-2-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "on-cloudrunner-2-road-running-shoes---mens",
+      "on-cloudrunner-2-waterproof-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11102837"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_58b39ec4224f",
+    "brand": "Unknown",
+    "model": "on-cloudrunner-3-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "on-cloudrunner-3-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d238e0994b4c",
+    "brand": "On",
+    "model": "on-cloudrunner-3-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "on-cloudrunner-3-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11128053"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4249123b0b94",
+    "brand": "Unknown",
+    "model": "on-cloudsurfer-2-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "on-cloudsurfer-2-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_43c42566cc87",
+    "brand": "On",
+    "model": "on-cloudsurfer-2-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "on-cloudsurfer-2-road-running-shoes---mens",
+      "on-cloudsurfer-next-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11076903"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_152ab27b0b9b",
+    "brand": "Unknown",
+    "model": "on-cloudsurfer-next-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "on-cloudsurfer-next-road-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_21a85e2436a9",
+    "brand": "On",
+    "model": "on-cloudsurfer-trail-2-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "on-cloudsurfer-trail-2-running-shoes---mens",
+      "on-cloudsurfer-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11103324"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_00787185320e",
+    "brand": "Unknown",
+    "model": "on-cloudsurfer-trail-2-waterproof-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "on-cloudsurfer-trail-2-waterproof-running-shoes---men-x27-s",
+      "on-cloudsurfer-trail-2-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a54679461379",
+    "brand": "Unknown",
+    "model": "on-cloudsurfer-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "on-cloudsurfer-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_16d598b606d1",
+    "brand": "Unknown",
+    "model": "on-cloudvista-2-waterproof-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "on-cloudvista-2-waterproof-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f74d1a699344",
+    "brand": "On",
+    "model": "on-cloudvista-2-waterproof-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "on-cloudvista-2-waterproof-trail-running-shoes---mens",
+      "on-cloudsurfer-trail-2-waterproof-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11099386"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_462996950378",
+    "brand": "Unknown",
+    "model": "on-men-s-cloudmonster-2---tempest-horizon-8",
+    "category": "running",
+    "aliases": [
+      "on-men-s-cloudmonster-2---tempest-horizon-8"
+    ],
+    "identifiers": {
+      "sku": "3ME10122903"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c2e0eb5360f6",
+    "brand": "Unknown",
+    "model": "on-mens-cloudboom-strike---juniper-limelight-8",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudboom-strike---juniper-limelight-8"
+    ],
+    "identifiers": {
+      "sku": "3ME30484834"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8c195faf36d5",
+    "brand": "Unknown",
+    "model": "on-mens-cloudflyer-5---wolf-black-10",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudflyer-5---wolf-black-10"
+    ],
+    "identifiers": {
+      "sku": "3ME30013275"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_47a4ae013e97",
+    "brand": "Unknown",
+    "model": "on-mens-cloudmonster-hyper---silver-iron-11-5",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudmonster-hyper---silver-iron-11-5"
+    ],
+    "identifiers": {
+      "sku": "3ME10132034"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_02d6b92999f4",
+    "brand": "Unknown",
+    "model": "on-mens-cloudrunner-2---alloy-chambray-8-regular",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudrunner-2---alloy-chambray-8-regular"
+    ],
+    "identifiers": {
+      "sku": "3ME10143194"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b4a7bfe9e342",
+    "brand": "Unknown",
+    "model": "on-mens-cloudrunner-2-waterproof---eclipse-rosemary-8-5",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudrunner-2-waterproof---eclipse-rosemary-8-5"
+    ],
+    "identifiers": {
+      "sku": "3ME10153701"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_62fa4c478fc7",
+    "brand": "Unknown",
+    "model": "on-mens-cloudrunner-3-2e-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudrunner-3-2e-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER443656"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_84a08f5060fa",
+    "brand": "Unknown",
+    "model": "on-mens-cloudspike-citius-2---mint-white-8-5",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudspike-citius-2---mint-white-8-5"
+    ],
+    "identifiers": {
+      "sku": "3MF10301752"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_15488d38f11f",
+    "brand": "Unknown",
+    "model": "on-mens-cloudsurfer-2---black-black-8-regular",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudsurfer-2---black-black-8-regular"
+    ],
+    "identifiers": {
+      "sku": "3MF10121043"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_38435d4da7b2",
+    "brand": "Unknown",
+    "model": "on-mens-cloudsurfer-next---black-eclipse-8-wide",
+    "category": "running",
+    "aliases": [
+      "on-mens-cloudsurfer-next---black-eclipse-8-wide"
+    ],
+    "identifiers": {
+      "sku": "3ME30190106"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c57cc3487126",
+    "brand": "Unknown",
+    "model": "on-womens-cloudrunner-3-b-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "on-womens-cloudrunner-3-b-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER443749"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a84d74bdc987",
+    "brand": "Unknown",
+    "model": "on-womens-cloudrunner-3-d-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "on-womens-cloudrunner-3-d-width-running-shoe",
+      "on-mens-cloudrunner-3-d-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER443812"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_42209b3ff485",
+    "brand": "Unknown",
+    "model": "online-only",
+    "category": "running",
+    "aliases": [
+      "online-only"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d0da54de44a1",
+    "brand": "Nike",
+    "model": "pegasus-41",
+    "category": "running",
+    "aliases": [
+      "pegasus-41"
+    ],
+    "identifiers": {
+      "sku": "NIKEPEG41M201"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a022c35ea9f2",
+    "brand": "Unknown",
+    "model": "peregrine-15",
+    "category": "trail",
+    "aliases": [
+      "peregrine-15"
+    ],
+    "identifiers": {
+      "sku": "195020791325"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4f1230501f71",
+    "brand": "Unknown",
+    "model": "peregrine-16",
+    "category": "trail",
+    "aliases": [
+      "peregrine-16"
+    ],
+    "identifiers": {
+      "sku": "195021642909"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1f61c2375979",
+    "brand": "Unknown",
+    "model": "peregrine-16-gtx",
+    "category": "trail",
+    "aliases": [
+      "peregrine-16-gtx"
+    ],
+    "identifiers": {
+      "sku": "195021643951"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_eb5899c7710c",
+    "brand": "Unknown",
+    "model": "peregrine-16-wide",
+    "category": "trail",
+    "aliases": [
+      "peregrine-16-wide"
+    ],
+    "identifiers": {
+      "sku": "195021643654"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d0c4b639c2f0",
+    "brand": "Unknown",
+    "model": "previous-slide",
+    "category": "running",
+    "aliases": [
+      "previous-slide"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7b18b58eb99e",
+    "brand": "Unknown",
+    "model": "product-image-container-23149-width-900px-product-image-container-23149-span-product-image-wrapper-padding-bottom-100-prodimagecontainers-document-queryselectorall-product-image-container-23149-for-var-i-0-i",
+    "category": "running",
+    "aliases": [
+      "product-image-container-23149-width-900px-product-image-container-23149-span-product-image-wrapper-padding-bottom-100-prodimagecontainers-document-queryselectorall-product-image-container-23149-for-var-i-0-i"
+    ],
+    "identifiers": {
+      "sku": "ITEM"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_da7146c323ec",
+    "brand": "Unknown",
+    "model": "product-not-added-to-wishlist",
+    "category": "running",
+    "aliases": [
+      "product-not-added-to-wishlist"
+    ],
+    "identifiers": {
+      "sku": "SALESPRICE"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_0635032ca67d",
+    "brand": "Unknown",
+    "model": "refine-by-price-100---200-cad",
+    "category": "running",
+    "aliases": [
+      "refine-by-price-100---200-cad"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b94e5c7b8266",
+    "brand": "Unknown",
+    "model": "refine-by-price-75---100-cad",
+    "category": "running",
+    "aliases": [
+      "refine-by-price-75---100-cad"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e5dc729069ac",
+    "brand": "Unknown",
+    "model": "refine-by-price-over-200-cad",
+    "category": "running",
+    "aliases": [
+      "refine-by-price-over-200-cad"
+    ],
+    "identifiers": {
+      "sku": "REFINEMENTSMODULESCSSMODULE"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_af26abf149b3",
+    "brand": "Unknown",
+    "model": "retro-running",
+    "category": "running",
+    "aliases": [
+      "retro-running"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3e7a2591bfd8",
+    "brand": "Unknown",
+    "model": "ride-18",
+    "category": "running",
+    "aliases": [
+      "ride-18"
+    ],
+    "identifiers": {
+      "sku": "195020797150"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_194ee17f7dd9",
+    "brand": "Unknown",
+    "model": "ride-19",
+    "category": "running",
+    "aliases": [
+      "ride-19"
+    ],
+    "identifiers": {
+      "sku": "195021636212"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_83bbbea058ef",
+    "brand": "Unknown",
+    "model": "ride-19-wide",
+    "category": "running",
+    "aliases": [
+      "ride-19-wide"
+    ],
+    "identifiers": {
+      "sku": "195021636960"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_db7d89ace82a",
+    "brand": "Unknown",
+    "model": "ride-tr2",
+    "category": "running",
+    "aliases": [
+      "ride-tr2"
+    ],
+    "identifiers": {
+      "sku": "195021160441"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b7c68dd8a1e5",
+    "brand": "Unknown",
+    "model": "ride-tr2-gtx",
+    "category": "running",
+    "aliases": [
+      "ride-tr2-gtx"
+    ],
+    "identifiers": {
+      "sku": "195020452073"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_72d7812feaee",
+    "brand": "Unknown",
+    "model": "running-training",
+    "category": "running",
+    "aliases": [
+      "running-training"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_613daed3fb3e",
+    "brand": "Unknown",
+    "model": "salomon-aero-blaze-3-gravel-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "salomon-aero-blaze-3-gravel-running-shoes---men-x27-s",
+      "salomon-aero-blaze-3-gravel-gore-tex-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4ee552136edb",
+    "brand": "Salomon",
+    "model": "salomon-aero-blaze-3-gravel-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "salomon-aero-blaze-3-gravel-running-shoes---mens",
+      "salomon-aero-blaze-3-gravel-gore-tex-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11132414"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1cee38f90346",
+    "brand": "Unknown",
+    "model": "salomon-genesis-gore-tex-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "salomon-genesis-gore-tex-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3103cb14adf6",
+    "brand": "Salomon",
+    "model": "salomon-genesis-gore-tex-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-genesis-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11085514"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3a09146fc8b9",
+    "brand": "Unknown",
+    "model": "salomon-genesis-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "salomon-genesis-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5bfcfde02f57",
+    "brand": "Salomon",
+    "model": "salomon-genesis-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-genesis-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11110201"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_cd0d73c8e842",
+    "brand": "Unknown",
+    "model": "salomon-speedcross-6-gore-tex-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "salomon-speedcross-6-gore-tex-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_da92cb3983bb",
+    "brand": "Salomon",
+    "model": "salomon-speedcross-6-gore-tex-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-speedcross-6-gore-tex-trail-running-shoes---mens",
+      "salomon-speedcross-6-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "938900"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_bd0f2bda3826",
+    "brand": "Unknown",
+    "model": "salomon-speedcross-6-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "salomon-speedcross-6-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_245349c5396b",
+    "brand": "Unknown",
+    "model": "salomon-ultra-glide-3-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "salomon-ultra-glide-3-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f7a22608de54",
+    "brand": "Salomon",
+    "model": "salomon-ultra-glide-3-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-ultra-glide-3-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11085756"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8c6ad262119a",
+    "brand": "Unknown",
+    "model": "salomon-xa-pro-3d-v9-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "salomon-xa-pro-3d-v9-trail-running-shoes---men-x27-s",
+      "salomon-xa-pro-3d-v9-gore-tex-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4460d25a0a64",
+    "brand": "Salomon",
+    "model": "salomon-xa-pro-3d-v9-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-xa-pro-3d-v9-trail-running-shoes---mens",
+      "salomon-xa-pro-3d-v9-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11154349"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_360906105398",
+    "brand": "Unknown",
+    "model": "sandals-slides",
+    "category": "running",
+    "aliases": [
+      "sandals-slides"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8ec1694fdd31",
+    "brand": "Saucony",
+    "model": "saucony-endorphin-elite-2---shock-black-m5-w6-5",
+    "category": "running",
+    "aliases": [
+      "saucony-endorphin-elite-2---shock-black-m5-w6-5"
+    ],
+    "identifiers": {
+      "sku": "S3099498"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_176093d92bed",
+    "brand": "Saucony",
+    "model": "saucony-excursion-tr17-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "saucony-excursion-tr17-trail-running-shoes---men-x27-s",
+      "saucony-excursion-tr17-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11103892"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d42f44770942",
+    "brand": "Saucony",
+    "model": "saucony-guide-18-road-running-shoes---men-x27-s",
+    "category": "running",
+    "aliases": [
+      "saucony-guide-18-road-running-shoes---men-x27-s",
+      "saucony-ride-18-road-running-shoes---men-x27-s",
+      "saucony-guide-18-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104191"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e27c6b6d7c2d",
+    "brand": "Saucony",
+    "model": "saucony-men-s-triumph-22---black-white-12-5-regular",
+    "category": "running",
+    "aliases": [
+      "saucony-men-s-triumph-22---black-white-12-5-regular"
+    ],
+    "identifiers": {
+      "sku": "S20964200"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c75939945e59",
+    "brand": "Saucony",
+    "model": "saucony-men-s-triumph-23---grey-shadow-9",
+    "category": "running",
+    "aliases": [
+      "saucony-men-s-triumph-23---grey-shadow-9"
+    ],
+    "identifiers": {
+      "sku": "S21023505"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b18f7462524f",
+    "brand": "Saucony",
+    "model": "saucony-mens-endorphin-speed-5---white-crimson-8",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-endorphin-speed-5---white-crimson-8"
+    ],
+    "identifiers": {
+      "sku": "S21007172"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d4dfc93f7e6d",
+    "brand": "Saucony",
+    "model": "saucony-mens-endorphin-trainer---white-black-8",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-endorphin-trainer---white-black-8"
+    ],
+    "identifiers": {
+      "sku": "S20996130"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d27b061b1c5c",
+    "brand": "Saucony",
+    "model": "saucony-mens-guide-18---skydiver-black-8",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-guide-18---skydiver-black-8"
+    ],
+    "identifiers": {
+      "sku": "S20998163"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7039b82ea84e",
+    "brand": "Saucony",
+    "model": "saucony-mens-hurricane-24---black-carbon-8-regular",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-hurricane-24---black-carbon-8-regular"
+    ],
+    "identifiers": {
+      "sku": "S20933100"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7ed970f9b471",
+    "brand": "Saucony",
+    "model": "saucony-mens-kinvara-pro---superblue-11",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-kinvara-pro---superblue-11"
+    ],
+    "identifiers": {
+      "sku": "S2084732"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8d583d17c978",
+    "brand": "Saucony",
+    "model": "saucony-mens-peregrine-15-gtx---hemlock-navy-12-5",
+    "category": "trail",
+    "aliases": [
+      "saucony-mens-peregrine-15-gtx---hemlock-navy-12-5"
+    ],
+    "identifiers": {
+      "sku": "S20992162"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_617272b8ac25",
+    "brand": "Saucony",
+    "model": "saucony-mens-ride-18---shadow-vizi-8",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-ride-18---shadow-vizi-8"
+    ],
+    "identifiers": {
+      "sku": "S2100099"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f58e521b0380",
+    "brand": "Saucony",
+    "model": "saucony-mens-ride-tr2---moon-sage-12-5",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-ride-tr2---moon-sage-12-5"
+    ],
+    "identifiers": {
+      "sku": "S20951240"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_96d6bf09aee4",
+    "brand": "Saucony",
+    "model": "saucony-mens-ride-tr2-gtx---navy-peel-8",
+    "category": "running",
+    "aliases": [
+      "saucony-mens-ride-tr2-gtx---navy-peel-8"
+    ],
+    "identifiers": {
+      "sku": "S20953251"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_749bbac32380",
+    "brand": "Saucony",
+    "model": "saucony-peregrine-15-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "saucony-peregrine-15-trail-running-shoes---men-x27-s",
+      "saucony-peregrine-15-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11094006"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d7e906dd4ccb",
+    "brand": "Saucony",
+    "model": "saucony-ride-18-road-running-shoes---mens",
+    "category": "running",
+    "aliases": [
+      "saucony-ride-18-road-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104320"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_02f73e3f52bb",
+    "brand": "Saucony",
+    "model": "saucony-ride-tr2-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "saucony-ride-tr2-trail-running-shoes---men-x27-s",
+      "saucony-ride-tr2-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11104375"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b6788cace435",
+    "brand": "Saucony",
+    "model": "saucony-womens-havoc-xc-3-spike-b-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "saucony-womens-havoc-xc-3-spike-b-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER158384"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_18e2042bc508",
+    "brand": "Saucony",
+    "model": "saucony-womens-kilkenny-xc9-spike-b-width-running-shoe",
+    "category": "running",
+    "aliases": [
+      "saucony-womens-kilkenny-xc9-spike-b-width-running-shoe"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER158413"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7f7a84e0e092",
+    "brand": "Unknown",
+    "model": "scarpa-ribelle-run-2-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "scarpa-ribelle-run-2-trail-running-shoes---men-x27-s",
+      "scarpa-ribelle-run-2-gore-tex-trail-running---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6f96957b5357",
+    "brand": "SCARPA",
+    "model": "scarpa-ribelle-run-2-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "scarpa-ribelle-run-2-trail-running-shoes---mens",
+      "scarpa-ribelle-run-2-gore-tex-trail-running---mens"
+    ],
+    "identifiers": {
+      "sku": "11082801"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5fe89b2fbf7e",
+    "brand": "Unknown",
+    "model": "scarpa-spin-planet-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "scarpa-spin-planet-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_beb81d7104fc",
+    "brand": "SCARPA",
+    "model": "scarpa-spin-planet-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "scarpa-spin-planet-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11038075"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_9f10895ea663",
+    "brand": "Unknown",
+    "model": "scarpa-spin-st-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "scarpa-spin-st-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_0657c3f6b72a",
+    "brand": "SCARPA",
+    "model": "scarpa-spin-st-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "scarpa-spin-st-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11018039"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_bf70f2dced20",
+    "brand": "Salomon",
+    "model": "sense-ride-5",
+    "category": "trail",
+    "aliases": [
+      "sense-ride-5"
+    ],
+    "identifiers": {
+      "sku": "SALSR5UNLI5370"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f2eba79060f0",
+    "brand": "Unknown",
+    "model": "shoes-100-under",
+    "category": "running",
+    "aliases": [
+      "shoes-100-under",
+      "shoes-under-100"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_33344a23a7af",
+    "brand": "Unknown",
+    "model": "shoes-80-under",
+    "category": "running",
+    "aliases": [
+      "shoes-80-under"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_76b003319dc2",
+    "brand": "Unknown",
+    "model": "shop-all-sale",
+    "category": "running",
+    "aliases": [
+      "shop-all-sale"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_466395c960e0",
+    "brand": "Unknown",
+    "model": "shop-by-biggest-discounts",
+    "category": "running",
+    "aliases": [
+      "shop-by-biggest-discounts"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a54052d8e183",
+    "brand": "Unknown",
+    "model": "shop-now",
+    "category": "running",
+    "aliases": [
+      "shop-now"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_906e3591bf13",
+    "brand": "Unknown",
+    "model": "skip-to-content",
+    "category": "running",
+    "aliases": [
+      "skip-to-content"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_350f4609f5fd",
+    "brand": "Unknown",
+    "model": "skip-to-navigation",
+    "category": "running",
+    "aliases": [
+      "skip-to-navigation"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e19d07a70640",
+    "brand": "Unknown",
+    "model": "surge-3",
+    "category": "running",
+    "aliases": [
+      "surge-3"
+    ],
+    "identifiers": {
+      "sku": "195020414026"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_671ea19e50ac",
+    "brand": "Unknown",
+    "model": "the-north-face-altamesa-500-trail-running-shoes---men-x27-s",
+    "category": "trail",
+    "aliases": [
+      "the-north-face-altamesa-500-trail-running-shoes---men-x27-s"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_07573719921e",
+    "brand": "The North Face",
+    "model": "the-north-face-altamesa-500-trail-running-shoes---mens",
+    "category": "trail",
+    "aliases": [
+      "the-north-face-altamesa-500-trail-running-shoes---mens"
+    ],
+    "identifiers": {
+      "sku": "11095647"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_16503a0a627f",
+    "brand": "Unknown",
+    "model": "tide-2",
+    "category": "running",
+    "aliases": [
+      "tide-2"
+    ],
+    "identifiers": {
+      "sku": "195020823491"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4e0ca4192d72",
+    "brand": "Unknown",
+    "model": "training-gym",
+    "category": "running",
+    "aliases": [
+      "training-gym"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_149226d34585",
+    "brand": "Unknown",
+    "model": "triumph-23",
+    "category": "running",
+    "aliases": [
+      "triumph-23"
+    ],
+    "identifiers": {
+      "sku": "195021166443"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_f0223b127b12",
+    "brand": "Unknown",
+    "model": "triumph-23-gtx",
+    "category": "running",
+    "aliases": [
+      "triumph-23-gtx"
+    ],
+    "identifiers": {
+      "sku": "195021168249"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_13b1fa2eaa78",
+    "brand": "Unknown",
+    "model": "triumph-23-wide",
+    "category": "running",
+    "aliases": [
+      "triumph-23-wide"
+    ],
+    "identifiers": {
+      "sku": "195021193852"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a52874e2d999",
+    "brand": "Unknown",
+    "model": "ua-surge-4",
+    "category": "running",
+    "aliases": [
+      "ua-surge-4",
+      "ua-charged-assert-11-wide-4e",
+      "ua-charged-assert-11",
+      "ua-velociti-pace",
+      "ua-velociti-distance",
+      "ua-charged-assert-11-camo",
+      "ua-charged-rogue-6",
+      "ua-halo-runner-se",
+      "ua-charged-ascend",
+      "ua-surge-4-wide-4e",
+      "ua-halo-racer",
+      "ua-charged-turbulence-3",
+      "ua-sprint-pro-3",
+      "ua-shakedown-elite-3",
+      "ua-centric-grip",
+      "ua-hovr-smokerider",
+      "ua-hovr-skyline-triple-jump",
+      "ua-hovr-skyline-high-jump"
+    ],
+    "identifiers": {
+      "sku": "TILEMODULESCSSMODULE"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_4acbd165501b",
+    "brand": "Unknown",
+    "model": "ua-velociti-spd-5",
+    "category": "running",
+    "aliases": [
+      "ua-velociti-spd-5"
+    ],
+    "identifiers": {
+      "sku": "BADGE"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c69b27e022fa",
+    "brand": "Unknown",
+    "model": "under-20",
+    "category": "running",
+    "aliases": [
+      "under-20"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b7add0bee1d4",
+    "brand": "Unknown",
+    "model": "virtual-gift-card",
+    "category": "running",
+    "aliases": [
+      "virtual-gift-card"
+    ],
+    "identifiers": {
+      "sku": "IMAGECONTAINER23149"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5365e8ee5e64",
+    "brand": "Unknown",
+    "model": "wide-shoes",
+    "category": "running",
+    "aliases": [
+      "wide-shoes"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_1a5e6da21b8a",
+    "brand": "Unknown",
+    "model": "women-x27-s-bras-bottoms",
+    "category": "running",
+    "aliases": [
+      "women-x27-s-bras-bottoms"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2a73268e3964",
+    "brand": "Unknown",
+    "model": "womens-clothing",
+    "category": "running",
+    "aliases": [
+      "womens-clothing",
+      "mens-clothing"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_3a462c0b9cb0",
+    "brand": "Unknown",
+    "model": "xodus-ultra-4",
+    "category": "running",
+    "aliases": [
+      "xodus-ultra-4"
+    ],
+    "identifiers": {
+      "sku": "195021170198"
     },
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   }

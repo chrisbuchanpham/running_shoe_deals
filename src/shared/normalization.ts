@@ -17,6 +17,26 @@ const MODEL_ALIASES: Record<string, string> = {
   "fresh foam 1080 v13": "fresh-foam-1080-v13"
 };
 
+const LOW_SIGNAL_TOKENS = new Set([
+  "men",
+  "mens",
+  "women",
+  "womens",
+  "unisex",
+  "kids",
+  "youth",
+  "junior",
+  "running",
+  "trail",
+  "shoe",
+  "shoes"
+]);
+
+type Identifiers = {
+  sku?: string;
+  gtin?: string;
+};
+
 export function normalizeWhitespace(value: string): string {
   return value.trim().replace(/\s+/g, " ");
 }
@@ -44,10 +64,37 @@ export function normalizeModel(rawModel: string): string {
   return normalized.replace(/\s+/g, "-");
 }
 
-export function splitTokens(raw: string): string[] {
-  return normalizeToken(raw)
-    .split(" ")
-    .filter(Boolean);
+export function splitTokens(
+  raw: string,
+  options?: { dropLowSignal?: boolean }
+): string[] {
+  const dropLowSignal = options?.dropLowSignal ?? true;
+  const tokens = normalizeToken(raw).split(/[\s-]+/).filter(Boolean);
+  if (!dropLowSignal) return tokens;
+  return tokens.filter((token) => !LOW_SIGNAL_TOKENS.has(token));
+}
+
+export function normalizeSku(rawSku?: string): string | undefined {
+  if (!rawSku) return undefined;
+  const cleaned = normalizeToken(rawSku)
+    .replace(/[\s-]+/g, "")
+    .replace(/[^a-z0-9]/g, "")
+    .toUpperCase();
+  return cleaned || undefined;
+}
+
+export function normalizeGtin(rawGtin?: string): string | undefined {
+  if (!rawGtin) return undefined;
+  const digits = rawGtin.replace(/\D+/g, "");
+  if (!digits) return undefined;
+  return digits.padStart(14, "0");
+}
+
+export function normalizeIdentifiers(rawIdentifiers?: Identifiers): Identifiers | undefined {
+  if (!rawIdentifiers) return undefined;
+  const sku = normalizeSku(rawIdentifiers.sku);
+  const gtin = normalizeGtin(rawIdentifiers.gtin);
+  return sku || gtin ? { sku, gtin } : undefined;
 }
 
 export function inferCategory(title: string): "running" | "trail" {

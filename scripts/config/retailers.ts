@@ -1,10 +1,85 @@
 import type { Retailer } from "../../src/shared/contracts";
 
+export type RetailerPaginationConfig =
+  | {
+      strategy: "none";
+    }
+  | {
+      strategy: "query";
+      pageParam: string;
+      startPage: number;
+      maxPages: number;
+    }
+  | {
+      strategy: "path";
+      pathTemplate: string;
+      startPage: number;
+      maxPages: number;
+    };
+
+export type RetailerHttpProfileConfig = {
+  profile: "default" | "anti-bot" | "selector-fallback";
+  retries: number;
+  timeoutMs: number;
+  minDelayMs: number;
+};
+
+export type RetailerExtractionHints = {
+  embeddedState?: {
+    prefer: boolean;
+    scriptIds?: string[];
+    globalKeys?: string[];
+    rootKeys?: string[];
+  };
+};
+
 export type RetailerConfig = Retailer & {
   parserId: string;
   dealsUrl: string;
   fixtureFile: string;
   allowScrape: boolean;
+  pagination?: RetailerPaginationConfig;
+  httpProfile?: RetailerHttpProfileConfig;
+  extractionHints?: RetailerExtractionHints;
+};
+
+const QUERY_PAGE_PAGINATION: RetailerPaginationConfig = {
+  strategy: "query",
+  pageParam: "page",
+  startPage: 2,
+  maxPages: 3
+};
+
+const NO_PAGINATION: RetailerPaginationConfig = {
+  strategy: "none"
+};
+
+const ASICS_PAGINATION: RetailerPaginationConfig = {
+  strategy: "query",
+  pageParam: "p",
+  startPage: 2,
+  maxPages: 3
+};
+
+const DEFAULT_HTTP_PROFILE: RetailerHttpProfileConfig = {
+  profile: "default",
+  retries: 2,
+  timeoutMs: 12_000,
+  minDelayMs: 700
+};
+
+const ANTI_BOT_HTTP_PROFILE: RetailerHttpProfileConfig = {
+  profile: "anti-bot",
+  retries: 2,
+  timeoutMs: 18_000,
+  minDelayMs: 1_200
+};
+
+const SELECTOR_FALLBACK_HTTP_PROFILE: RetailerHttpProfileConfig = {
+  profile: "selector-fallback",
+  retries: 2,
+  timeoutMs: 15_000,
+  minDelayMs: 900
 };
 
 export const RETAILERS: RetailerConfig[] = [
@@ -31,7 +106,9 @@ export const RETAILERS: RetailerConfig[] = [
     logoUrl: "https://www.sportchek.ca/favicon.ico",
     dealsUrl: "https://www.sportchek.ca/en/cat/shop-by-sport/running/running-shoes-DC2001110.html",
     fixtureFile: "sport-chek.json",
-    allowScrape: true
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: SELECTOR_FALLBACK_HTTP_PROFILE
   },
   {
     id: "mec",
@@ -41,7 +118,7 @@ export const RETAILERS: RetailerConfig[] = [
     currency: "CAD",
     homepageUrl: "https://www.mec.ca",
     logoUrl: "https://www.mec.ca/favicon.ico",
-    dealsUrl: "https://www.mec.ca/en/products/footwear/running-shoes",
+    dealsUrl: "https://www.mec.ca/en/products/running/running-and-training-footwear/running-shoes/mens",
     fixtureFile: "mec.json",
     allowScrape: true
   },
@@ -55,7 +132,17 @@ export const RETAILERS: RetailerConfig[] = [
     logoUrl: "https://www.altitude-sports.com/favicon.ico",
     dealsUrl: "https://www.altitude-sports.com/collections/running-shoes",
     fixtureFile: "altitude-sports.json",
-    allowScrape: true
+    allowScrape: true,
+    pagination: QUERY_PAGE_PAGINATION,
+    httpProfile: SELECTOR_FALLBACK_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__", "__NUXT_DATA__"],
+        globalKeys: ["window.__INITIAL_STATE__", "window.__APOLLO_STATE__"],
+        rootKeys: ["products", "items", "hits", "edges"]
+      }
+    }
   },
   {
     id: "the-last-hunt",
@@ -77,7 +164,7 @@ export const RETAILERS: RetailerConfig[] = [
     currency: "CAD",
     homepageUrl: "https://www.blacktoerunning.com",
     logoUrl: "https://www.blacktoerunning.com/favicon.ico",
-    dealsUrl: "https://www.blacktoerunning.com/collections/mens-running-shoes",
+    dealsUrl: "https://www.blacktoerunning.com/collections/mens-shoes",
     fixtureFile: "blacktoe.json",
     allowScrape: true
   },
@@ -87,11 +174,13 @@ export const RETAILERS: RetailerConfig[] = [
     name: "Soles",
     country: "CA",
     currency: "CAD",
-    homepageUrl: "https://shop.sportinglife.ca",
-    logoUrl: "https://shop.sportinglife.ca/favicon.ico",
-    dealsUrl: "https://shop.sportinglife.ca/collections/running-shoes",
+    homepageUrl: "https://www.sportinglife.ca",
+    logoUrl: "https://www.sportinglife.ca/favicon.ico",
+    dealsUrl: "https://www.sportinglife.ca/",
     fixtureFile: "soles.json",
-    allowScrape: true
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: DEFAULT_HTTP_PROFILE
   },
   {
     id: "nike-ca",
@@ -115,7 +204,9 @@ export const RETAILERS: RetailerConfig[] = [
     logoUrl: "https://www.adidas.ca/favicon.ico",
     dealsUrl: "https://www.adidas.ca/en/running-shoes",
     fixtureFile: "adidas-ca.json",
-    allowScrape: true
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: ANTI_BOT_HTTP_PROFILE
   },
   {
     id: "asics-ca",
@@ -125,9 +216,11 @@ export const RETAILERS: RetailerConfig[] = [
     currency: "CAD",
     homepageUrl: "https://www.asics.com/ca/en-ca",
     logoUrl: "https://www.asics.com/favicon.ico",
-    dealsUrl: "https://www.asics.com/ca/en-ca/running-shoes/c/aa20105000/",
+    dealsUrl: "https://www.asics.com/ca/en-ca/footwear/running",
     fixtureFile: "asics-ca.json",
-    allowScrape: true
+    allowScrape: true,
+    pagination: ASICS_PAGINATION,
+    httpProfile: DEFAULT_HTTP_PROFILE
   },
   {
     id: "new-balance-ca",
@@ -137,9 +230,11 @@ export const RETAILERS: RetailerConfig[] = [
     currency: "CAD",
     homepageUrl: "https://www.newbalance.ca",
     logoUrl: "https://www.newbalance.ca/favicon.ico",
-    dealsUrl: "https://www.newbalance.ca/en_ca/men/shoes/running/",
+    dealsUrl: "https://www.newbalance.ca/en_ca/shoes/running/",
     fixtureFile: "new-balance-ca.json",
-    allowScrape: true
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: ANTI_BOT_HTTP_PROFILE
   },
   {
     id: "brooks-ca",
@@ -152,5 +247,81 @@ export const RETAILERS: RetailerConfig[] = [
     dealsUrl: "https://www.brooksrunning.com/en_ca/mens-running-shoes/",
     fixtureFile: "brooks-ca.json",
     allowScrape: true
+  },
+  {
+    id: "hoka-ca",
+    parserId: "hoka-ca",
+    name: "HOKA Canada",
+    country: "CA",
+    currency: "CAD",
+    homepageUrl: "https://www.hoka.com/en/ca/",
+    logoUrl: "https://www.hoka.com/favicon.ico",
+    dealsUrl: "https://www.hoka.com/en/ca/mens-running-shoes/",
+    fixtureFile: "hoka-ca.json",
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: DEFAULT_HTTP_PROFILE
+  },
+  {
+    id: "saucony-ca",
+    parserId: "saucony-ca",
+    name: "Saucony Canada",
+    country: "CA",
+    currency: "CAD",
+    homepageUrl: "https://www.saucony.com/CA/en_CA/home",
+    logoUrl: "https://www.saucony.com/favicon.ico",
+    dealsUrl: "https://www.saucony.com/CA/en_CA/mens-running-shoes/",
+    fixtureFile: "saucony-ca.json",
+    allowScrape: true
+  },
+  {
+    id: "salomon-ca",
+    parserId: "salomon-ca",
+    name: "Salomon Canada",
+    country: "CA",
+    currency: "CAD",
+    homepageUrl: "https://www.salomon.com/en-ca",
+    logoUrl: "https://www.salomon.com/favicon.ico",
+    dealsUrl: "https://www.salomon.com/en-ca/c/sports/trail-running/trail-running-shoes",
+    fixtureFile: "salomon-ca.json",
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: ANTI_BOT_HTTP_PROFILE
+  },
+  {
+    id: "on-running-ca",
+    parserId: "on-running-ca",
+    name: "On Running Canada",
+    country: "CA",
+    currency: "CAD",
+    homepageUrl: "https://www.on.com/en-ca",
+    logoUrl: "https://www.on.com/favicon.ico",
+    dealsUrl: "https://www.on.com/en-ca/shop/shoes/running",
+    fixtureFile: "on-running-ca.json",
+    allowScrape: true,
+    pagination: QUERY_PAGE_PAGINATION,
+    httpProfile: SELECTOR_FALLBACK_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__"],
+        globalKeys: ["window.__NEXT_DATA__", "window.__INITIAL_STATE__", "window.__APOLLO_STATE__"],
+        rootKeys: ["props", "pageProps", "products", "productGrid", "items"]
+      }
+    }
+  },
+  {
+    id: "under-armour-ca",
+    parserId: "under-armour-ca",
+    name: "Under Armour Canada",
+    country: "CA",
+    currency: "CAD",
+    homepageUrl: "https://www.underarmour.ca/en-ca/",
+    logoUrl: "https://www.underarmour.ca/favicon.ico",
+    dealsUrl: "https://www.underarmour.ca/en-ca/c/mens/shoes/running/",
+    fixtureFile: "under-armour-ca.json",
+    allowScrape: true,
+    pagination: NO_PAGINATION,
+    httpProfile: DEFAULT_HTTP_PROFILE
   }
 ];

@@ -1,25 +1,63 @@
 const DEFAULT_HEADERS = {
   "user-agent":
-    "Mozilla/5.0 (compatible; ShoeDealsCA/0.1; +https://github.com/placeholder)"
+    "Mozilla/5.0 (compatible; ShoeDealsCA/0.1; +https://github.com/placeholder)",
+  accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+  "accept-language": "en-CA,en-US;q=0.9,en;q=0.8",
+  "cache-control": "no-cache"
 };
+
+const ANTI_BOT_HEADERS = {
+  "user-agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+  accept:
+    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+  "accept-language": "en-CA,en-US;q=0.9,en;q=0.8",
+  "cache-control": "no-cache",
+  pragma: "no-cache",
+  "upgrade-insecure-requests": "1",
+  "sec-fetch-dest": "document",
+  "sec-fetch-mode": "navigate",
+  "sec-fetch-site": "none",
+  "sec-fetch-user": "?1"
+};
+
+const SELECTOR_FALLBACK_HEADERS = {
+  ...DEFAULT_HEADERS
+};
+
+type FetchHeaderPreset = "default" | "anti-bot" | "selector-fallback";
 
 type FetchRetryOptions = {
   retries?: number;
   timeoutMs?: number;
   minDelayMs?: number;
+  headerPreset?: FetchHeaderPreset;
+};
+
+export type FetchPageResult = {
+  html: string;
+  finalUrl: string;
+  status: number;
 };
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-export async function fetchTextWithRetry(
+function headersForPreset(preset: FetchHeaderPreset): Record<string, string> {
+  if (preset === "anti-bot") return ANTI_BOT_HEADERS;
+  if (preset === "selector-fallback") return SELECTOR_FALLBACK_HEADERS;
+  return DEFAULT_HEADERS;
+}
+
+export async function fetchPageWithRetry(
   url: string,
   options: FetchRetryOptions = {}
-): Promise<string> {
+): Promise<FetchPageResult> {
   const retries = options.retries ?? 2;
   const timeoutMs = options.timeoutMs ?? 12_000;
   const minDelayMs = options.minDelayMs ?? 500;
+  const headerPreset = options.headerPreset ?? "default";
 
   let lastError: unknown;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
@@ -28,14 +66,19 @@ export async function fetchTextWithRetry(
 
     try {
       const response = await fetch(url, {
-        headers: DEFAULT_HEADERS,
+        headers: headersForPreset(headerPreset),
         signal: controller.signal
       });
       if (!response.ok) {
         throw new Error(`HTTP ${response.status} on ${url}`);
       }
+      const html = await response.text();
       clearTimeout(timeout);
-      return await response.text();
+      return {
+        html,
+        finalUrl: response.url || url,
+        status: response.status
+      };
     } catch (error) {
       clearTimeout(timeout);
       lastError = error;
@@ -45,4 +88,12 @@ export async function fetchTextWithRetry(
     }
   }
   throw lastError;
+}
+
+export async function fetchTextWithRetry(
+  url: string,
+  options: FetchRetryOptions = {}
+): Promise<string> {
+  const result = await fetchPageWithRetry(url, options);
+  return result.html;
 }

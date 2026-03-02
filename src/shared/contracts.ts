@@ -60,7 +60,59 @@ export const parserHealthSchema = z.object({
   status: z.enum(["ok", "disabled", "failed"]),
   offersCount: z.number().int().nonnegative(),
   warning: z.string().optional(),
-  durationMs: z.number().int().nonnegative()
+  durationMs: z.number().int().nonnegative(),
+  discoveredCount: z.number().int().nonnegative().optional(),
+  parsedCount: z.number().int().nonnegative().optional(),
+  pagesCrawled: z.number().int().nonnegative().optional(),
+  sourceMode: z.enum(["live", "fixture"]).optional()
+});
+
+const coverageRateSchema = z.number().min(0).max(1);
+
+export const coverageBenchmarkSchema = z.object({
+  retailerId: z.string().min(1),
+  expectedModels: z.array(z.string().min(1)).default([]),
+  expectedCount: z.number().int().positive().optional()
+});
+
+export const coverageRetailerResultSchema = z.object({
+  retailerId: z.string().min(1),
+  expected: z.number().int().nonnegative(),
+  matched: z.number().int().nonnegative(),
+  recall: coverageRateSchema,
+  threshold: coverageRateSchema,
+  pass: z.boolean(),
+  consecutiveFailures: z.number().int().nonnegative(),
+  autoDisabled: z.boolean()
+});
+
+export const coverageReportSchema = z.object({
+  generatedAt: z.string().datetime(),
+  thresholds: z.object({
+    perRetailerRecall: coverageRateSchema,
+    aggregateRecall: coverageRateSchema,
+    fixtureUsageRate: coverageRateSchema.default(0.1)
+  }),
+  perRetailerRecall: z.record(z.string().min(1), coverageRateSchema),
+  aggregateRecall: coverageRateSchema,
+  fixtureUsageRate: coverageRateSchema,
+  retailers: z.array(coverageRetailerResultSchema),
+  breaches: z.array(
+    z.object({
+      scope: z.enum(["retailer", "aggregate", "fixture"]),
+      retailerId: z.string().min(1).optional(),
+      recall: coverageRateSchema,
+      threshold: coverageRateSchema,
+      consecutiveFailures: z.number().int().nonnegative().optional(),
+      autoDisabled: z.boolean().optional()
+    })
+  )
+});
+
+export const coverageStateSchema = z.object({
+  generatedAt: z.string().datetime(),
+  retailerConsecutiveFailures: z.record(z.string().min(1), z.number().int().nonnegative()),
+  aggregateConsecutiveFailures: z.number().int().nonnegative()
 });
 
 export const metadataSchema = z.object({
@@ -74,7 +126,15 @@ export const metadataSchema = z.object({
     deals: z.number().int().nonnegative()
   }),
   parserHealth: z.array(parserHealthSchema),
-  warnings: z.array(z.string())
+  warnings: z.array(z.string()),
+  coverage: z
+    .object({
+      perRetailerRecall: z.record(z.string().min(1), coverageRateSchema),
+      aggregateRecall: coverageRateSchema,
+      fixtureUsageRate: coverageRateSchema,
+      fixtureUsageThreshold: coverageRateSchema.optional()
+    })
+    .optional()
 });
 
 export const retailersFileSchema = z.array(retailerSchema);
@@ -88,3 +148,7 @@ export type ShoeCanonical = z.infer<typeof shoeCanonicalSchema>;
 export type DealCard = z.infer<typeof dealCardSchema>;
 export type ParserHealth = z.infer<typeof parserHealthSchema>;
 export type Metadata = z.infer<typeof metadataSchema>;
+export type CoverageBenchmark = z.infer<typeof coverageBenchmarkSchema>;
+export type CoverageRetailerResult = z.infer<typeof coverageRetailerResultSchema>;
+export type CoverageReport = z.infer<typeof coverageReportSchema>;
+export type CoverageState = z.infer<typeof coverageStateSchema>;
