@@ -41,6 +41,11 @@ npm run build
 3. In repository settings, set Pages source to **GitHub Actions**.
 4. Ensure Actions are enabled.
 5. `deploy.yml` publishes the site on push to `main`.
+6. Expected entry URLs after deploy:
+   - `https://<username>.github.io/`
+   - `https://<username>.github.io/running_shoe_deals/`
+7. Build includes a post-build alias step (`scripts/build-subpath.mjs`) that mirrors
+   `dist/index.html` to `dist/running_shoe_deals/index.html`.
 
 ## Data Refresh Workflow
 
