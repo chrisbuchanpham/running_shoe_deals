@@ -179,17 +179,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_9763982ca85c",
-    "brand": "Unknown",
-    "model": "altra-escalante-4-road-running-shoes---mens",
-    "category": "running",
-    "aliases": [
-      "altra-escalante-4-road-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_d2c017d20c72",
     "brand": "Altra",
     "model": "altra-escalante-4-road-running-shoes---mens",
@@ -200,6 +189,18 @@
     "identifiers": {
       "sku": "11129025"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_b9c1736e579c",
+    "brand": "Unknown",
+    "model": "altra-escalante-4-road-running-shoes-mens",
+    "category": "running",
+    "aliases": [
+      "altra-escalante-4-road-running-shoes-mens",
+      "altra-escalante-4-road-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -252,23 +253,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_fa6e9cbbd023",
+    "shoeId": "shoe_4528444ca215",
     "brand": "Unknown",
-    "model": "altra-experience-wild-trail-2-running-shoes---mens",
+    "model": "altra-experience-wild-trail-2-running-shoes-mens",
     "category": "trail",
     "aliases": [
+      "altra-experience-wild-trail-2-running-shoes-mens",
       "altra-experience-wild-trail-2-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
-    "shoeId": "shoe_7e6b2587c867",
-    "brand": "Unknown",
-    "model": "altra-fwd-via-road-running-shoes---mens",
-    "category": "running",
-    "aliases": [
-      "altra-fwd-via-road-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -287,12 +278,25 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
+    "shoeId": "shoe_4bc4aada5fc8",
+    "brand": "Unknown",
+    "model": "altra-fwd-via-road-running-shoes-mens",
+    "category": "running",
+    "aliases": [
+      "altra-fwd-via-road-running-shoes-mens",
+      "altra-fwd-via-road-running-shoes---mens"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
     "shoeId": "shoe_0d5c151777ab",
     "brand": "Unknown",
     "model": "altra-lone-peak-9-gtx-trail-running-shoes---mens",
     "category": "trail",
     "aliases": [
       "altra-lone-peak-9-gtx-trail-running-shoes---mens",
+      "altra-lone-peak-9-trail-running-shoes-mens",
       "altra-lone-peak-9-trail-running-shoes---mens"
     ],
     "identifiers": {},
@@ -326,17 +330,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_45c05a55b02d",
-    "brand": "Unknown",
-    "model": "altra-olympus-6-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "altra-olympus-6-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_f047e77ee4e0",
     "brand": "Altra",
     "model": "altra-olympus-6-trail-running-shoes---mens",
@@ -350,12 +343,25 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
+    "shoeId": "shoe_bbe48bfbc105",
+    "brand": "Unknown",
+    "model": "altra-olympus-6-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "altra-olympus-6-trail-running-shoes-mens",
+      "altra-olympus-6-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
     "shoeId": "shoe_18710f7b7dd4",
     "brand": "Unknown",
     "model": "altra-timp-5-gtx-trail-running-shoes---mens",
     "category": "trail",
     "aliases": [
       "altra-timp-5-gtx-trail-running-shoes---mens",
+      "altra-timp-5-trail-running-shoes-mens",
       "altra-timp-5-trail-running-shoes---mens"
     ],
     "identifiers": {},
@@ -473,17 +479,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_9adb240ecfbe",
-    "brand": "Unknown",
-    "model": "arcteryx-norvan-ld-4-gore-tex-trail-run---mens",
-    "category": "trail",
-    "aliases": [
-      "arcteryx-norvan-ld-4-gore-tex-trail-run---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_b5466f5790b3",
     "brand": "Arc'teryx",
     "model": "arcteryx-norvan-ld-4-gore-tex-trail-run---mens",
@@ -497,12 +492,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_036731fa7b86",
+    "shoeId": "shoe_77d8ecf2aedd",
     "brand": "Unknown",
-    "model": "arcteryx-norvan-ld-4-trail-running-shoes---mens",
+    "model": "arcteryx-norvan-ld-4-gore-tex-trail-run-mens",
     "category": "trail",
     "aliases": [
-      "arcteryx-norvan-ld-4-trail-running-shoes---mens"
+      "arcteryx-norvan-ld-4-gore-tex-trail-run-mens",
+      "arcteryx-norvan-ld-4-gore-tex-trail-run---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -521,12 +517,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_34613cbaecce",
+    "shoeId": "shoe_b02b1357a694",
     "brand": "Unknown",
-    "model": "arcteryx-sylan-gore-tex-running-shoes---mens",
-    "category": "running",
+    "model": "arcteryx-norvan-ld-4-trail-running-shoes-mens",
+    "category": "trail",
     "aliases": [
-      "arcteryx-sylan-gore-tex-running-shoes---mens"
+      "arcteryx-norvan-ld-4-trail-running-shoes-mens",
+      "arcteryx-norvan-ld-4-trail-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -545,12 +542,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_7858baefb220",
+    "shoeId": "shoe_38dc5501f2e5",
     "brand": "Unknown",
-    "model": "arcteryx-sylan-pro-trail-running-shoes---mens",
-    "category": "trail",
+    "model": "arcteryx-sylan-gore-tex-running-shoes-mens",
+    "category": "running",
     "aliases": [
-      "arcteryx-sylan-pro-trail-running-shoes---mens"
+      "arcteryx-sylan-gore-tex-running-shoes-mens",
+      "arcteryx-sylan-gore-tex-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -566,6 +564,18 @@
     "identifiers": {
       "sku": "11108748"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_c93a89e1e117",
+    "brand": "Unknown",
+    "model": "arcteryx-sylan-pro-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "arcteryx-sylan-pro-trail-running-shoes-mens",
+      "arcteryx-sylan-pro-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -640,6 +650,7 @@
     "category": "running",
     "aliases": [
       "brooks-ghost-17-gore-tex-road-running-shoes---mens",
+      "brooks-ghost-17-road-running-shoes-mens",
       "brooks-ghost-17-road-running-shoes---mens"
     ],
     "identifiers": {
@@ -648,11 +659,12 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_4313ab5ff687",
+    "shoeId": "shoe_5c3f3b53a4d5",
     "brand": "Brooks",
-    "model": "brooks-glycerin-22-road-running-shoes---mens",
+    "model": "brooks-glycerin-22-road-running-shoes-mens",
     "category": "running",
     "aliases": [
+      "brooks-glycerin-22-road-running-shoes-mens",
       "brooks-glycerin-22-road-running-shoes---mens"
     ],
     "identifiers": {
@@ -836,22 +848,15 @@
       "cloudspike-citius-2-bloom-lime-men-middle-distance-track-racing-fast-feeling-ride-cad-200-00-new-generation",
       "cloudultra-pro-pearl-juniper-women-ultra-trail-running-fast-ride-cad-330-00",
       "cloudspike-citius-2-bloom-lime-women-middle-distance-track-racing-fast-feeling-ride-cad-200-00-new-generation",
-      "cloud-6-versa-all-day-wear-cad-190-00",
-      "cloudmonster-void-year-of-the-horse-all-day-movement-cad-230-00-limited-edition",
+      "cloudsurfer-next-everyday-running-smooth-ride-cad-190-00",
+      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof",
+      "cloudmonster-hyper-paf-all-day-comfort-cad-360-00-limited-edition",
       "cloudmonster-3-hyper-lily-limelight-men-long-runs-tempo-runs-responsive-ride-cad-280-00-coming-soon",
       "cloudspike-amplius-2-bloom-lime-women-long-distance-track-running-fast-feeling-ride-cad-200-00-new-generation",
-      "cloudmonster-hyper-paf-all-day-comfort-cad-360-00-limited-edition",
-      "cloud-x-4-versatile-workouts-gym-workouts-hiit-cad-190-00-bestseller",
-      "cloudultra-3-trail-running-stable-ride-cad-250-00",
-      "cloudmonster-1-all-day-comfort-cad-220-00",
+      "cloudvista-2-trail-running-mixed-terrain-road-to-trail-cad-190-00",
+      "cloudsurfer-2-everyday-running-smooth-ride-cad-200-00-bestseller",
       "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
-      "cloudboom-max-marathons-fast-ride-cad-290-00",
-      "cloudnova-2-everyday-wear-comfort-lifestyle-cad-200-00-bestseller",
-      "cloudmonster-void-all-day-movement-cad-220-00-bestseller",
-      "cloud-6-shf-all-day-wear-cad-230-00-limited-edition",
-      "cloudsurfer-trail-2-trail-running-smooth-ride-cad-200-00",
-      "cloudrunner-3-wide-everyday-running-stable-ride-cad-190-00-new-generation",
-      "cloudswift-4-everyday-running-responsive-ride-cad-200-00-bestseller"
+      "cloud-x-4-versatile-workouts-gym-workouts-hiit-cad-190-00-bestseller"
     ],
     "identifiers": {
       "sku": "CARDLINK"
@@ -865,15 +870,14 @@
     "category": "running",
     "aliases": [
       "cloudsurfer-next-everyday-running-smooth-ride-cad-190-00",
-      "cloudmonster-void-year-of-the-horse-all-day-movement-cad-230-00-limited-edition",
-      "cloud-x-4-versatile-workouts-gym-workouts-hiit-cad-190-00-bestseller",
-      "cloudmonster-1-all-day-comfort-cad-220-00",
-      "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
-      "cloudboom-max-marathons-fast-ride-cad-290-00",
+      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof",
       "cloud-6-shf-all-day-wear-cad-230-00-limited-edition",
-      "cloudsurfer-trail-2-trail-running-smooth-ride-cad-200-00",
-      "cloudrunner-3-wide-everyday-running-stable-ride-cad-190-00-new-generation",
-      "cloudswift-4-everyday-running-responsive-ride-cad-200-00-bestseller"
+      "cloudmonster-void-year-of-the-horse-all-day-movement-cad-230-00-limited-edition",
+      "cloudmonster-hyper-paf-all-day-comfort-cad-360-00-limited-edition",
+      "cloudsurfer-2-everyday-running-smooth-ride-cad-200-00-bestseller",
+      "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
+      "cloud-x-4-versatile-workouts-gym-workouts-hiit-cad-190-00-bestseller",
+      "cloudsurfer-max-long-runs-smooth-ride-cad-220-00-bestseller"
     ],
     "identifiers": {
       "sku": "SUMMARY"
@@ -1248,11 +1252,12 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_a5ecf9527f42",
+    "shoeId": "shoe_79fd94cb25b1",
     "brand": "HOKA",
-    "model": "hoka-bondi-9-road-running-shoes---mens",
+    "model": "hoka-bondi-9-road-running-shoes-mens",
     "category": "running",
     "aliases": [
+      "hoka-bondi-9-road-running-shoes-mens",
       "hoka-bondi-9-road-running-shoes---mens"
     ],
     "identifiers": {
@@ -1274,11 +1279,12 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_ad43d615a00e",
+    "shoeId": "shoe_a2728f52d38f",
     "brand": "HOKA",
-    "model": "hoka-clifton-10-road-running-shoes---mens",
+    "model": "hoka-clifton-10-road-running-shoes-mens",
     "category": "running",
     "aliases": [
+      "hoka-clifton-10-road-running-shoes-mens",
       "hoka-clifton-10-road-running-shoes---mens"
     ],
     "identifiers": {
@@ -1586,17 +1592,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_171a380f6208",
-    "brand": "Unknown",
-    "model": "keen-roam-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "keen-roam-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_7979ace0dca4",
     "brand": "Keen",
     "model": "keen-roam-trail-running-shoes---mens",
@@ -1610,12 +1605,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_87baac1ae390",
+    "shoeId": "shoe_01393a535b5d",
     "brand": "Unknown",
-    "model": "keen-seek-trail-running-shoes---mens",
+    "model": "keen-roam-trail-running-shoes-mens",
     "category": "trail",
     "aliases": [
-      "keen-seek-trail-running-shoes---mens"
+      "keen-roam-trail-running-shoes-mens",
+      "keen-roam-trail-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -1630,6 +1626,65 @@
     ],
     "identifiers": {
       "sku": "11148974"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_dd86bd1c2a50",
+    "brand": "Unknown",
+    "model": "keen-seek-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "keen-seek-trail-running-shoes-mens",
+      "keen-seek-trail-running-shoes---mens",
+      "la-sportiva-prodigio-pro-trail-running-shoes-mens",
+      "altra-experience-wild-3-trail-running-shoes-mens",
+      "la-sportiva-ultra-raptor-3-trail-shoes-mens",
+      "merrell-agility-trail-waterproof-running-shoes-mens",
+      "on-cloudrunner-3-road-running-shoes-mens",
+      "altra-timp-6-trail-running-shoes-mens",
+      "salomon-aero-blaze-3-gravel-running-shoes-mens",
+      "merrell-agility-peak-6-trail-running-shoes-mens",
+      "saucony-endorphin-azura-road-running-shoes-mens",
+      "saucony-ride-19-road-running-shoes-mens",
+      "on-cloudvista-2-waterproof-trail-running-shoes-mens",
+      "the-north-face-altamesa-500-trail-running-shoes-mens",
+      "brooks-cascadia-19-gore-tex-trail-running-shoes-mens",
+      "on-cloudsurfer-2-road-running-shoes-mens",
+      "salomon-ultra-glide-3-trail-running-shoes-mens",
+      "altra-lone-peak-9-gtx-trail-running-shoes-mens",
+      "on-cloudsurfer-next-road-running-shoes-mens",
+      "hoka-mach-6-road-running-shoes-mens",
+      "saucony-peregrine-15-trail-running-shoes-mens",
+      "altra-experience-flow-2-road-running-shoes-mens",
+      "scarpa-ribelle-run-2-trail-running-shoes-mens",
+      "scarpa-spin-planet-trail-running-shoes-mens",
+      "saucony-ride-18-road-running-shoes-mens",
+      "saucony-excursion-tr17-trail-running-shoes-mens",
+      "altra-torin-8-gtx-road-running-shoes-mens",
+      "hoka-speedgoat-6-gore-tex-trail-running-shoes-mens",
+      "brooks-ghost-17-gore-tex-road-running-shoes-mens",
+      "altra-lone-peak-9-trail-running-shoes-mens",
+      "merrell-speedarc-matis-hiking-shoes-mens",
+      "on-cloudsurfer-trail-2-running-shoes-mens",
+      "scarpa-spin-st-trail-running-shoes-mens",
+      "la-sportiva-prodigio-max-trail-running-shoes-mens",
+      "hoka-transport-road-walking-shoes-mens",
+      "salomon-speedcross-6-trail-running-shoes-mens",
+      "hoka-mafate-x-trail-running-shoe-mens",
+      "hoka-torrent-4-trail-running-shoes-mens",
+      "brooks-caldera-8-trail-running-shoes-mens",
+      "saucony-ride-tr2-trail-running-shoes-mens",
+      "hoka-challenger-8-trail-running-shoes-mens",
+      "altra-timp-5-gtx-trail-running-shoes-mens",
+      "icebug-newrun-bugrip-traction-road-running-shoes-mens",
+      "altra-x-smartwool-escalante-4-runners-mens",
+      "on-cloudsurfer-trail-running-shoes-mens",
+      "la-sportiva-bushido-iii-gore-tex-trail-running-shoes-mens",
+      "on-cloudrunner-2-waterproof-road-running-shoes-mens"
+    ],
+    "identifiers": {
+      "sku": "REVIEWS"
     },
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
@@ -1673,17 +1728,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_171141d8a31e",
-    "brand": "Unknown",
-    "model": "la-sportiva-bushido-iii-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "la-sportiva-bushido-iii-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_4438caa77b3a",
     "brand": "La Sportiva",
     "model": "la-sportiva-bushido-iii-trail-running-shoes---mens",
@@ -1695,6 +1739,18 @@
     "identifiers": {
       "sku": "11134572"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_fbfd2832929c",
+    "brand": "Unknown",
+    "model": "la-sportiva-bushido-iii-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "la-sportiva-bushido-iii-trail-running-shoes-mens",
+      "la-sportiva-bushido-iii-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -1715,6 +1771,7 @@
     "category": "trail",
     "aliases": [
       "la-sportiva-prodigio-pro-trail-running-shoes---mens",
+      "la-sportiva-prodigio-trail-running-shoes-mens",
       "la-sportiva-prodigio-trail-running-shoes---mens"
     ],
     "identifiers": {},
@@ -2270,17 +2327,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_22eccfec87bf",
-    "brand": "Unknown",
-    "model": "merrell-agility-peak-6-gore-tex-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "merrell-agility-peak-6-gore-tex-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_3d392b9d7722",
     "brand": "Merrell",
     "model": "merrell-agility-peak-6-gore-tex-trail-running-shoes---mens",
@@ -2292,6 +2338,18 @@
     "identifiers": {
       "sku": "11138461"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_8b2208bfcaa9",
+    "brand": "Unknown",
+    "model": "merrell-agility-peak-6-gore-tex-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "merrell-agility-peak-6-gore-tex-trail-running-shoes-mens",
+      "merrell-agility-peak-6-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -2330,17 +2388,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_38c600eccbc0",
-    "brand": "Unknown",
-    "model": "merrell-speedarc-matis-gore-tex-hiking-shoes---mens",
-    "category": "running",
-    "aliases": [
-      "merrell-speedarc-matis-gore-tex-hiking-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_517ae38889f9",
     "brand": "Merrell",
     "model": "merrell-speedarc-matis-gore-tex-hiking-shoes---mens",
@@ -2352,6 +2399,18 @@
     "identifiers": {
       "sku": "11137387"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_e4d6a08c67bd",
+    "brand": "Unknown",
+    "model": "merrell-speedarc-matis-gore-tex-hiking-shoes-mens",
+    "category": "running",
+    "aliases": [
+      "merrell-speedarc-matis-gore-tex-hiking-shoes-mens",
+      "merrell-speedarc-matis-gore-tex-hiking-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -2629,31 +2688,18 @@
       "nike-vomero-18-gore-tex",
       "nike-vomero-18",
       "nike-vaporfly-4-glam",
-      "nike-vomero-premium",
       "nike-revolution-8",
       "nike-juniper-trail-3",
       "nike-pegasus-plus",
       "nike-alphafly-3",
-      "cloud-6-versa-all-day-wear-cad-190-00",
-      "cloudmonster-hyper-paf-all-day-comfort-cad-360-00-limited-edition",
-      "cloudultra-3-trail-running-stable-ride-cad-250-00",
-      "cloudnova-2-everyday-wear-comfort-lifestyle-cad-200-00-bestseller",
-      "cloudmonster-void-all-day-movement-cad-220-00-bestseller"
+      "cloudvista-2-trail-running-mixed-terrain-road-to-trail-cad-190-00",
+      "cloudrunner-3-everyday-running-stable-ride-cad-190-00-new-generation",
+      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof",
+      "cloudnova-2-everyday-wear-comfort-lifestyle-cad-200-00-bestseller"
     ],
     "identifiers": {
       "sku": "PRICE"
     },
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
-    "shoeId": "shoe_70cc8e6d7358",
-    "brand": "Unknown",
-    "model": "norda-001a-seamless-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "norda-001a-seamless-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -2670,12 +2716,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_ed05fc25154a",
+    "shoeId": "shoe_23f56d28fa76",
     "brand": "Unknown",
-    "model": "norda-002-trail-running-shoes---mens",
+    "model": "norda-001a-seamless-trail-running-shoes-mens",
     "category": "trail",
     "aliases": [
-      "norda-002-trail-running-shoes---mens"
+      "norda-001a-seamless-trail-running-shoes-mens",
+      "norda-001a-seamless-trail-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -2691,6 +2738,18 @@
     "identifiers": {
       "sku": "11148640"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_7be6e91758ef",
+    "brand": "Unknown",
+    "model": "norda-002-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "norda-002-trail-running-shoes-mens",
+      "norda-002-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -2710,17 +2769,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_996965413089",
-    "brand": "Unknown",
-    "model": "on-cloud-6-shoes---mens",
-    "category": "running",
-    "aliases": [
-      "on-cloud-6-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_8590d01b7a62",
     "brand": "On",
     "model": "on-cloud-6-shoes---mens",
@@ -2734,13 +2782,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_4c51b4b2bb76",
+    "shoeId": "shoe_5b3613dcd25f",
     "brand": "Unknown",
-    "model": "on-cloudrunner-2-road-running-shoes---mens",
+    "model": "on-cloud-6-shoes-mens",
     "category": "running",
     "aliases": [
-      "on-cloudrunner-2-road-running-shoes---mens",
-      "on-cloudrunner-2-waterproof-road-running-shoes---mens"
+      "on-cloud-6-shoes-mens",
+      "on-cloud-6-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -2757,6 +2805,19 @@
     "identifiers": {
       "sku": "11102837"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_528cd0e0f299",
+    "brand": "Unknown",
+    "model": "on-cloudrunner-2-road-running-shoes-mens",
+    "category": "running",
+    "aliases": [
+      "on-cloudrunner-2-road-running-shoes-mens",
+      "on-cloudrunner-2-road-running-shoes---mens",
+      "on-cloudrunner-2-waterproof-road-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -2834,11 +2895,12 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_4e93b0a2e334",
+    "shoeId": "shoe_ec541d666477",
     "brand": "Unknown",
-    "model": "on-cloudsurfer-trail-2-waterproof-running-shoes---mens",
+    "model": "on-cloudsurfer-trail-2-waterproof-running-shoes-mens",
     "category": "trail",
     "aliases": [
+      "on-cloudsurfer-trail-2-waterproof-running-shoes-mens",
       "on-cloudsurfer-trail-2-waterproof-running-shoes---mens",
       "on-cloudsurfer-trail-2-running-shoes---mens"
     ],
@@ -3135,11 +3197,12 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_450087c72ad5",
+    "shoeId": "shoe_500e1209bc80",
     "brand": "Unknown",
-    "model": "salomon-aero-blaze-3-gravel-gore-tex-running-shoes---mens",
+    "model": "salomon-aero-blaze-3-gravel-gore-tex-running-shoes-mens",
     "category": "running",
     "aliases": [
+      "salomon-aero-blaze-3-gravel-gore-tex-running-shoes-mens",
       "salomon-aero-blaze-3-gravel-gore-tex-running-shoes---mens"
     ],
     "identifiers": {},
@@ -3195,17 +3258,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_f0dd6fb7c356",
-    "brand": "Unknown",
-    "model": "salomon-genesis-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "salomon-genesis-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_5bfcfde02f57",
     "brand": "Salomon",
     "model": "salomon-genesis-trail-running-shoes---mens",
@@ -3219,12 +3271,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_16fb0204ea84",
+    "shoeId": "shoe_d18b421071f6",
     "brand": "Unknown",
-    "model": "salomon-speedcross-6-gore-tex-trail-running-shoes---mens",
+    "model": "salomon-genesis-trail-running-shoes-mens",
     "category": "trail",
     "aliases": [
-      "salomon-speedcross-6-gore-tex-trail-running-shoes---mens"
+      "salomon-genesis-trail-running-shoes-mens",
+      "salomon-genesis-trail-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -3241,6 +3294,18 @@
     "identifiers": {
       "sku": "938900"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5c9268c66801",
+    "brand": "Unknown",
+    "model": "salomon-speedcross-6-gore-tex-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-speedcross-6-gore-tex-trail-running-shoes-mens",
+      "salomon-speedcross-6-gore-tex-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -3279,23 +3344,13 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_457e31cf71f8",
+    "shoeId": "shoe_4bfe056f271a",
     "brand": "Unknown",
-    "model": "salomon-xa-pro-3d-v9-gore-tex-trail-running-shoes---mens",
+    "model": "salomon-xa-pro-3d-v9-gore-tex-trail-running-shoes-mens",
     "category": "trail",
     "aliases": [
+      "salomon-xa-pro-3d-v9-gore-tex-trail-running-shoes-mens",
       "salomon-xa-pro-3d-v9-gore-tex-trail-running-shoes---mens"
-    ],
-    "identifiers": {},
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
-    "shoeId": "shoe_839d29aa08a0",
-    "brand": "Unknown",
-    "model": "salomon-xa-pro-3d-v9-trail-running-shoes---mens",
-    "category": "trail",
-    "aliases": [
-      "salomon-xa-pro-3d-v9-trail-running-shoes---mens"
     ],
     "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
@@ -3312,6 +3367,18 @@
     "identifiers": {
       "sku": "11154349"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_afb49e8dbb79",
+    "brand": "Unknown",
+    "model": "salomon-xa-pro-3d-v9-trail-running-shoes-mens",
+    "category": "trail",
+    "aliases": [
+      "salomon-xa-pro-3d-v9-trail-running-shoes-mens",
+      "salomon-xa-pro-3d-v9-trail-running-shoes---mens"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -3354,11 +3421,12 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_a88977bb1ed7",
+    "shoeId": "shoe_d46a70055c2e",
     "brand": "Saucony",
-    "model": "saucony-guide-18-road-running-shoes---mens",
+    "model": "saucony-guide-18-road-running-shoes-mens",
     "category": "running",
     "aliases": [
+      "saucony-guide-18-road-running-shoes-mens",
       "saucony-guide-18-road-running-shoes---mens"
     ],
     "identifiers": {
@@ -3634,6 +3702,17 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
+    "shoeId": "shoe_3726d52b5bc6",
+    "brand": "Unknown",
+    "model": "shoes-slip-on-sneakers",
+    "category": "running",
+    "aliases": [
+      "shoes-slip-on-sneakers"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
     "shoeId": "shoe_268006faadad",
     "brand": "Unknown",
     "model": "shoes-under-100",
@@ -3666,6 +3745,7 @@
       "adidas-runfalcon-5-sneakers---junior-c-64-99",
       "reebok-rush-runner-elastic-lace-and-top-strap-running-shoes---kids-c-64-99",
       "native-jefferson-bio-bling-slip-on-shoes---kids-c-54-99",
+      "new-salomon-aero-glide-4-road-running-shoes---mens-c-209-99",
       "3-new-allbirds-tree-runner-nz-casual-shoes---mens-c-149-99",
       "new-allbirds-wool-runner-nz-waterproof-shoes---women-s-c-184-99",
       "brooks-adrenaline-gts-24-gtx-road-running-shoes---womens-c-199-99",
@@ -3688,7 +3768,8 @@
       "nike-pegasus-premium",
       "nike-zoom-fly-6",
       "nike-vaporfly-4-glam",
-      "cloudsurfer-max-wide-long-runs-smooth-ride-cad-220-00"
+      "cloudhorizon-2-waterproof-hiking-walking-trails-wet-weather-hiking-cad-250-00-new-generation",
+      "cloudsurfer-max-long-runs-smooth-ride-cad-220-00-bestseller"
     ],
     "identifiers": {
       "sku": "CARD"

@@ -128,7 +128,7 @@ export const RETAILERS: RetailerConfig[] = [
     currency: "CAD",
     homepageUrl: "https://www.sportchek.ca",
     logoUrl: "https://www.sportchek.ca/favicon.ico",
-    dealsUrl: "https://www.sportchek.ca/en/cat/shop-by-sport/running/running-shoes-DC2001110.html",
+    dealsUrl: "https://www.sportchek.ca/en/cat/activities-and-equipment/running/running-shoes-DC2000805.html",
     fixtureFile: "sport-chek.json",
     allowScrape: true,
     pagination: NO_PAGINATION,

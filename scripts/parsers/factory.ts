@@ -93,6 +93,17 @@ function parsePriceList(snippet: string): number[] {
     }
   }
   PRICE_RE.lastIndex = 0;
+
+  if (prices.length === 0 && /\b(?:price|sale|now|from|was|save)\b/i.test(text)) {
+    const numericRe = /\b([1-9][0-9]{1,3}(?:[.,][0-9]{2}))\b/g;
+    while ((match = numericRe.exec(text)) !== null) {
+      const parsed = numberFromUnknown(match[1]);
+      if (typeof parsed === "number" && Number.isFinite(parsed) && parsed > 20 && parsed < 2_500) {
+        prices.push(parsed);
+      }
+    }
+  }
+
   return prices;
 }
 
@@ -103,6 +114,24 @@ function stripTags(value: string): string {
     .replace(/&amp;/g, "&")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function titleFromUrlPath(url: string): string | undefined {
+  try {
+    const pathname = new URL(url).pathname;
+    const slug = pathname.split("/").filter(Boolean).pop();
+    if (!slug) return undefined;
+    const decoded = decodeURIComponent(slug)
+      .replace(/\.[a-z0-9]{2,5}$/i, "")
+      .replace(/[-_]+/g, " ")
+      .replace(/\b(?:pdp|product|products|pd|p)\b/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (decoded.length < 8) return undefined;
+    return decoded;
+  } catch {
+    return undefined;
+  }
 }
 
 function productToRawOffer(product: any, fallbackUrl: string): RawRetailerOffer | undefined {
@@ -196,7 +225,9 @@ function extractProductCards(html: string, fallbackUrl: string): RawRetailerOffe
     const titleFromAttr =
       /aria-label=(["'])(.*?)\1/i.exec(anchorContent)?.[2] ??
       /title=(["'])(.*?)\1/i.exec(anchorContent)?.[2];
-    const titleRaw = normalizeOfferText(stripTags(titleFromAttr ?? match[3]));
+    const titleRaw = normalizeOfferText(
+      stripTags(titleFromAttr ?? match[3] ?? "") || titleFromUrlPath(absoluteUrl) || ""
+    );
     if (!titleRaw || titleRaw.length < 8) continue;
 
     const windowStart = Math.max(0, (match.index ?? 0) - 400);
@@ -564,7 +595,7 @@ function looksLikeRetailerOfferUrl(url: string, retailerHostname: string): boole
     const linkHost = parsed.hostname.replace(/^www\./i, "");
     if (linkHost !== retailerHost) return false;
     const path = parsed.pathname.toLowerCase();
-    return /running|trail|shoe|footwear|product|products|\/pd\//i.test(path);
+    return /running|trail|shoe|footwear|product|products|\/pd\/|\/p\/|\/dp\//i.test(path);
   } catch {
     return false;
   }
@@ -626,7 +657,7 @@ async function discoverFallbackUrls(
           if (
             queue.length < 20 &&
             !visited.has(absolute) &&
-            /product|catalog|sitemap|shoe|running|trail/i.test(absolute)
+            /product|catalog|sitemap|shoe|running|trail|\/p\/|\/pd\//i.test(absolute)
           ) {
             queue.push(absolute);
           }
@@ -768,7 +799,12 @@ async function resolveBrowserFallbackUrls(
   const mode = getResolvedBrowserFallbackMode(config);
   if (mode === "sitemap-products") {
     const discovered = await discoverFallbackUrls(config, httpProfile);
-    return dedupePageUrls(discovered).slice(0, maxPages);
+    const dedupedDiscovered = dedupePageUrls(discovered);
+    if (dedupedDiscovered.length > 0) {
+      return dedupedDiscovered.slice(0, maxPages);
+    }
+    // When sitemap discovery is blocked, still attempt browser rendering on listing pages.
+    return dedupePageUrls(pageUrls).slice(0, Math.max(1, Math.min(maxPages, 3)));
   }
   return dedupePageUrls(pageUrls).slice(0, maxPages);
 }
