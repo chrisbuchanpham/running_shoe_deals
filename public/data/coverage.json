@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-03T13:59:47.972Z",
+  "generatedAt": "2026-03-03T15:17:12.467Z",
   "thresholds": {
     "perRetailerRecall": 0.9,
     "aggregateRecall": 0.93,
@@ -25,7 +25,7 @@
     "under-armour-ca": 1
   },
   "aggregateRecall": 1,
-  "fixtureUsageRate": 0.2353,
+  "fixtureUsageRate": 0.0588,
   "retailers": [
     {
       "retailerId": "adidas-ca",
@@ -198,11 +198,5 @@
       "autoDisabled": false
     }
   ],
-  "breaches": [
-    {
-      "scope": "fixture",
-      "recall": 0.2353,
-      "threshold": 0.1
-    }
-  ]
+  "breaches": []
 }

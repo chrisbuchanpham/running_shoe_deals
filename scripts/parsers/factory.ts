@@ -274,6 +274,56 @@ function extractProductCards(html: string, fallbackUrl: string): RawRetailerOffe
   return offers;
 }
 
+function extractTrackingSignalOffers(html: string, fallbackUrl: string): RawRetailerOffer[] {
+  if (!/\/pdp\//i.test(fallbackUrl)) {
+    return [];
+  }
+
+  const titleRaw = normalizeOfferText(
+    stripTags((/<title[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1] ?? "").replace(/\|.*$/, ""))
+  );
+  if (!titleRaw || titleRaw.length < 8) {
+    return [];
+  }
+
+  const trackedPrices: number[] = [];
+  const trackedPriceRe = /\bpr%3D([0-9]+(?:\.[0-9]{2})?)/gi;
+  let match: RegExpExecArray | null;
+  while ((match = trackedPriceRe.exec(html)) !== null) {
+    const parsed = numberFromUnknown(match[1]);
+    if (typeof parsed === "number" && Number.isFinite(parsed) && parsed > 0) {
+      trackedPrices.push(parsed);
+    }
+  }
+  trackedPriceRe.lastIndex = 0;
+
+  const priceCurrent = [...new Set(trackedPrices)].sort((a, b) => a - b)[0];
+  if (!priceCurrent) {
+    return [];
+  }
+
+  const category = inferCategory(titleRaw);
+  const modelRaw = titleRaw;
+  if (!isLikelyShoeOffer({ title: titleRaw, model: modelRaw, url: fallbackUrl, category })) {
+    return [];
+  }
+
+  return [
+    {
+      url: fallbackUrl,
+      titleRaw,
+      modelRaw,
+      brand: undefined,
+      category,
+      gender: inferGender(titleRaw),
+      priceCurrent,
+      priceOriginal: undefined,
+      inStock: !/out[-\s]?of[-\s]?stock|sold[-\s]?out/i.test(html),
+      identifiers: {}
+    }
+  ];
+}
+
 function extractOfferLikeNodes(node: unknown, out: Record<string, unknown>[]): void {
   if (!node || typeof node !== "object") return;
   if (Array.isArray(node)) {
@@ -496,10 +546,12 @@ function extractOffersFromHtml(html: string, fallbackUrl: string, config: Retail
   const fromEmbedded = extractEmbeddedStateOffers(html, fallbackUrl, embeddedHints);
   const fromJsonLd = extractJsonLdOffers(html, fallbackUrl);
   const fromCards = extractProductCards(html, fallbackUrl);
-  const discoveredCount = fromJsonLd.length + fromCards.length + fromEmbedded.length;
+  const fromTrackingSignals = extractTrackingSignalOffers(html, fallbackUrl);
+  const discoveredCount =
+    fromJsonLd.length + fromCards.length + fromEmbedded.length + fromTrackingSignals.length;
   const offers = embeddedHints?.prefer
-    ? dedupeOffers([...fromEmbedded, ...fromJsonLd, ...fromCards])
-    : dedupeOffers([...fromJsonLd, ...fromCards, ...fromEmbedded]);
+    ? dedupeOffers([...fromEmbedded, ...fromJsonLd, ...fromCards, ...fromTrackingSignals])
+    : dedupeOffers([...fromJsonLd, ...fromCards, ...fromEmbedded, ...fromTrackingSignals]);
   return { offers, discoveredCount };
 }
 
@@ -722,6 +774,115 @@ async function fetchSitemapFallbackOffers(
   };
 }
 
+function extractLinkedProductUrlsFromPageHtml(
+  html: string,
+  baseUrl: string,
+  retailerHostname: string
+): string[] {
+  const links = extractHtmlHrefLinks(html);
+  const prioritizedCandidates: string[] = [];
+  const secondaryCandidates: string[] = [];
+  for (const link of links) {
+    const absolute = normalizeUrl(link, baseUrl);
+    try {
+      const parsed = new URL(absolute);
+      const retailerHost = retailerHostname.replace(/^www\./i, "");
+      const linkHost = parsed.hostname.replace(/^www\./i, "");
+      if (linkHost !== retailerHost) continue;
+      const path = parsed.pathname.toLowerCase();
+      if (/\/pdp\/|\/product\/|\/pd\/|\/p\//i.test(path)) {
+        prioritizedCandidates.push(absolute);
+        continue;
+      }
+      if (/running|trail|shoe|footwear/i.test(path)) {
+        secondaryCandidates.push(absolute);
+      }
+    } catch {
+      continue;
+    }
+  }
+  return dedupePageUrls([...prioritizedCandidates, ...secondaryCandidates]);
+}
+
+async function fetchLinkedProductFallbackOffers(
+  config: RetailerConfig,
+  fetchedPages: FetchedPageSnapshot[],
+  httpProfile: RetailerHttpProfileConfig
+): Promise<{
+  offers: RawRetailerOffer[];
+  discoveredCount: number;
+  pagesCrawled: number;
+}> {
+  if (fetchedPages.length === 0) {
+    return { offers: [], discoveredCount: 0, pagesCrawled: 0 };
+  }
+
+  const retailerHostname = new URL(config.homepageUrl).hostname;
+  const candidateUrls: string[] = [];
+  for (const page of fetchedPages) {
+    candidateUrls.push(
+      ...extractLinkedProductUrlsFromPageHtml(page.html, page.finalUrl || page.pageUrl, retailerHostname)
+    );
+  }
+
+  const dedupedCandidateUrls = dedupePageUrls(candidateUrls).slice(0, 8);
+  if (dedupedCandidateUrls.length === 0) {
+    return { offers: [], discoveredCount: 0, pagesCrawled: 0 };
+  }
+
+  const scrapedOffers: RawRetailerOffer[] = [];
+  let discoveredCount = 0;
+  let pagesCrawled = 0;
+  let browserProductPagesFetched = 0;
+
+  for (const productUrl of dedupedCandidateUrls) {
+    try {
+      const page = await fetchPageWithRetry(productUrl, {
+        retries: 1,
+        timeoutMs: Math.min(httpProfile.timeoutMs, 15_000),
+        minDelayMs: 350,
+        headerPreset: httpProfile.profile
+      });
+      pagesCrawled += 1;
+      const extraction = extractOffersFromHtml(page.html, page.finalUrl || productUrl, config);
+      discoveredCount += extraction.discoveredCount;
+      scrapedOffers.push(...extraction.offers);
+
+      if (extraction.offers.length === 0 && /\/pdp\//i.test(productUrl) && browserProductPagesFetched < 4) {
+        try {
+          const browserPage = await fetchPageWithBrowser(productUrl, {
+            timeoutMs: Math.max(httpProfile.timeoutMs * 2, 30_000),
+            waitMs: 2_500
+          });
+          browserProductPagesFetched += 1;
+          pagesCrawled += 1;
+          const browserExtraction = extractOffersFromHtml(
+            browserPage.html,
+            browserPage.finalUrl || productUrl,
+            config
+          );
+          discoveredCount += browserExtraction.discoveredCount;
+          scrapedOffers.push(...browserExtraction.offers);
+        } catch {
+          // Continue scanning remaining candidate URLs.
+        }
+      }
+
+      if (dedupeOffers(scrapedOffers).length >= 6) {
+        break;
+      }
+    } catch {
+      continue;
+    }
+  }
+
+  return {
+    offers: dedupeOffers(scrapedOffers),
+    discoveredCount,
+    pagesCrawled
+  };
+}
+
 function shouldAttemptSitemapFallback(classification: RetailerBlockerClassification): boolean {
   return (
     classification === "anti-bot" ||
@@ -745,6 +906,12 @@ type PageFetchFailure = {
   pageUrl: string;
   status?: number;
   antiBotSignal: boolean;
+};
+
+type FetchedPageSnapshot = {
+  pageUrl: string;
+  finalUrl: string;
+  html: string;
 };
 
 type ExecutionPath = "http" | "browser" | "fixture";
@@ -832,6 +999,7 @@ async function fetchBrowserFallbackOffers(
   const waitMs = getResolvedBrowserWaitMs(config);
   const timeoutMs = Math.max(httpProfile.timeoutMs * 2, waitMs + 10_000, 30_000);
   const scrapedOffers: RawRetailerOffer[] = [];
+  const fetchedPages: FetchedPageSnapshot[] = [];
   const warnings: string[] = [];
   let discoveredCount = 0;
   let pagesCrawled = 0;
@@ -843,6 +1011,11 @@ async function fetchBrowserFallbackOffers(
         waitMs
       });
       pagesCrawled += 1;
+      fetchedPages.push({
+        pageUrl,
+        finalUrl: page.finalUrl || pageUrl,
+        html: page.html
+      });
 
       const extraction = extractOffersFromHtml(page.html, page.finalUrl || pageUrl, config);
       discoveredCount += extraction.discoveredCount;
@@ -861,10 +1034,23 @@ async function fetchBrowserFallbackOffers(
     }
   }
 
+  let linkedProductsRecoveryPages = 0;
+  if (scrapedOffers.length === 0 && fetchedPages.length > 0) {
+    const linkedProductsResult = await fetchLinkedProductFallbackOffers(config, fetchedPages, httpProfile);
+    if (linkedProductsResult.offers.length > 0) {
+      scrapedOffers.push(...linkedProductsResult.offers);
+      discoveredCount += linkedProductsResult.discoveredCount;
+      linkedProductsRecoveryPages = linkedProductsResult.pagesCrawled;
+      warnings.push(
+        `Recovered linked products from browser pages (${linkedProductsResult.pagesCrawled} pages).`
+      );
+    }
+  }
+
   return {
     offers: dedupeOffers(scrapedOffers),
     discoveredCount,
-    pagesCrawled,
+    pagesCrawled: pagesCrawled + linkedProductsRecoveryPages,
     warnings
   };
 }
@@ -1029,6 +1215,7 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
       const httpProfile = getResolvedHttpProfile(config);
       const scrapedOffers: RawRetailerOffer[] = [];
       const pageFailures: PageFetchFailure[] = [];
+      const fetchedPages: FetchedPageSnapshot[] = [];
       let discoveredCount = 0;
       let pagesCrawled = 0;
       let firstPageSucceeded = false;
@@ -1045,6 +1232,11 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
             });
             pagesCrawled += 1;
             if (pageIndex === 0) firstPageSucceeded = true;
+            fetchedPages.push({
+              pageUrl,
+              finalUrl: page.finalUrl || pageUrl,
+              html: page.html
+            });
             const extraction = extractOffersFromHtml(page.html, page.finalUrl || config.dealsUrl, config);
             discoveredCount += extraction.discoveredCount;
             scrapedOffers.push(...extraction.offers);
@@ -1116,6 +1308,28 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
         if (shouldPrioritizeBrowserFallback(blocker.classification)) {
           const browserRecovered = await tryBrowserFallback();
           if (browserRecovered) return browserRecovered;
+        }
+
+        if (blocker.classification === "selector-drift" || blocker.classification === "unknown") {
+          const linkedProductsResult = await fetchLinkedProductFallbackOffers(
+            config,
+            fetchedPages,
+            httpProfile
+          );
+          if (linkedProductsResult.offers.length > 0) {
+            const recoveryMessage = `Recovered via linked product fallback (${linkedProductsResult.pagesCrawled} pages).`;
+            const warning = warnings.length > 0 ? `${warnings.join(" | ")} | ${recoveryMessage}` : recoveryMessage;
+            return {
+              offers: linkedProductsResult.offers,
+              warning,
+              usedFixture: false,
+              discoveredCount: discoveredCount + linkedProductsResult.discoveredCount,
+              parsedCount: linkedProductsResult.offers.length,
+              pagesCrawled: pagesCrawled + linkedProductsResult.pagesCrawled,
+              sourceMode: "live",
+              diagnostics: diagnosticsForExecutionPath("http")
+            };
+          }
         }
 
         if (shouldAttemptSitemapFallback(blocker.classification)) {

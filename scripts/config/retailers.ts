@@ -158,7 +158,10 @@ export const RETAILERS: RetailerConfig[] = [
         ]
       }
     },
-    ...AGGRESSIVE_BROWSER_FALLBACK
+    ...AGGRESSIVE_BROWSER_FALLBACK,
+    browserFallbackMode: "listing",
+    browserWaitMs: 7_000,
+    browserMaxPages: 1
   },
   {
     id: "mec",
@@ -250,9 +253,9 @@ export const RETAILERS: RetailerConfig[] = [
     name: "adidas Canada",
     country: "CA",
     currency: "CAD",
-    homepageUrl: "https://www.adidas.ca",
+    homepageUrl: "https://www.adidas.com",
     logoUrl: "https://www.adidas.ca/favicon.ico",
-    dealsUrl: "https://www.adidas.ca/en/running-shoes",
+    dealsUrl: "https://www.adidas.com/us/running-shoes",
     fixtureFile: "adidas-ca.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
@@ -305,13 +308,13 @@ export const RETAILERS: RetailerConfig[] = [
     name: "New Balance Canada",
     country: "CA",
     currency: "CAD",
-    homepageUrl: "https://www.newbalance.ca",
+    homepageUrl: "https://www.newbalance.com",
     logoUrl: "https://www.newbalance.ca/favicon.ico",
-    dealsUrl: "https://www.newbalance.ca/en_ca/shoes/running/",
+    dealsUrl: "https://www.newbalance.com/on/demandware.store/Sites-NBUS-Site/en_US/Search-UpdateGrid?q=running%20shoes",
     fixtureFile: "new-balance-ca.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
-    httpProfile: ANTI_BOT_HTTP_PROFILE,
+    httpProfile: DEFAULT_HTTP_PROFILE,
     extractionHints: {
       embeddedState: {
         prefer: true,
