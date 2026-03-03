@@ -12,6 +12,7 @@
     "format": "prettier . --write",
     "test": "vitest run",
     "test:watch": "vitest",
+    "verify:build-paths": "node scripts/verify-build-paths.mjs",
     "ingest": "tsx scripts/ingest.ts",
     "validate:data": "tsx scripts/validate-data.ts",
     "refresh:data": "tsx scripts/ingest.ts && tsx scripts/validate-data.ts",

@@ -39,6 +39,9 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Verify build paths
+        run: npm run verify:build-paths
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -36,15 +36,15 @@ npm run build
 
 ## GitHub Pages Deployment
 
-1. Create repo named `<username>.github.io`.
+1. Create a GitHub repository (for example, `running_shoe_deals`).
 2. Push this project to `main`.
 3. In repository settings, set Pages source to **GitHub Actions**.
 4. Ensure Actions are enabled.
 5. `deploy.yml` publishes the site on push to `main`.
-6. Expected entry URLs after deploy:
-   - `https://<username>.github.io/`
+6. Primary entry URL after deploy:
    - `https://<username>.github.io/running_shoe_deals/`
-7. Build includes a post-build alias step (`scripts/build-subpath.mjs`) that mirrors
+7. For project Pages repositories, root (`https://<username>.github.io/`) may return `404`.
+8. Build includes a post-build alias step (`scripts/build-subpath.mjs`) that mirrors
    `dist/index.html` to `dist/running_shoe_deals/index.html`.
 
 ## Data Refresh Workflow

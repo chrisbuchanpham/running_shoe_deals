@@ -27,12 +27,28 @@ type DataState = {
 };
 
 const DATA_FILE_PATHS = {
-  retailers: "/data/retailers.json",
-  offers: "/data/offers.json",
-  shoes: "/data/shoes.json",
-  deals: "/data/deals.json",
-  metadata: "/data/metadata.json"
+  retailers: "retailers.json",
+  offers: "offers.json",
+  shoes: "shoes.json",
+  deals: "deals.json",
+  metadata: "metadata.json"
 } as const;
+
+function normalizeBaseUrl(baseUrl: string): string {
+  const trimmedBaseUrl = baseUrl.trim();
+  if (!trimmedBaseUrl) return "/";
+  if (trimmedBaseUrl === "." || trimmedBaseUrl === "./") return "./";
+  return trimmedBaseUrl.endsWith("/") ? trimmedBaseUrl : `${trimmedBaseUrl}/`;
+}
+
+export function resolveDataPath(
+  fileName: string,
+  baseUrl: string = import.meta.env.BASE_URL
+): string {
+  const normalizedFileName = fileName.replace(/^\/+/, "");
+  const normalizedBaseUrl = normalizeBaseUrl(baseUrl);
+  return `${normalizedBaseUrl}data/${normalizedFileName}`;
+}
 
 function getResponsePreview(rawBody: string): string {
   const compactBody = rawBody.replace(/\s+/g, " ").trim();
@@ -78,11 +94,11 @@ async function fetchJsonData(filePath: string): Promise<unknown> {
 
 export async function fetchDataset(): Promise<Dataset> {
   const [retailers, offers, shoes, deals, metadata] = await Promise.all([
-    fetchJsonData(DATA_FILE_PATHS.retailers),
-    fetchJsonData(DATA_FILE_PATHS.offers),
-    fetchJsonData(DATA_FILE_PATHS.shoes),
-    fetchJsonData(DATA_FILE_PATHS.deals),
-    fetchJsonData(DATA_FILE_PATHS.metadata)
+    fetchJsonData(resolveDataPath(DATA_FILE_PATHS.retailers)),
+    fetchJsonData(resolveDataPath(DATA_FILE_PATHS.offers)),
+    fetchJsonData(resolveDataPath(DATA_FILE_PATHS.shoes)),
+    fetchJsonData(resolveDataPath(DATA_FILE_PATHS.deals)),
+    fetchJsonData(resolveDataPath(DATA_FILE_PATHS.metadata))
   ]);
 
   return {
