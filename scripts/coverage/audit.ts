@@ -241,7 +241,9 @@ async function run(): Promise<void> {
   const aggregateRecall = totalExpected === 0 ? 1 : roundRate(totalMatched / totalExpected);
   const activeParserHealth = metadata.parserHealth.filter((entry) => entry.status !== "disabled");
   const fixtureHits = activeParserHealth.filter((entry) =>
-    entry.sourceMode === "fixture" || (entry.warning ?? "").toLowerCase().includes("fixture")
+    entry.executionPath === "fixture" ||
+    entry.sourceMode === "fixture" ||
+    (entry.warning ?? "").toLowerCase().includes("fixture")
   ).length;
   const fixtureUsageRate =
     activeParserHealth.length === 0 ? 0 : roundRate(fixtureHits / activeParserHealth.length);

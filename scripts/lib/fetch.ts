@@ -14,7 +14,13 @@ const ANTI_BOT_HEADERS = {
   "accept-language": "en-CA,en-US;q=0.9,en;q=0.8",
   "cache-control": "no-cache",
   pragma: "no-cache",
+  dnt: "1",
+  referer: "https://www.google.com/",
   "upgrade-insecure-requests": "1",
+  "sec-ch-ua":
+    "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\"",
+  "sec-ch-ua-mobile": "?0",
+  "sec-ch-ua-platform": "\"Windows\"",
   "sec-fetch-dest": "document",
   "sec-fetch-mode": "navigate",
   "sec-fetch-site": "none",
@@ -50,6 +56,12 @@ function headersForPreset(preset: FetchHeaderPreset): Record<string, string> {
   return DEFAULT_HEADERS;
 }
 
+function resolveAttemptHeaderPreset(basePreset: FetchHeaderPreset, attempt: number): FetchHeaderPreset {
+  if (basePreset !== "anti-bot") return basePreset;
+  // Alternate presets so we can recover when strict anti-bot headers are themselves a blocker.
+  return attempt % 2 === 0 ? "anti-bot" : "default";
+}
+
 export async function fetchPageWithRetry(
   url: string,
   options: FetchRetryOptions = {}
@@ -66,7 +78,7 @@ export async function fetchPageWithRetry(
 
     try {
       const response = await fetch(url, {
-        headers: headersForPreset(headerPreset),
+        headers: headersForPreset(resolveAttemptHeaderPreset(headerPreset, attempt)),
         signal: controller.signal
       });
       if (!response.ok) {

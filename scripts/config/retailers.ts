@@ -41,6 +41,10 @@ export type RetailerConfig = Retailer & {
   pagination?: RetailerPaginationConfig;
   httpProfile?: RetailerHttpProfileConfig;
   extractionHints?: RetailerExtractionHints;
+  browserFallbackEnabled?: boolean;
+  browserFallbackMode?: "listing" | "sitemap-products";
+  browserWaitMs?: number;
+  browserMaxPages?: number;
 };
 
 const QUERY_PAGE_PAGINATION: RetailerPaginationConfig = {
@@ -70,9 +74,9 @@ const DEFAULT_HTTP_PROFILE: RetailerHttpProfileConfig = {
 
 const ANTI_BOT_HTTP_PROFILE: RetailerHttpProfileConfig = {
   profile: "anti-bot",
-  retries: 2,
-  timeoutMs: 18_000,
-  minDelayMs: 1_200
+  retries: 3,
+  timeoutMs: 22_000,
+  minDelayMs: 1_500
 };
 
 const SELECTOR_FALLBACK_HTTP_PROFILE: RetailerHttpProfileConfig = {
@@ -80,6 +84,26 @@ const SELECTOR_FALLBACK_HTTP_PROFILE: RetailerHttpProfileConfig = {
   retries: 2,
   timeoutMs: 15_000,
   minDelayMs: 900
+};
+
+const FIXTURE_BROWSER_FALLBACK_DEFAULTS: Pick<
+  RetailerConfig,
+  "browserFallbackEnabled" | "browserFallbackMode" | "browserWaitMs" | "browserMaxPages"
+> = {
+  browserFallbackEnabled: true,
+  browserFallbackMode: "listing",
+  browserWaitMs: 2_500,
+  browserMaxPages: 3
+};
+
+const AGGRESSIVE_BROWSER_FALLBACK: Pick<
+  RetailerConfig,
+  "browserFallbackEnabled" | "browserFallbackMode" | "browserWaitMs" | "browserMaxPages"
+> = {
+  browserFallbackEnabled: true,
+  browserFallbackMode: "sitemap-products",
+  browserWaitMs: 6_500,
+  browserMaxPages: 8
 };
 
 export const RETAILERS: RetailerConfig[] = [
@@ -108,7 +132,33 @@ export const RETAILERS: RetailerConfig[] = [
     fixtureFile: "sport-chek.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
-    httpProfile: SELECTOR_FALLBACK_HTTP_PROFILE
+    httpProfile: ANTI_BOT_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__", "__NUXT_DATA__"],
+        globalKeys: [
+          "window.__NEXT_DATA__",
+          "window.__INITIAL_STATE__",
+          "window.__APOLLO_STATE__",
+          "window.__PRELOADED_STATE__"
+        ],
+        rootKeys: [
+          "props",
+          "pageProps",
+          "products",
+          "productList",
+          "items",
+          "hits",
+          "results",
+          "product_name",
+          "product_id",
+          "pricing_information",
+          "prices"
+        ]
+      }
+    },
+    ...AGGRESSIVE_BROWSER_FALLBACK
   },
   {
     id: "mec",
@@ -206,7 +256,34 @@ export const RETAILERS: RetailerConfig[] = [
     fixtureFile: "adidas-ca.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
-    httpProfile: ANTI_BOT_HTTP_PROFILE
+    httpProfile: ANTI_BOT_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__", "__NUXT_DATA__"],
+        globalKeys: [
+          "window.__NEXT_DATA__",
+          "window.__INITIAL_STATE__",
+          "window.__PRELOADED_STATE__",
+          "window.__APOLLO_STATE__",
+          "window.__GLASS_STATE__"
+        ],
+        rootKeys: [
+          "props",
+          "pageProps",
+          "products",
+          "product",
+          "productList",
+          "items",
+          "hits",
+          "pricing_information",
+          "prices",
+          "product_name",
+          "product_id"
+        ]
+      }
+    },
+    ...AGGRESSIVE_BROWSER_FALLBACK
   },
   {
     id: "asics-ca",
@@ -234,7 +311,33 @@ export const RETAILERS: RetailerConfig[] = [
     fixtureFile: "new-balance-ca.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
-    httpProfile: ANTI_BOT_HTTP_PROFILE
+    httpProfile: ANTI_BOT_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__", "__NUXT_DATA__"],
+        globalKeys: [
+          "window.__NEXT_DATA__",
+          "window.__INITIAL_STATE__",
+          "window.__APOLLO_STATE__",
+          "window.__PRELOADED_STATE__"
+        ],
+        rootKeys: [
+          "props",
+          "pageProps",
+          "products",
+          "productList",
+          "items",
+          "hits",
+          "results",
+          "product_name",
+          "product_id",
+          "pricing_information",
+          "prices"
+        ]
+      }
+    },
+    ...AGGRESSIVE_BROWSER_FALLBACK
   },
   {
     id: "brooks-ca",
@@ -260,7 +363,33 @@ export const RETAILERS: RetailerConfig[] = [
     fixtureFile: "hoka-ca.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
-    httpProfile: DEFAULT_HTTP_PROFILE
+    httpProfile: ANTI_BOT_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__", "__NUXT_DATA__"],
+        globalKeys: [
+          "window.__NEXT_DATA__",
+          "window.__INITIAL_STATE__",
+          "window.__APOLLO_STATE__",
+          "window.__PRELOADED_STATE__"
+        ],
+        rootKeys: [
+          "props",
+          "pageProps",
+          "products",
+          "productList",
+          "items",
+          "hits",
+          "results",
+          "product_name",
+          "product_id",
+          "pricing_information",
+          "prices"
+        ]
+      }
+    },
+    ...AGGRESSIVE_BROWSER_FALLBACK
   },
   {
     id: "saucony-ca",
@@ -286,7 +415,37 @@ export const RETAILERS: RetailerConfig[] = [
     fixtureFile: "salomon-ca.json",
     allowScrape: true,
     pagination: NO_PAGINATION,
-    httpProfile: ANTI_BOT_HTTP_PROFILE
+    httpProfile: ANTI_BOT_HTTP_PROFILE,
+    extractionHints: {
+      embeddedState: {
+        prefer: true,
+        scriptIds: ["__NEXT_DATA__", "__NUXT_DATA__"],
+        globalKeys: [
+          "window.__NEXT_DATA__",
+          "window.__INITIAL_STATE__",
+          "window.__APOLLO_STATE__",
+          "window.__NUXT__",
+          "window[Symbol.for(\"react.instantsearch.serverstate\")]",
+          "window[Symbol.for(\"react.instantsearch.nextjs\")]"
+        ],
+        rootKeys: [
+          "props",
+          "pageProps",
+          "serverState",
+          "instantsearch",
+          "searchState",
+          "results",
+          "hits",
+          "products",
+          "items",
+          "product_name",
+          "product_id",
+          "pricing_information",
+          "prices"
+        ]
+      }
+    },
+    ...AGGRESSIVE_BROWSER_FALLBACK
   },
   {
     id: "on-running-ca",
@@ -301,6 +460,7 @@ export const RETAILERS: RetailerConfig[] = [
     allowScrape: true,
     pagination: QUERY_PAGE_PAGINATION,
     httpProfile: SELECTOR_FALLBACK_HTTP_PROFILE,
+    ...FIXTURE_BROWSER_FALLBACK_DEFAULTS,
     extractionHints: {
       embeddedState: {
         prefer: true,

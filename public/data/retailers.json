@@ -7,7 +7,7 @@
     "homepageUrl": "https://www.runningroom.com",
     "logoUrl": "https://www.runningroom.com/favicon.ico",
     "shippingNotes": "Free shipping thresholds vary by promo.",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "sport-chek",
@@ -24,7 +24,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.mec.ca",
     "logoUrl": "https://www.mec.ca/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "altitude-sports",
@@ -33,7 +33,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.altitude-sports.com",
     "logoUrl": "https://www.altitude-sports.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "the-last-hunt",
@@ -42,7 +42,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.thelasthunt.com",
     "logoUrl": "https://www.thelasthunt.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "blacktoe",
@@ -51,7 +51,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.blacktoerunning.com",
     "logoUrl": "https://www.blacktoerunning.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "soles",
@@ -60,7 +60,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.sportinglife.ca",
     "logoUrl": "https://www.sportinglife.ca/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "nike-ca",
@@ -69,7 +69,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.nike.com/ca",
     "logoUrl": "https://www.nike.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "adidas-ca",
@@ -86,7 +86,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.asics.com/ca/en-ca",
     "logoUrl": "https://www.asics.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "new-balance-ca",
@@ -103,7 +103,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.brooksrunning.com/en_ca",
     "logoUrl": "https://www.brooksrunning.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "hoka-ca",
@@ -120,7 +120,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.saucony.com/CA/en_CA/home",
     "logoUrl": "https://www.saucony.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "salomon-ca",
@@ -128,7 +128,8 @@
     "country": "CA",
     "currency": "CAD",
     "homepageUrl": "https://www.salomon.com/en-ca",
-    "logoUrl": "https://www.salomon.com/favicon.ico"
+    "logoUrl": "https://www.salomon.com/favicon.ico",
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "on-running-ca",
@@ -137,7 +138,7 @@
     "currency": "CAD",
     "homepageUrl": "https://www.on.com/en-ca",
     "logoUrl": "https://www.on.com/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   },
   {
     "id": "under-armour-ca",
@@ -146,6 +147,6 @@
     "currency": "CAD",
     "homepageUrl": "https://www.underarmour.ca/en-ca/",
     "logoUrl": "https://www.underarmour.ca/favicon.ico",
-    "lastCrawledAt": "2026-03-03T12:37:00.900Z"
+    "lastCrawledAt": "2026-03-03T13:16:36.858Z"
   }
 ]

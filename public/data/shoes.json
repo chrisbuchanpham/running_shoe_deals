@@ -18,6 +18,17 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
+    "shoeId": "shoe_d1c2e35cff97",
+    "brand": "Unknown",
+    "model": "active-skin-4",
+    "category": "running",
+    "aliases": [
+      "active-skin-4"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
     "shoeId": "shoe_19f88ceb386b",
     "brand": "adidas",
     "model": "adidas-adizero-adios-pro-evo-1---white-black-crystal-white",
@@ -119,6 +130,52 @@
     "identifiers": {
       "sku": "ADIBOS12U400"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_db6793543305",
+    "brand": "Unknown",
+    "model": "adv-skin-12-gradient",
+    "category": "running",
+    "aliases": [
+      "adv-skin-12-gradient",
+      "adv-skin-12"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_57c7af06fbe4",
+    "brand": "Unknown",
+    "model": "adv-skin-5-gradient",
+    "category": "running",
+    "aliases": [
+      "adv-skin-5-gradient",
+      "adv-skin-5"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d8f54df133b7",
+    "brand": "Unknown",
+    "model": "aero-blaze-3-grvl-gore-tex",
+    "category": "running",
+    "aliases": [
+      "aero-blaze-3-grvl-gore-tex"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_d753a6ff0a19",
+    "brand": "Unknown",
+    "model": "aero-glide-4-grvl",
+    "category": "running",
+    "aliases": [
+      "aero-glide-4-grvl"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -779,20 +836,22 @@
       "cloudspike-citius-2-bloom-lime-men-middle-distance-track-racing-fast-feeling-ride-cad-200-00-new-generation",
       "cloudultra-pro-pearl-juniper-women-ultra-trail-running-fast-ride-cad-330-00",
       "cloudspike-citius-2-bloom-lime-women-middle-distance-track-racing-fast-feeling-ride-cad-200-00-new-generation",
-      "cloudsurfer-2-everyday-running-smooth-ride-cad-200-00-bestseller",
-      "cloudvista-2-trail-running-mixed-terrain-road-to-trail-cad-190-00",
-      "cloudmonster-1-all-day-comfort-cad-220-00",
-      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof",
-      "cloudswift-4-everyday-running-responsive-ride-cad-200-00-bestseller",
-      "cloudsurfer-max-long-runs-smooth-ride-cad-220-00-bestseller",
+      "cloud-6-versa-all-day-wear-cad-190-00",
+      "cloudmonster-void-year-of-the-horse-all-day-movement-cad-230-00-limited-edition",
       "cloudmonster-3-hyper-lily-limelight-men-long-runs-tempo-runs-responsive-ride-cad-280-00-coming-soon",
       "cloudspike-amplius-2-bloom-lime-women-long-distance-track-running-fast-feeling-ride-cad-200-00-new-generation",
-      "cloud-6-shf-all-day-wear-cad-230-00-limited-edition",
-      "cloudrunner-3-everyday-running-stable-ride-cad-190-00-new-generation",
-      "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
-      "cloud-6-versa-all-day-wear-cad-190-00",
+      "cloudmonster-hyper-paf-all-day-comfort-cad-360-00-limited-edition",
+      "cloud-x-4-versatile-workouts-gym-workouts-hiit-cad-190-00-bestseller",
       "cloudultra-3-trail-running-stable-ride-cad-250-00",
-      "cloudboom-max-marathons-fast-ride-cad-290-00"
+      "cloudmonster-1-all-day-comfort-cad-220-00",
+      "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
+      "cloudboom-max-marathons-fast-ride-cad-290-00",
+      "cloudnova-2-everyday-wear-comfort-lifestyle-cad-200-00-bestseller",
+      "cloudmonster-void-all-day-movement-cad-220-00-bestseller",
+      "cloud-6-shf-all-day-wear-cad-230-00-limited-edition",
+      "cloudsurfer-trail-2-trail-running-smooth-ride-cad-200-00",
+      "cloudrunner-3-wide-everyday-running-stable-ride-cad-190-00-new-generation",
+      "cloudswift-4-everyday-running-responsive-ride-cad-200-00-bestseller"
     ],
     "identifiers": {
       "sku": "CARDLINK"
@@ -800,21 +859,21 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_2ce7741920c3",
+    "shoeId": "shoe_ae0f9145aea1",
     "brand": "Unknown",
-    "model": "cloudvista-2-trail-running-mixed-terrain-road-to-trail-cad-190-00",
-    "category": "trail",
+    "model": "cloudsurfer-next-everyday-running-smooth-ride-cad-190-00",
+    "category": "running",
     "aliases": [
-      "cloudvista-2-trail-running-mixed-terrain-road-to-trail-cad-190-00",
-      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof",
-      "cloudswift-4-everyday-running-responsive-ride-cad-200-00-bestseller",
-      "cloudsurfer-max-long-runs-smooth-ride-cad-220-00-bestseller",
-      "cloudrunner-3-everyday-running-stable-ride-cad-190-00-new-generation",
-      "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
-      "cloud-6-versa-all-day-wear-cad-190-00",
-      "cloudultra-3-trail-running-stable-ride-cad-250-00",
+      "cloudsurfer-next-everyday-running-smooth-ride-cad-190-00",
+      "cloudmonster-void-year-of-the-horse-all-day-movement-cad-230-00-limited-edition",
+      "cloud-x-4-versatile-workouts-gym-workouts-hiit-cad-190-00-bestseller",
       "cloudmonster-1-all-day-comfort-cad-220-00",
-      "cloudboom-max-marathons-fast-ride-cad-290-00"
+      "cloudflow-5-long-runs-tempo-runs-fast-ride-cad-230-00",
+      "cloudboom-max-marathons-fast-ride-cad-290-00",
+      "cloud-6-shf-all-day-wear-cad-230-00-limited-edition",
+      "cloudsurfer-trail-2-trail-running-smooth-ride-cad-200-00",
+      "cloudrunner-3-wide-everyday-running-stable-ride-cad-190-00-new-generation",
+      "cloudswift-4-everyday-running-responsive-ride-cad-200-00-bestseller"
     ],
     "identifiers": {
       "sku": "SUMMARY"
@@ -1104,6 +1163,17 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
+    "shoeId": "shoe_6e8955bf7ed1",
+    "brand": "Unknown",
+    "model": "gravel-skin-2",
+    "category": "running",
+    "aliases": [
+      "gravel-skin-2"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
     "shoeId": "shoe_ba97f4a2f812",
     "brand": "Unknown",
     "model": "guide-18",
@@ -1132,27 +1202,15 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_1adf79df2a04",
-    "brand": "Unknown",
-    "model": "guide-19-extra-wide",
-    "category": "running",
-    "aliases": [
-      "guide-19-extra-wide",
-      "mens-guide-19-extra-wide"
-    ],
-    "identifiers": {
-      "sku": "195021641704"
-    },
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_b86511a8c064",
     "brand": "Unknown",
     "model": "guide-19-wide",
     "category": "running",
     "aliases": [
       "guide-19-wide",
-      "mens-guide-19-wide"
+      "guide-19-extra-wide",
+      "mens-guide-19-wide",
+      "mens-guide-19-extra-wide"
     ],
     "identifiers": {
       "sku": "195021641216"
@@ -1736,6 +1794,20 @@
     ],
     "identifiers": {
       "sku": "3UG10014837"
+    },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_0459ac4d300e",
+    "brand": "Unknown",
+    "model": "main-product-image-of-speedcross-6---trail-running-shoes---women",
+    "category": "trail",
+    "aliases": [
+      "main-product-image-of-speedcross-6---trail-running-shoes---women",
+      "main-product-image-of-active-skin-4---womens-running-vest-with-flasks-included"
+    ],
+    "identifiers": {
+      "sku": "IMAGE"
     },
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
@@ -2557,14 +2629,16 @@
       "nike-vomero-18-gore-tex",
       "nike-vomero-18",
       "nike-vaporfly-4-glam",
+      "nike-vomero-premium",
       "nike-revolution-8",
       "nike-juniper-trail-3",
       "nike-pegasus-plus",
       "nike-alphafly-3",
-      "cloudsurfer-2-everyday-running-smooth-ride-cad-200-00-bestseller",
-      "cloudmonster-1-all-day-comfort-cad-220-00",
-      "cloud-6-shf-all-day-wear-cad-230-00-limited-edition",
-      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof"
+      "cloud-6-versa-all-day-wear-cad-190-00",
+      "cloudmonster-hyper-paf-all-day-comfort-cad-360-00-limited-edition",
+      "cloudultra-3-trail-running-stable-ride-cad-250-00",
+      "cloudnova-2-everyday-wear-comfort-lifestyle-cad-200-00-bestseller",
+      "cloudmonster-void-all-day-movement-cad-220-00-bestseller"
     ],
     "identifiers": {
       "sku": "PRICE"
@@ -3036,6 +3110,28 @@
     "identifiers": {
       "sku": "195020452073"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_6296d21bd90b",
+    "brand": "Unknown",
+    "model": "s-lab-sense-6",
+    "category": "running",
+    "aliases": [
+      "s-lab-sense-6"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_a29fda6cf5ef",
+    "brand": "Unknown",
+    "model": "s-lab-ultra-glide-2",
+    "category": "running",
+    "aliases": [
+      "s-lab-ultra-glide-2"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -3538,19 +3634,6 @@
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
-    "shoeId": "shoe_bf70f2dced20",
-    "brand": "Salomon",
-    "model": "sense-ride-5",
-    "category": "trail",
-    "aliases": [
-      "sense-ride-5"
-    ],
-    "identifiers": {
-      "sku": "SALSR5UNLI5370"
-    },
-    "matchRulesVersion": "v1-hybrid-exact-fallback"
-  },
-  {
     "shoeId": "shoe_268006faadad",
     "brand": "Unknown",
     "model": "shoes-under-100",
@@ -3605,11 +3688,33 @@
       "nike-pegasus-premium",
       "nike-zoom-fly-6",
       "nike-vaporfly-4-glam",
-      "cloudsurfer-trail-2-waterproof-trail-running-smooth-ride-cad-230-00-waterproof"
+      "cloudsurfer-max-wide-long-runs-smooth-ride-cad-220-00"
     ],
     "identifiers": {
       "sku": "CARD"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_149c8c2d607e",
+    "brand": "Unknown",
+    "model": "speedcross-6",
+    "category": "running",
+    "aliases": [
+      "speedcross-6"
+    ],
+    "identifiers": {},
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_5149f9c41755",
+    "brand": "Unknown",
+    "model": "speedcross-6-gore-tex",
+    "category": "running",
+    "aliases": [
+      "speedcross-6-gore-tex"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {
@@ -3738,6 +3843,17 @@
     "identifiers": {
       "sku": "BADGE"
     },
+    "matchRulesVersion": "v1-hybrid-exact-fallback"
+  },
+  {
+    "shoeId": "shoe_2d2d5630a89f",
+    "brand": "Unknown",
+    "model": "ultra-glide-4",
+    "category": "running",
+    "aliases": [
+      "ultra-glide-4"
+    ],
+    "identifiers": {},
     "matchRulesVersion": "v1-hybrid-exact-fallback"
   },
   {

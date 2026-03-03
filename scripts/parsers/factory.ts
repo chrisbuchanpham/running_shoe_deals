@@ -941,6 +941,10 @@ function browserFallbackEnabled(config: RetailerConfig): boolean {
   return config.browserFallbackEnabled === true;
 }
 
+function shouldPrioritizeBrowserFallback(classification: RetailerBlockerClassification): boolean {
+  return classification === "anti-bot" || classification === "unknown";
+}
+
 function classifyBlockerFromUnexpectedError(
   error: unknown
 ): {
@@ -1045,26 +1049,10 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
           pagesCrawled
         });
 
-        if (shouldAttemptSitemapFallback(blocker.classification)) {
-          const fallbackResult = await fetchSitemapFallbackOffers(config, httpProfile);
-          if (fallbackResult.offers.length > 0) {
-            const recoveryMessage = `Recovered via sitemap fallback (${fallbackResult.pagesCrawled} pages).`;
-            const warning = warnings.length > 0 ? `${warnings.join(" | ")} | ${recoveryMessage}` : recoveryMessage;
-
-            return {
-              offers: fallbackResult.offers,
-              warning,
-              usedFixture: false,
-              discoveredCount: discoveredCount + fallbackResult.discoveredCount,
-              parsedCount: fallbackResult.offers.length,
-              pagesCrawled: pagesCrawled + fallbackResult.pagesCrawled,
-              sourceMode: "live",
-              diagnostics: diagnosticsForExecutionPath("http")
-            };
+        const tryBrowserFallback = async (): Promise<ParsedRetailerResult | undefined> => {
+          if (!browserFallbackEnabled(config) || !shouldAttemptBrowserFallback(blocker.classification)) {
+            return undefined;
           }
-        }
-
-        if (browserFallbackEnabled(config) && shouldAttemptBrowserFallback(blocker.classification)) {
           const browserFallbackResult = await fetchBrowserFallbackOffers(config, pageUrls, httpProfile);
           if (browserFallbackResult.warnings.length > 0) {
             warnings.push(...browserFallbackResult.warnings);
@@ -1086,6 +1074,36 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
               diagnostics: diagnosticsForExecutionPath("browser")
             };
           }
+          return undefined;
+        };
+
+        if (shouldPrioritizeBrowserFallback(blocker.classification)) {
+          const browserRecovered = await tryBrowserFallback();
+          if (browserRecovered) return browserRecovered;
+        }
+
+        if (shouldAttemptSitemapFallback(blocker.classification)) {
+          const fallbackResult = await fetchSitemapFallbackOffers(config, httpProfile);
+          if (fallbackResult.offers.length > 0) {
+            const recoveryMessage = `Recovered via sitemap fallback (${fallbackResult.pagesCrawled} pages).`;
+            const warning = warnings.length > 0 ? `${warnings.join(" | ")} | ${recoveryMessage}` : recoveryMessage;
+
+            return {
+              offers: fallbackResult.offers,
+              warning,
+              usedFixture: false,
+              discoveredCount: discoveredCount + fallbackResult.discoveredCount,
+              parsedCount: fallbackResult.offers.length,
+              pagesCrawled: pagesCrawled + fallbackResult.pagesCrawled,
+              sourceMode: "live",
+              diagnostics: diagnosticsForExecutionPath("http")
+            };
+          }
+        }
+
+        if (!shouldPrioritizeBrowserFallback(blocker.classification)) {
+          const browserRecovered = await tryBrowserFallback();
+          if (browserRecovered) return browserRecovered;
         }
 
         const fixtureOffers = await loadFixtureOffers(config);

@@ -26,6 +26,7 @@ export type RetailerBlockerClassification =
   | "unknown";
 
 export type ParsedRetailerDiagnostics = {
+  executionPath?: "http" | "browser" | "fixture";
   blocker?: {
     classification: RetailerBlockerClassification;
     details?: string;

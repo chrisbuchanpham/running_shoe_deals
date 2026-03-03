@@ -64,7 +64,8 @@ export const parserHealthSchema = z.object({
   discoveredCount: z.number().int().nonnegative().optional(),
   parsedCount: z.number().int().nonnegative().optional(),
   pagesCrawled: z.number().int().nonnegative().optional(),
-  sourceMode: z.enum(["live", "fixture"]).optional()
+  sourceMode: z.enum(["live", "fixture"]).optional(),
+  executionPath: z.enum(["browser", "http", "fixture"]).optional()
 });
 
 const coverageRateSchema = z.number().min(0).max(1);
