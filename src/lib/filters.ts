@@ -44,7 +44,9 @@ export function filterDeals(
     if (filters.maxPrice !== undefined && deal.bestPrice > filters.maxPrice) return false;
 
     if (queryToken) {
-      const haystack = normalizeToken(`${shoe.brand} ${shoe.model} ${offer.titleRaw}`);
+      const haystack = normalizeToken(
+        `${shoe.brand} ${shoe.model} ${offer.titleRaw} ${offer.sizeRange ?? ""}`
+      );
       if (!haystack.includes(queryToken)) return false;
     }
 

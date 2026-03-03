@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 import { describe, expect, it } from "vitest";
 import { runIngestion } from "../ingest";
-import { coverageReportSchema, metadataSchema } from "../../src/shared/contracts";
+import { coverageReportSchema, metadataSchema, offerSchema } from "../../src/shared/contracts";
 
 const execFileAsync = promisify(execFile);
 const TEST_DIR = path.dirname(fileURLToPath(import.meta.url));
@@ -30,6 +30,60 @@ describe("ingestion pipeline", () => {
       expect(health.discoveredCount ?? 0).toBeGreaterThanOrEqual(0);
       expect(health.parsedCount ?? 0).toBeGreaterThanOrEqual(0);
     }
+    const firstOffer = result.offers[0];
+    const offerWithSizeRange = offerSchema.parse({
+      ...firstOffer,
+      sizeRange: firstOffer.sizeRange ?? "M 8-12"
+    });
+    expect(offerWithSizeRange.sizeRange).toBe(firstOffer.sizeRange ?? "M 8-12");
+  });
+
+  it("accepts browser, http, and fixture execution paths in metadata parser health", () => {
+    const now = new Date().toISOString();
+    const metadata = metadataSchema.parse({
+      generatedAt: now,
+      staleAfterHours: 36,
+      stale: false,
+      counts: {
+        retailers: 3,
+        offers: 3,
+        shoes: 0,
+        deals: 0
+      },
+      parserHealth: [
+        {
+          retailerId: "browser-retailer",
+          status: "ok",
+          offersCount: 1,
+          durationMs: 1,
+          sourceMode: "live",
+          executionPath: "browser"
+        },
+        {
+          retailerId: "http-retailer",
+          status: "ok",
+          offersCount: 1,
+          durationMs: 1,
+          sourceMode: "live",
+          executionPath: "http"
+        },
+        {
+          retailerId: "fixture-retailer",
+          status: "failed",
+          offersCount: 1,
+          durationMs: 1,
+          sourceMode: "fixture",
+          executionPath: "fixture"
+        }
+      ],
+      warnings: []
+    });
+
+    expect(metadata.parserHealth.map((entry) => entry.executionPath)).toEqual([
+      "browser",
+      "http",
+      "fixture"
+    ]);
   });
 
   it("fails coverage audit when fixture usage exceeds threshold and records fixture breach data", async () => {
@@ -49,6 +103,7 @@ describe("ingestion pipeline", () => {
           titleRaw: "Unit Test Shoe",
           modelNormalized: "unit test shoe",
           category: "running",
+          sizeRange: "M 8-12",
           priceCurrent: 120,
           inStock: true,
           scrapedAt: now,
@@ -74,7 +129,8 @@ describe("ingestion pipeline", () => {
             discoveredCount: 1,
             parsedCount: 1,
             pagesCrawled: 0,
-            sourceMode: "fixture"
+            sourceMode: "fixture",
+            executionPath: "fixture"
           }
         ],
         warnings: []

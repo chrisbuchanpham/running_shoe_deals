@@ -17,7 +17,13 @@ describe("DealsPage", () => {
     expect(screen.getByText("2 matches")).toBeInTheDocument();
     await user.selectOptions(screen.getByLabelText("Brand"), "ASICS");
     expect(screen.getByText("1 matches")).toBeInTheDocument();
-    expect(screen.getByText(/gel-kayano-30/i)).toBeInTheDocument();
+    expect(screen.getByText("Gel Kayano 30")).toBeInTheDocument();
+    expect(screen.getByText("Size W 6-11")).toBeInTheDocument();
+
+    await user.clear(screen.getByLabelText("Search"));
+    await user.type(screen.getByLabelText("Search"), "6-11");
+    expect(screen.getByText("1 matches")).toBeInTheDocument();
+    expect(screen.getByText("Gel Kayano 30")).toBeInTheDocument();
 
     await user.clear(screen.getByLabelText("Search"));
     await user.type(screen.getByLabelText("Search"), "pegasus");

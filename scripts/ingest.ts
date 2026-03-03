@@ -5,6 +5,11 @@ import { parsers } from "./parsers";
 import { stableId } from "./lib/hash";
 import { readJsonFile, writeJsonFile } from "./lib/files";
 import {
+  extractSizeRange,
+  isLikelyShoeOffer,
+  normalizeOfferText
+} from "./lib/shoeOfferQuality";
+import {
   dealsFileSchema,
   metadataSchema,
   offersFileSchema,
@@ -122,10 +127,13 @@ function toWorkingOffer(
   usedFixture: boolean,
   overrides: ManualOverrides
 ): WorkingOffer {
-  const brand = normalizeBrand(raw.brand ?? extractBrand(raw.titleRaw));
-  const modelRaw = raw.modelRaw ?? raw.titleRaw;
-  const modelNormalized = normalizeModel(modelRaw);
-  const category = normalizeCategory(raw, raw.titleRaw, overrides);
+  const cleanedTitle = normalizeOfferText(raw.titleRaw);
+  const cleanedModel = raw.modelRaw ? normalizeOfferText(raw.modelRaw) : undefined;
+  const modelSource = cleanedModel ?? cleanedTitle;
+  const { cleaned: cleanedModelSource, sizeRange: extractedSizeRange } = extractSizeRange(modelSource);
+  const brand = normalizeBrand(raw.brand ?? extractBrand(cleanedTitle));
+  const modelNormalized = normalizeModel(cleanedModelSource);
+  const category = normalizeCategory(raw, cleanedTitle, overrides);
   const identifiers = normalizeIdentifiers(raw.identifiers);
   const discountPct = computeDiscountPct(raw.priceCurrent, raw.priceOriginal);
 
@@ -143,13 +151,13 @@ function toWorkingOffer(
     id: offerId,
     retailerId,
     url: raw.url,
-    titleRaw: raw.titleRaw,
+    titleRaw: cleanedTitle,
     brand,
     modelNormalized,
-    gender: raw.gender ?? inferGender(raw.titleRaw),
+    gender: raw.gender ?? inferGender(cleanedTitle),
     category,
     colorway: raw.colorway,
-    sizeRange: raw.sizeRange,
+    sizeRange: raw.sizeRange ?? extractedSizeRange,
     priceCurrent: raw.priceCurrent,
     priceOriginal: raw.priceOriginal,
     discountPct,
@@ -170,6 +178,7 @@ function dedupeOffers(offers: WorkingOffer[]): WorkingOffer[] {
       offer.modelNormalized,
       offer.category,
       offer.gender ?? "",
+      offer.sizeRange ?? "",
       offer.identifiers?.sku ?? "",
       offer.identifiers?.gtin ?? "",
       offer.priceCurrent.toFixed(2)
@@ -354,6 +363,14 @@ export async function runIngestion(options?: {
 
       const normalized = result.offers
         .filter((raw) => raw.priceCurrent > 0 && raw.url)
+        .filter((raw) =>
+          isLikelyShoeOffer({
+            title: raw.titleRaw,
+            model: raw.modelRaw,
+            url: raw.url,
+            category: raw.category
+          })
+        )
         .map((raw) =>
           toWorkingOffer(parser.config.id, raw, scrapedAt, result.usedFixture, overrides)
         );

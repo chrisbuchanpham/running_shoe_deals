@@ -366,6 +366,20 @@ a {
   font-weight: 800;
 }
 
+.size-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 66, 100, 0.23);
+  background: rgba(230, 240, 255, 0.88);
+  color: #244163;
+  padding: 0.24rem 0.56rem;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
 .deal-actions {
   margin-top: auto;
   display: flex;

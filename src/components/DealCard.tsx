@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { formatModelDisplay, formatSizeDisplay } from "../lib/modelDisplay";
 import type {
   DealCard as DealCardType,
   Offer,
@@ -96,12 +97,15 @@ function getBadgeStyles(tone: HealthTone) {
 export function DealCard({ deal, shoe, bestOffer, retailer, retailerHealth }: DealCardProps) {
   const healthBadge = getHealthBadge(retailerHealth);
   const badgeStyles = getBadgeStyles(healthBadge.tone);
+  const modelDisplay = formatModelDisplay(shoe.model);
+  const sizeDisplay = formatSizeDisplay(bestOffer.sizeRange);
 
   return (
     <article className="deal-card">
       <div className="deal-card-top">
         <p className="deal-brand">{shoe.brand}</p>
-        <p className="deal-model">{shoe.model}</p>
+        <p className="deal-model">{modelDisplay}</p>
+        {sizeDisplay ? <span className="size-chip">Size {sizeDisplay}</span> : null}
         <p className="deal-meta">
           {shoe.category} | {deal.offersCount} retailer offer{deal.offersCount > 1 ? "s" : ""}
         </p>

@@ -1,7 +1,9 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { fetchPageWithRetry } from "../lib/fetch";
+import { fetchPageWithBrowser } from "../lib/browser-fetch";
 import { readJsonFile } from "../lib/files";
+import { isLikelyShoeOffer, normalizeOfferText } from "../lib/shoeOfferQuality";
 import { inferCategory, inferGender } from "../../src/shared/normalization";
 import type {
   RetailerConfig,
@@ -30,6 +32,8 @@ const DEFAULT_HTTP_PROFILE_CONFIG: RetailerHttpProfileConfig = {
   timeoutMs: 12_000,
   minDelayMs: 700
 };
+const DEFAULT_BROWSER_WAIT_MS = 2_500;
+const DEFAULT_BROWSER_MAX_PAGES = 3;
 const PRICE_RE = /(?:CAD|CA\$|C\$|\$)\s*([0-9][0-9\s,]*(?:\s*[.,]\s*[0-9]{2})?)/gi;
 const SCRIPT_RE = /<script[^>]*>([\s\S]*?)<\/script>/gi;
 const JSON_LD_SCRIPT_RE = /<script[^>]*application\/ld\+json[^>]*>[\s\S]*?<\/script>/gi;
@@ -102,7 +106,7 @@ function stripTags(value: string): string {
 }
 
 function productToRawOffer(product: any, fallbackUrl: string): RawRetailerOffer | undefined {
-  const titleRaw: string | undefined = product?.name;
+  const titleRaw = normalizeOfferText(String(product?.name ?? ""));
   if (!titleRaw) return undefined;
 
   const offerData = Array.isArray(product?.offers)
@@ -126,14 +130,21 @@ function productToRawOffer(product: any, fallbackUrl: string): RawRetailerOffer 
       : typeof product?.gtin === "string"
         ? product.gtin
         : undefined;
+  const modelRaw = normalizeOfferText(String(product?.model ?? titleRaw)) || titleRaw;
+  const category = inferCategory(titleRaw);
+  const gender = inferGender(titleRaw);
+  const url = normalizeUrl(String(product?.url ?? fallbackUrl), fallbackUrl);
+  if (!isLikelyShoeOffer({ title: titleRaw, model: modelRaw, url, category })) {
+    return undefined;
+  }
 
   return {
-    url: normalizeUrl(product?.url ?? fallbackUrl, fallbackUrl),
+    url,
     titleRaw,
     brand: brandRaw,
-    modelRaw: product?.model ?? titleRaw,
-    category: inferCategory(titleRaw),
-    gender: inferGender(titleRaw),
+    modelRaw,
+    category,
+    gender,
     priceCurrent,
     priceOriginal:
       Number.isFinite(Number(offerData?.highPrice)) && Number(offerData?.highPrice) > priceCurrent
@@ -185,7 +196,7 @@ function extractProductCards(html: string, fallbackUrl: string): RawRetailerOffe
     const titleFromAttr =
       /aria-label=(["'])(.*?)\1/i.exec(anchorContent)?.[2] ??
       /title=(["'])(.*?)\1/i.exec(anchorContent)?.[2];
-    const titleRaw = stripTags(titleFromAttr ?? match[3]);
+    const titleRaw = normalizeOfferText(stripTags(titleFromAttr ?? match[3]));
     if (!titleRaw || titleRaw.length < 8) continue;
 
     const windowStart = Math.max(0, (match.index ?? 0) - 400);
@@ -202,14 +213,20 @@ function extractProductCards(html: string, fallbackUrl: string): RawRetailerOffe
 
     const current = uniqueSortedPrices[0];
     const original = uniqueSortedPrices.find((value) => value > current);
+    const modelRaw = titleRaw;
+    const category = inferCategory(titleRaw);
+    const gender = inferGender(titleRaw);
+    if (!isLikelyShoeOffer({ title: titleRaw, model: modelRaw, url: absoluteUrl, category })) {
+      continue;
+    }
 
     offers.push({
       url: absoluteUrl,
       titleRaw,
-      modelRaw: titleRaw,
+      modelRaw,
       brand: undefined,
-      category: inferCategory(titleRaw),
-      gender: inferGender(titleRaw),
+      category,
+      gender,
       priceCurrent: current,
       priceOriginal: original,
       inStock: !/out[-\s]?of[-\s]?stock|sold[-\s]?out/i.test(surroundingText),
@@ -236,16 +253,22 @@ function extractOfferLikeNodes(node: unknown, out: Record<string, unknown>[]): v
   }
 
   const candidate = node as Record<string, unknown>;
-  const title = candidate.name ?? candidate.title ?? candidate.productName;
+  const title = candidate.name ?? candidate.title ?? candidate.productName ?? candidate.product_name;
+  const titleText =
+    typeof title === "string" || typeof title === "number"
+      ? normalizeOfferText(String(title))
+      : "";
   const directPrice =
     candidate.price ??
     candidate.currentPrice ??
     candidate.salePrice ??
     candidate.offerPrice ??
+    (candidate.pricing_information as Record<string, unknown> | undefined)?.currentPrice ??
+    (candidate.prices as Record<string, unknown> | undefined)?.final ??
     (candidate.prices as Record<string, unknown> | undefined)?.sale ??
     (candidate.prices as Record<string, unknown> | undefined)?.current;
 
-  if ((typeof title === "string" || typeof title === "number") && numberFromUnknown(directPrice)) {
+  if (titleText && numberFromUnknown(directPrice) && isLikelyShoeOffer({ title: titleText })) {
     out.push(candidate);
   }
 
@@ -292,7 +315,9 @@ function nestedNumber(node: Record<string, unknown>, keys: string[]): number | u
 }
 
 function offerLikeNodeToRawOffer(node: Record<string, unknown>, fallbackUrl: string): RawRetailerOffer | undefined {
-  const titleRaw = String(node.name ?? node.title ?? node.productName ?? "").trim();
+  const titleRaw = normalizeOfferText(
+    String(node.name ?? node.title ?? node.productName ?? node.product_name ?? "")
+  );
   if (!titleRaw) return undefined;
 
   const priceCurrent =
@@ -300,8 +325,12 @@ function offerLikeNodeToRawOffer(node: Record<string, unknown>, fallbackUrl: str
     numberFromUnknown(node.currentPrice) ??
     numberFromUnknown(node.salePrice) ??
     numberFromUnknown(node.offerPrice) ??
+    numberFromUnknown((node.pricing_information as Record<string, unknown> | undefined)?.currentPrice) ??
+    numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.final) ??
     numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.sale) ??
     numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.current) ??
+    nestedNumber(node, ["pricing_information", "currentPrice"]) ??
+    nestedNumber(node, ["prices", "final"]) ??
     nestedNumber(node, ["price", "amount"]) ??
     nestedNumber(node, ["price", "value"]) ??
     nestedNumber(node, ["prices", "current", "amount"]);
@@ -311,8 +340,10 @@ function offerLikeNodeToRawOffer(node: Record<string, unknown>, fallbackUrl: str
     numberFromUnknown(node.originalPrice) ??
     numberFromUnknown(node.compareAtPrice) ??
     numberFromUnknown(node.listPrice) ??
+    numberFromUnknown((node.pricing_information as Record<string, unknown> | undefined)?.standardPrice) ??
     numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.list) ??
     numberFromUnknown((node.prices as Record<string, unknown> | undefined)?.original) ??
+    nestedNumber(node, ["pricing_information", "standardPrice"]) ??
     nestedNumber(node, ["compareAtPrice", "amount"]) ??
     nestedNumber(node, ["prices", "original", "amount"]) ??
     nestedNumber(node, ["priceRange", "max"]);
@@ -324,19 +355,31 @@ function offerLikeNodeToRawOffer(node: Record<string, unknown>, fallbackUrl: str
       : typeof rawBrand === "object" && rawBrand !== null
         ? String((rawBrand as Record<string, unknown>).name ?? "")
         : undefined;
+  const modelRaw = normalizeOfferText(String(node.model ?? titleRaw)) || titleRaw;
+  const category = inferCategory(titleRaw);
+  const gender = inferGender(titleRaw);
+  const url = normalizeUrl(String(node.url ?? node.link ?? fallbackUrl), fallbackUrl);
+  if (!isLikelyShoeOffer({ title: titleRaw, model: modelRaw, url, category })) {
+    return undefined;
+  }
 
   return {
-    url: normalizeUrl(String(node.url ?? fallbackUrl), fallbackUrl),
+    url,
     titleRaw,
     brand: brand || undefined,
-    modelRaw: String(node.model ?? titleRaw),
-    category: inferCategory(titleRaw),
-    gender: inferGender(titleRaw),
+    modelRaw,
+    category,
+    gender,
     priceCurrent,
     priceOriginal: priceOriginal && priceOriginal > priceCurrent ? priceOriginal : undefined,
     inStock: !/out[-\s]?of[-\s]?stock|sold[-\s]?out/i.test(String(node.availability ?? "")),
     identifiers: {
-      sku: typeof node.sku === "string" ? node.sku : undefined,
+      sku:
+        typeof node.sku === "string"
+          ? node.sku
+          : typeof node.product_id === "string" || typeof node.product_id === "number"
+            ? String(node.product_id)
+            : undefined,
       gtin:
         typeof node.gtin === "string"
           ? node.gtin
@@ -657,6 +700,15 @@ function shouldAttemptSitemapFallback(classification: RetailerBlockerClassificat
   );
 }
 
+function shouldAttemptBrowserFallback(classification: RetailerBlockerClassification): boolean {
+  return (
+    classification === "anti-bot" ||
+    classification === "selector-drift" ||
+    classification === "url-drift" ||
+    classification === "unknown"
+  );
+}
+
 type PageFetchFailure = {
   pageIndex: number;
   pageUrl: string;
@@ -664,8 +716,121 @@ type PageFetchFailure = {
   antiBotSignal: boolean;
 };
 
+type ExecutionPath = "http" | "browser" | "fixture";
+type BrowserFallbackMode = NonNullable<RetailerConfig["browserFallbackMode"]>;
+
 function getResolvedHttpProfile(config: RetailerConfig): RetailerHttpProfileConfig {
   return config.httpProfile ?? DEFAULT_HTTP_PROFILE_CONFIG;
+}
+
+function getResolvedBrowserWaitMs(config: RetailerConfig): number {
+  if (
+    typeof config.browserWaitMs !== "number" ||
+    !Number.isFinite(config.browserWaitMs) ||
+    config.browserWaitMs < 0
+  ) {
+    return DEFAULT_BROWSER_WAIT_MS;
+  }
+  return Math.min(Math.floor(config.browserWaitMs), 30_000);
+}
+
+function getResolvedBrowserMaxPages(config: RetailerConfig): number {
+  if (
+    typeof config.browserMaxPages !== "number" ||
+    !Number.isFinite(config.browserMaxPages) ||
+    config.browserMaxPages < 1
+  ) {
+    return DEFAULT_BROWSER_MAX_PAGES;
+  }
+  return Math.min(Math.floor(config.browserMaxPages), 20);
+}
+
+function getResolvedBrowserFallbackMode(config: RetailerConfig): BrowserFallbackMode {
+  return config.browserFallbackMode ?? "listing";
+}
+
+function isPlaywrightUnavailableError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+  const message = error.message.toLowerCase();
+  return (
+    message.includes("playwright runtime not available") ||
+    message.includes("cannot find package 'playwright'") ||
+    message.includes("cannot find package 'playwright-core'")
+  );
+}
+
+async function resolveBrowserFallbackUrls(
+  config: RetailerConfig,
+  pageUrls: string[],
+  httpProfile: RetailerHttpProfileConfig
+): Promise<string[]> {
+  const maxPages = getResolvedBrowserMaxPages(config);
+  const mode = getResolvedBrowserFallbackMode(config);
+  if (mode === "sitemap-products") {
+    const discovered = await discoverFallbackUrls(config, httpProfile);
+    return dedupePageUrls(discovered).slice(0, maxPages);
+  }
+  return dedupePageUrls(pageUrls).slice(0, maxPages);
+}
+
+async function fetchBrowserFallbackOffers(
+  config: RetailerConfig,
+  pageUrls: string[],
+  httpProfile: RetailerHttpProfileConfig
+): Promise<{
+  offers: RawRetailerOffer[];
+  discoveredCount: number;
+  pagesCrawled: number;
+  warnings: string[];
+}> {
+  const fallbackUrls = await resolveBrowserFallbackUrls(config, pageUrls, httpProfile);
+  if (fallbackUrls.length === 0) {
+    return {
+      offers: [],
+      discoveredCount: 0,
+      pagesCrawled: 0,
+      warnings: []
+    };
+  }
+
+  const waitMs = getResolvedBrowserWaitMs(config);
+  const timeoutMs = Math.max(httpProfile.timeoutMs * 2, waitMs + 10_000, 30_000);
+  const scrapedOffers: RawRetailerOffer[] = [];
+  const warnings: string[] = [];
+  let discoveredCount = 0;
+  let pagesCrawled = 0;
+
+  for (const pageUrl of fallbackUrls) {
+    try {
+      const page = await fetchPageWithBrowser(pageUrl, {
+        timeoutMs,
+        waitMs
+      });
+      pagesCrawled += 1;
+
+      const extraction = extractOffersFromHtml(page.html, page.finalUrl || pageUrl, config);
+      discoveredCount += extraction.discoveredCount;
+      scrapedOffers.push(...extraction.offers);
+
+      if (extraction.offers.length === 0 && pagesCrawled > 1) {
+        break;
+      }
+    } catch (error) {
+      warnings.push(
+        `browser fetch failed (${pageUrl}): ${error instanceof Error ? error.message : "unknown"}`
+      );
+      if (isPlaywrightUnavailableError(error) || pagesCrawled > 0) {
+        break;
+      }
+    }
+  }
+
+  return {
+    offers: dedupeOffers(scrapedOffers),
+    discoveredCount,
+    pagesCrawled,
+    warnings
+  };
 }
 
 function getHttpStatusFromError(error: unknown): number | undefined {
@@ -749,18 +914,31 @@ function appendBlockerHintToWarning(
   return `${warning} Blocker hint: ${classification}.`;
 }
 
+function diagnosticsForExecutionPath(
+  executionPath: ExecutionPath
+): ParsedRetailerResult["diagnostics"] {
+  return {
+    executionPath
+  };
+}
+
 function diagnosticsFromBlocker(blocker: {
   classification: RetailerBlockerClassification;
   details?: string;
   url?: string;
-}): ParsedRetailerResult["diagnostics"] {
+}, executionPath: ExecutionPath = "fixture"): ParsedRetailerResult["diagnostics"] {
   return {
+    executionPath,
     blocker: {
       classification: blocker.classification,
       details: blocker.details,
       url: blocker.url
     }
   };
+}
+
+function browserFallbackEnabled(config: RetailerConfig): boolean {
+  return config.browserFallbackEnabled === true;
 }
 
 function classifyBlockerFromUnexpectedError(
@@ -801,7 +979,8 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
           discoveredCount: fixtureOffers.length,
           parsedCount: fixtureOffers.length,
           pagesCrawled: 0,
-          sourceMode: "fixture"
+          sourceMode: "fixture",
+          diagnostics: diagnosticsForExecutionPath("fixture")
         };
       }
 
@@ -854,7 +1033,8 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
             discoveredCount,
             parsedCount: deduped.length,
             pagesCrawled,
-            sourceMode: "live"
+            sourceMode: "live",
+            diagnostics: diagnosticsForExecutionPath("http")
           };
         }
 
@@ -878,7 +1058,32 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
               discoveredCount: discoveredCount + fallbackResult.discoveredCount,
               parsedCount: fallbackResult.offers.length,
               pagesCrawled: pagesCrawled + fallbackResult.pagesCrawled,
-              sourceMode: "live"
+              sourceMode: "live",
+              diagnostics: diagnosticsForExecutionPath("http")
+            };
+          }
+        }
+
+        if (browserFallbackEnabled(config) && shouldAttemptBrowserFallback(blocker.classification)) {
+          const browserFallbackResult = await fetchBrowserFallbackOffers(config, pageUrls, httpProfile);
+          if (browserFallbackResult.warnings.length > 0) {
+            warnings.push(...browserFallbackResult.warnings);
+          }
+
+          if (browserFallbackResult.offers.length > 0) {
+            const recoveryMessage = `Recovered via browser fallback (${browserFallbackResult.pagesCrawled} pages).`;
+            const warning =
+              warnings.length > 0 ? `${warnings.join(" | ")} | ${recoveryMessage}` : recoveryMessage;
+
+            return {
+              offers: browserFallbackResult.offers,
+              warning,
+              usedFixture: false,
+              discoveredCount: discoveredCount + browserFallbackResult.discoveredCount,
+              parsedCount: browserFallbackResult.offers.length,
+              pagesCrawled: pagesCrawled + browserFallbackResult.pagesCrawled,
+              sourceMode: "live",
+              diagnostics: diagnosticsForExecutionPath("browser")
             };
           }
         }
@@ -896,7 +1101,7 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
           parsedCount: fixtureOffers.length,
           pagesCrawled,
           sourceMode: "fixture",
-          diagnostics: diagnosticsFromBlocker(blocker)
+          diagnostics: diagnosticsFromBlocker(blocker, "fixture")
         };
       } catch (error) {
         const fixtureOffers = await loadFixtureOffers(config);
@@ -910,7 +1115,7 @@ export function createRetailerParser(config: RetailerConfig): RetailerParser {
           parsedCount: fixtureOffers.length,
           pagesCrawled,
           sourceMode: "fixture",
-          diagnostics: diagnosticsFromBlocker(blocker)
+          diagnostics: diagnosticsFromBlocker(blocker, "fixture")
         };
       }
     }

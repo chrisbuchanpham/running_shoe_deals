@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import type { CSSProperties } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { Dataset } from "../lib/dataLoader";
+import { formatModelDisplay, formatSizeDisplay } from "../lib/modelDisplay";
 import { normalizeBrand } from "../shared/normalization";
 
 type ShoeDetailPageProps = {
@@ -138,11 +139,13 @@ export function ShoeDetailPage({ data }: ShoeDetailPageProps) {
     );
   }
 
+  const formattedModel = formatModelDisplay(shoe.model);
+
   return (
     <section>
       <div className="section-header">
         <h1>
-          {shoe.brand} {shoe.model}
+          {shoe.brand} {formattedModel}
         </h1>
         <p>
           Category: {shoe.category} | Match rules: {shoe.matchRulesVersion}
@@ -184,7 +187,7 @@ export function ShoeDetailPage({ data }: ShoeDetailPageProps) {
 
       {offerRows.length === 0 ? (
         <p className="result-count">
-          No normalized offers currently match this canonical shoe.
+          No normalized offers currently match {shoe.brand} {formattedModel}.
         </p>
       ) : (
         <>
@@ -196,6 +199,7 @@ export function ShoeDetailPage({ data }: ShoeDetailPageProps) {
                 <th>Current Price</th>
                 <th>Original Price</th>
                 <th>Discount</th>
+                <th>Size</th>
                 <th>Stock</th>
                 <th>Scraped</th>
                 <th>Link</th>
@@ -241,6 +245,7 @@ export function ShoeDetailPage({ data }: ShoeDetailPageProps) {
                       ? `${row.offer.discountPct.toFixed(0)}%`
                       : "Not listed"}
                   </td>
+                  <td>{formatSizeDisplay(row.offer.sizeRange) ?? "Not listed"}</td>
                   <td
                     style={{
                       fontWeight: 700,
@@ -275,57 +280,62 @@ export function ShoeDetailPage({ data }: ShoeDetailPageProps) {
           </p>
 
           <div className="deal-grid">
-            {offerRows.map((row) => (
-              <article className="deal-card" key={`${row.offer.id}-card`}>
-                <div>
-                  <p className="deal-brand">{row.retailerName}</p>
-                  <p className="deal-model" style={{ fontSize: "0.95rem" }}>
-                    {row.offer.titleRaw}
+            {offerRows.map((row) => {
+              const sizeDisplay = formatSizeDisplay(row.offer.sizeRange);
+
+              return (
+                <article className="deal-card" key={`${row.offer.id}-card`}>
+                  <div>
+                    <p className="deal-brand">{row.retailerName}</p>
+                    <p className="deal-model" style={{ fontSize: "0.95rem" }}>
+                      {row.offer.titleRaw}
+                    </p>
+                    <p className="deal-meta">
+                      Scraped {formatDateTime(row.offer.scrapedAt)}
+                    </p>
+                    {sizeDisplay ? <span className="size-chip">Size {sizeDisplay}</span> : null}
+                  </div>
+
+                  <div className="deal-pricing">
+                    <p className="deal-price">
+                      {formatPrice(row.offer.priceCurrent)}
+                    </p>
+                    {typeof row.offer.discountPct === "number" ? (
+                      <span className="deal-discount">
+                        {row.offer.discountPct.toFixed(0)}% off
+                      </span>
+                    ) : null}
+                  </div>
+
+                  <p className="deal-retailer" style={{ marginTop: 0 }}>
+                    {row.offer.inStock ? "In stock" : "Out of stock"}
+                    {row.offer.priceOriginal
+                      ? ` | Was ${formatPrice(row.offer.priceOriginal)}`
+                      : ""}
                   </p>
-                  <p className="deal-meta">
-                    Scraped {formatDateTime(row.offer.scrapedAt)}
-                  </p>
-                </div>
 
-                <div className="deal-pricing">
-                  <p className="deal-price">
-                    {formatPrice(row.offer.priceCurrent)}
-                  </p>
-                  {typeof row.offer.discountPct === "number" ? (
-                    <span className="deal-discount">
-                      {row.offer.discountPct.toFixed(0)}% off
-                    </span>
-                  ) : null}
-                </div>
+                  <span
+                    style={{
+                      ...row.trust.style,
+                      borderRadius: "999px",
+                      fontWeight: 700,
+                      fontSize: "0.8rem",
+                      display: "inline-block",
+                      padding: "0.23rem 0.56rem",
+                      width: "fit-content"
+                    }}
+                  >
+                    {row.trust.label} ({row.trust.scorePct}%)
+                  </span>
 
-                <p className="deal-retailer" style={{ marginTop: 0 }}>
-                  {row.offer.inStock ? "In stock" : "Out of stock"}
-                  {row.offer.priceOriginal
-                    ? ` | Was ${formatPrice(row.offer.priceOriginal)}`
-                    : ""}
-                </p>
-
-                <span
-                  style={{
-                    ...row.trust.style,
-                    borderRadius: "999px",
-                    fontWeight: 700,
-                    fontSize: "0.8rem",
-                    display: "inline-block",
-                    padding: "0.23rem 0.56rem",
-                    width: "fit-content"
-                  }}
-                >
-                  {row.trust.label} ({row.trust.scorePct}%)
-                </span>
-
-                <div className="deal-actions">
-                  <a href={row.offer.url} target="_blank" rel="noreferrer">
-                    Open retailer
-                  </a>
-                </div>
-              </article>
-            ))}
+                  <div className="deal-actions">
+                    <a href={row.offer.url} target="_blank" rel="noreferrer">
+                      Open retailer
+                    </a>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </>
       )}
